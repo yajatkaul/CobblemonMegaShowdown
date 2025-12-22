@@ -1,0 +1,142 @@
+{
+  "portraitScale": 1.2,
+  "portraitTranslation": [-1.15,2.04, 0],
+  "profileScale": 0.34,
+  "profileTranslation": [0.02, 1.15, -20],
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 1.7, 1]
+  },
+  "animations": {
+   
+
+    
+  },
+  "poses": {
+   "battle-standing": {
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "WALK"],
+       "condition": "q.has_entity ? !q.in_air : 1.0",
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('koraidon', 'battle_idle')"
+      ],
+            "transitions": {
+                "standing": "q.bedrock_primary('koraidon', 'ground_idle', q.curve('one'))"
+            }
+    },
+    "standing": {
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.is_ridden",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('koraidon', 'ground_idle')"
+      ],
+            "transitions": {
+                "battle-standing": "q.bedrock_primary('koraidon', 'battle_intro', q.curve('one'))"
+            }
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+	  "isBattle": false,
+      "animations": ["q.look('head_ai')", "q.bedrock('koraidon', 'ground_walk')"],
+       "transitions": {
+                "battle-standing": "q.bedrock_primary('koraidon', 'battle_intro', q.curve('one'))"
+            },
+      "condition": "!q.is_ridden"
+      
+    },
+    "ride_jump": {
+      "poseTypes": ["WALK","STAND", "FLOAT", "NONE"],
+      "isBattle": false,
+      "condition": "q.in_air && q.is_ridden && q.has_entity",
+      "animations": [
+        "q.look('head')",
+		"q.bedrock('koraidon','ride_car_jump')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+   "mount_idle": {
+      "poseTypes": ["STAND"],
+      "isBattle": false,
+	  "isTouchingWater": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ride_ground_idle')"
+      ],
+      "condition": "q.is_ridden && !q.in_air"
+    },
+    "mount_walk": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+	  "isTouchingWater": false,
+      "condition": "q.is_ridden && !q.is_sprinting && !q.is_air && q.has_entity",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ride_car_walk')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "mount_run": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+	  "isTouchingWater": false,
+      "condition": "!q.in_air && q.is_sprinting && q.is_ridden && q.has_entity",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ride_car_run')"
+      ]
+    },
+	"surfacewater-float": {
+      "poseTypes": ["STAND", "FLOAT"],
+      "isTouchingWater": true,
+	  "condition": "q.is_ridden",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('koraidon', 'ride_water_idle')"
+      ]
+    },
+	"surfacewater-swim": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": true,
+	  "condition": "q.is_ridden && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ride_water_swim')"
+      ]
+    },
+	"surfacewater-swimrun": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": true,
+	  "condition": "q.is_ridden && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ride_water_swim_run')"
+      ]
+    },
+	"hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('koraidon', 'ride_air_fly')"
+      ]
+    },
+	"fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('koraidon', 'ride_air_fly')"
+      ],
+      "transitions": {
+                "battle-standing": "q.bedrock_primary('koraidon', 'battle_idle', q.curve('one'))"
+            }
+    }
+  }
+}

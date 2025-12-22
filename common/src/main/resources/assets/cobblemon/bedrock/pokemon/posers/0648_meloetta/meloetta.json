@@ -1,80 +1,68 @@
 {
-  "head": "head",
-  "portraitScale": 1.25,
-  "portraitTranslation": [
-    0,
-    0.5,
-    0
-  ],
-  "profileScale": 0.8,
-  "profileTranslation": [
-    0,
-    0.4,
-    0
-  ],
-  "cry": "bedrock(meloetta, cry)",
+  "portraitScale": 2,
+  "portraitTranslation": [-0.1, 0.85, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [0, 0.65, 0],
+  "animations": {
+    "cry": "q.bedrock_stateful('meloetta', 'cry')"
+  },
   "poses": {
-    "standing": {
-      "poseName": "standing",
+	"standing": {
       "transformTicks": 10,
-      "poseTypes": [
-        "STAND",
-        "NONE",
-        "PORTRAIT",
-        "PROFILE"
-      ],
+      "poseTypes": ["STAND", "PORTRAIT", "PROFILE"],
       "isBattle": false,
       "animations": [
-        "look",
-        "bedrock(meloetta, ground_idle)"
+        "q.look('head')",
+        "q.bedrock('meloetta', 'ground_idle')"
       ],
       "quirks": [
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(meloetta, blink)"
-          ]
-        }
+        "q.bedrock_quirk('meloetta', 'blink')"
       ]
-    },
-    "walking": {
-      "poseName": "walking",
+    },  
+    "battle-standing": {
       "transformTicks": 10,
-      "poseTypes": [
-        "WALK"
-      ],
-      "animations": [
-        "look",
-        "bedrock(meloetta, ground_walk)"
-      ],
-      "quirks": [
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(meloetta, blink)"
-          ]
-        }
-      ]
-    },
-    "battle-idle": {
-      "poseName": "battle-idle",
-      "transformTicks": 10,
-      "poseTypes": [
-        "STAND"
-      ],
+      "poseTypes": ["STAND", "NONE"],
       "isBattle": true,
       "animations": [
-        "look",
-        "bedrock(meloetta, battle_idle)"
+        "q.look('head')",
+        "q.bedrock('meloetta', 'air_idle')"
       ],
-      "quirks": [
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(meloetta, blink)"
-          ]
-        }
+      "quirks": ["q.bedrock_quirk('meloetta', 'blink')"]
+    },
+    "walking": {
+      "transformTicks": 10,
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('meloetta', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('meloetta', 'blink')"]
+    },
+    "hover": {
+      "transformTicks": 10,
+      "poseTypes": [  "HOVER", "FLOAT" ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('meloetta', 'air_idle')"
+       ],
+       "quirks": [
+        "q.bedrock_quirk('meloetta', 'blink')"
       ]
+    },
+    "fly": {
+      "transformTicks": 10,
+      "poseTypes": [ "FLY" ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('meloetta', 'air_fly')"
+       ],
+       "quirks": [
+        "q.bedrock_quirk('meloetta', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('meloetta', 'sleep')"]
     }
   }
 }

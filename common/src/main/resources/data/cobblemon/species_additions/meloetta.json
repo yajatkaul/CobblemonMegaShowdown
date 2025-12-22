@@ -4,14 +4,15 @@
   "behaviour": {
     "moving": {
       "walk": {
-        "canWalk": true
+        "canWalk": true,
+		"walkSpeed": 0.147
       },
       "fly": {
         "canFly": true
       }
     }
   },
-  "baseScale": 0.8,
+  "baseScale": 0.65,
   "hitbox": {
     "width": 1,
     "height": 1.5,

@@ -1,0 +1,359 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 94,
+  "name": "Gengar",
+  "primaryType": "ghost",
+  "secondaryType": "poison",
+  "maleRatio": 0.5,
+  "height": 15,
+  "weight": 405,
+  "pokedex": [
+    "cobblemon.species.gengar.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "cursedbody",
+    "h:cursedbody"
+  ],
+  "eggGroups": [
+    "amorphous"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "attack": 65,
+    "defence": 60,
+    "special_attack": 130,
+    "special_defence": 75,
+    "speed": 110
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 3,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 250,
+  "experienceGroup": "medium_slow",
+  "catchRate": 45,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 0.95,
+  "hitbox": {
+    "width": 1.3,
+    "height": 1.6,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canWalkOnWater": true
+      }
+    },
+    "herd": {
+      "maxSize": "6"
+    },
+    "resting": {
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0014,
+      "rouseChance": 0.0042
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:spell_tag",
+        "percentage": 10.0
+      },
+      {
+        "item": "cobblemon:payapa_berry",
+        "percentage": 10.0
+      }
+    ]
+  },
+  "moves": [
+    "1:hypnosis",
+    "1:lick",
+    "1:meanlook",
+    "1:confuseray",
+    "1:shadowpunch",
+    "1:nightmare",
+    "1:perishsong",
+    "1:reflecttype",
+    "12:payback",
+    "16:spite",
+    "20:curse",
+    "24:hex",
+    "30:nightshade",
+    "36:suckerpunch",
+    "42:darkpulse",
+    "48:shadowball",
+    "54:destinybond",
+    "60:dreameater",
+    "egg:astonish",
+    "egg:clearsmog",
+    "egg:disable",
+    "egg:grudge",
+    "egg:haze",
+    "egg:nightmare",
+    "egg:perishsong",
+    "egg:psywave",
+    "egg:reflecttype",
+    "egg:smog",
+    "egg:toxic",
+    "tm:acidspray",
+    "tm:allyswitch",
+    "tm:bodyslam",
+    "tm:brickbreak",
+    "tm:confuseray",
+    "tm:corrosivegas",
+    "tm:curse",
+    "tm:darkpulse",
+    "tm:dazzlinggleam",
+    "tm:drainpunch",
+    "tm:dreameater",
+    "tm:embargo",
+    "tm:encore",
+    "tm:endure",
+    "tm:energyball",
+    "tm:explosion",
+    "tm:facade",
+    "tm:firepunch",
+    "tm:fling",
+    "tm:focusblast",
+    "tm:focuspunch",
+    "tm:foulplay",
+    "tm:gigadrain",
+    "tm:gigaimpact",
+    "tm:gunkshot",
+    "tm:haze",
+    "tm:headbutt",
+    "tm:hex",
+    "tm:hyperbeam",
+    "tm:icepunch",
+    "tm:icywind",
+    "tm:imprison",
+    "tm:infestation",
+    "tm:knockoff",
+    "tm:laserfocus",
+    "tm:megakick",
+    "tm:megapunch",
+    "tm:metronome",
+    "tm:nastyplot",
+    "tm:nightshade",
+    "tm:ominouswind",
+    "tm:painsplit",
+    "tm:payback",
+    "tm:phantomforce",
+    "tm:poisonjab",
+    "tm:poltergeist",
+    "tm:powershift",
+    "tm:poweruppunch",
+    "tm:protect",
+    "tm:psychic",
+    "tm:psychicnoise",
+    "tm:psychup",
+    "tm:raindance",
+    "tm:rest",
+    "tm:rocksmash",
+    "tm:roleplay",
+    "tm:scaryface",
+    "tm:selfdestruct",
+    "tm:shadowball",
+    "tm:shadowclaw",
+    "tm:skillswap",
+    "tm:skittersmack",
+    "tm:sleeptalk",
+    "tm:sludgebomb",
+    "tm:sludgewave",
+    "tm:snatch",
+    "tm:spite",
+    "tm:strength",
+    "tm:substitute",
+    "tm:suckerpunch",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:telekinesis",
+    "tm:terablast",
+    "tm:thief",
+    "tm:thunder",
+    "tm:thunderbolt",
+    "tm:thunderpunch",
+    "tm:thunderwave",
+    "tm:torment",
+    "tm:toxic",
+    "tm:toxicspikes",
+    "tm:trick",
+    "tm:trickroom",
+    "tm:venoshock",
+    "tm:willowisp",
+    "tm:wonderroom",
+    "tutor:allyswitch",
+    "tutor:corrosivegas",
+    "tutor:darkpulse",
+    "tutor:dazzlinggleam",
+    "tutor:drainpunch",
+    "tutor:energyball",
+    "tutor:firepunch",
+    "tutor:focuspunch",
+    "tutor:foulplay",
+    "tutor:gigadrain",
+    "tutor:gigaimpact",
+    "tutor:gunkshot",
+    "tutor:hyperbeam",
+    "tutor:icepunch",
+    "tutor:icywind",
+    "tutor:laserfocus",
+    "tutor:ominouswind",
+    "tutor:painsplit",
+    "tutor:poisonjab",
+    "tutor:poltergeist",
+    "tutor:powershift",
+    "tutor:psychic",
+    "tutor:rest",
+    "tutor:rocksmash",
+    "tutor:roleplay",
+    "tutor:shadowball",
+    "tutor:shadowclaw",
+    "tutor:skillswap",
+    "tutor:skittersmack",
+    "tutor:sleeptalk",
+    "tutor:sludgebomb",
+    "tutor:snatch",
+    "tutor:spite",
+    "tutor:suckerpunch",
+    "tutor:telekinesis",
+    "tutor:thunderbolt",
+    "tutor:thunderpunch",
+    "tutor:trick",
+    "tutor:wonderroom",
+    "legacy:attract",
+    "legacy:bide",
+    "legacy:captivate",
+    "legacy:confide",
+    "legacy:counter",
+    "legacy:doubleedge",
+    "legacy:doubleteam",
+    "legacy:dynamicpunch",
+    "legacy:frustration",
+    "legacy:hiddenpower",
+    "legacy:megadrain",
+    "legacy:mimic",
+    "legacy:naturalgift",
+    "legacy:poisongas",
+    "legacy:rage",
+    "legacy:return",
+    "legacy:round",
+    "legacy:secretpower",
+    "legacy:seismictoss",
+    "legacy:skullbash",
+    "legacy:snore",
+    "legacy:submission",
+    "legacy:swagger",
+    "legacy:takedown",
+    "legacy:uproar",
+    "legacy:zapcannon"
+  ],
+  "preEvolution": "haunter",
+  "evolutions": [],
+  "forms": [
+    {
+      "name": "Mega",
+      "primaryType": "ghost",
+      "secondaryType": "poison",
+      "maleRatio": 0.5,
+      "height": 14,
+      "weight": 405,
+      "pokedex": [
+        "cobblemon.species.gengar-mega.desc"
+      ],
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "aspects": [
+        "mega"
+      ],
+      "abilities": [
+        "shadowtag",
+        "h:shadowtag"
+      ],
+      "baseStats": {
+        "hp": 60,
+        "attack": 65,
+        "defence": 80,
+        "special_attack": 170,
+        "special_defence": 95,
+        "speed": 130
+      },
+      "baseExperienceYield": 300,
+      "dynamaxBlocked": true,
+      "evolutions": [],
+      "battleOnly": true,
+      "behaviour": {
+        "herd": {
+          "maxSize": "7"
+        },
+        "resting": {
+          "times": [
+            "any"
+          ],
+          "drowsyChance": 0.0014,
+          "rouseChance": 0.0042
+        },
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canWalkOnWater": true
+          },
+          "fly": {
+            "canFly": true
+          }
+        },
+        "combat": {
+          "willDefendSelf": true,
+          "willDefendOwner": true,
+          "willFlee": false
+        }
+      }
+    },
+    {
+      "name": "Gmax",
+      "primaryType": "ghost",
+      "secondaryType": "poison",
+      "maleRatio": 0.5,
+      "height": 200,
+      "weight": 0,
+	  "baseScale": 0.45,
+      "pokedex": [
+        "cobblemon.species.gengar-gmax.desc"
+      ],
+      "labels": [
+        "gen8",
+        "gmax"
+      ],
+      "aspects": [
+        "gmax"
+      ],
+      "dynamaxBlocked": true,
+      "evolutions": [],
+      "battleOnly": true
+    }
+  ]
+}
