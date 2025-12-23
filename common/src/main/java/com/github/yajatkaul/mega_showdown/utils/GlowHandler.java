@@ -127,4 +127,52 @@ public class GlowHandler {
             default -> ChatFormatting.WHITE;
         };
     }
+
+    public static float[] getTeraColor(String teraId) {
+        if (teraId == null) {
+            return WHITE;
+        }
+
+        return switch (teraId) {
+            case "msd:tera_fire"      -> FIRE;
+            case "msd:tera_water"     -> WATER;
+            case "msd:tera_grass"     -> GRASS;
+            case "msd:tera_electric"  -> ELECTRIC;
+            case "msd:tera_ice"       -> ICE;
+            case "msd:tera_fighting"  -> FIGHTING;
+            case "msd:tera_poison"    -> POISON;
+            case "msd:tera_ground"    -> GROUND;
+            case "msd:tera_flying"    -> FLYING;
+            case "msd:tera_psychic"   -> PSYCHIC;
+            case "msd:tera_bug"       -> BUG;
+            case "msd:tera_rock"      -> ROCK;
+            case "msd:tera_ghost"     -> GHOST;
+            case "msd:tera_dragon"    -> DRAGON;
+            case "msd:tera_dark"      -> DARK;
+            case "msd:tera_steel"     -> STEEL;
+            case "msd:tera_fairy"     -> FAIRY;
+            case "msd:tera_normal"    -> NORMAL;
+            default                   -> WHITE;
+        };
+    }
+
+    private static final float[] WHITE     = {1.0f, 1.0f, 1.0f, 1.0f};
+    private static final float[] FIRE      = {1.0f, 0.30f, 0.20f, 1.0f};
+    private static final float[] WATER     = {0.30f, 0.60f, 1.00f, 1.0f};
+    private static final float[] GRASS     = {0.30f, 1.00f, 0.40f, 1.0f};
+    private static final float[] ELECTRIC  = {1.00f, 1.00f, 0.30f, 1.0f};
+    private static final float[] ICE       = {0.60f, 0.90f, 1.00f, 1.0f};
+    private static final float[] FIGHTING  = {0.80f, 0.30f, 0.20f, 1.0f};
+    private static final float[] POISON    = {0.70f, 0.30f, 0.80f, 1.0f};
+    private static final float[] GROUND    = {0.80f, 0.65f, 0.40f, 1.0f};
+    private static final float[] FLYING    = {0.70f, 0.70f, 1.00f, 1.0f};
+    private static final float[] PSYCHIC   = {1.00f, 0.40f, 0.70f, 1.0f};
+    private static final float[] BUG       = {0.60f, 0.80f, 0.20f, 1.0f};
+    private static final float[] ROCK      = {0.70f, 0.60f, 0.40f, 1.0f};
+    private static final float[] GHOST     = {0.60f, 0.50f, 0.90f, 1.0f};
+    private static final float[] DRAGON    = {0.50f, 0.40f, 1.00f, 1.0f};
+    private static final float[] DARK      = {0.30f, 0.30f, 0.30f, 1.0f};
+    private static final float[] STEEL     = {0.70f, 0.75f, 0.80f, 1.0f};
+    private static final float[] FAIRY     = {1.00f, 0.60f, 0.90f, 1.0f};
+    private static final float[] NORMAL    = {0.90f, 0.90f, 0.90f, 1.0f};
 }

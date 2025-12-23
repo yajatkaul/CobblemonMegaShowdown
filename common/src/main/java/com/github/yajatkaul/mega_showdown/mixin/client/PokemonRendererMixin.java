@@ -10,6 +10,8 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.block.block_entity.renderer.state.TeraHatState;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
+import com.github.yajatkaul.mega_showdown.render.renderTypes.MSDRenderTypes;
+import com.github.yajatkaul.mega_showdown.utils.GlowHandler;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -100,7 +102,8 @@ public class PokemonRendererMixin {
             );
 
             // Render
-            VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.entityCutout(texture));
+            MSDRenderTypes.teraShader.safeGetUniform("TeraTint").set(GlowHandler.getTeraColor(aspect.get()));
+            VertexConsumer vertexConsumer = buffer.getBuffer(MSDRenderTypes.pokemonShader(texture));
             model.render(mega_showdown$context, poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, -0x1);
 
             model.withLayerContext(

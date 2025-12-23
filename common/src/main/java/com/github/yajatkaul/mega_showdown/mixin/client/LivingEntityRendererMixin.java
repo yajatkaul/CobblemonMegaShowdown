@@ -5,6 +5,7 @@ import com.cobblemon.mod.common.client.render.models.blockbench.repository.Varyi
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import com.github.yajatkaul.mega_showdown.render.renderTypes.MSDRenderTypes;
+import com.github.yajatkaul.mega_showdown.utils.GlowHandler;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -16,6 +17,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+
+import java.util.Optional;
 
 @Mixin(value = LivingEntityRenderer.class)
 public class LivingEntityRendererMixin<T extends LivingEntity, M extends EntityModel<T>> {
@@ -40,7 +43,9 @@ public class LivingEntityRendererMixin<T extends LivingEntity, M extends EntityM
             return originalCall.call(buffer, original);
         }
 
-        if (pokemon.getAspects().stream().noneMatch((s) -> s.startsWith("msd:tera_"))) {
+        Optional<String> aspect = pokemon.getAspects().stream()
+                .filter(a -> a.startsWith("msd:tera_")).findFirst();
+        if (aspect.isEmpty()) {
             return originalCall.call(buffer, original);
         }
 
@@ -53,7 +58,7 @@ public class LivingEntityRendererMixin<T extends LivingEntity, M extends EntityM
                         delegate
                 );
 
-        MSDRenderTypes.teraShader.safeGetUniform("TeraTint").set(1.0f, 1.0f, 1.0f);
+        MSDRenderTypes.teraShader.safeGetUniform("TeraTint").set(GlowHandler.getTeraColor(aspect.get()));
         return buffer.getBuffer(MSDRenderTypes.pokemonShader(texture));
     }
 }

@@ -14,6 +14,7 @@ import com.cobblemon.mod.common.net.messages.client.pokemon.update.AbilityUpdate
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.cobblemon.mod.common.pokemon.properties.UnaspectPropertyType;
 import com.github.yajatkaul.mega_showdown.codec.Effect;
+import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import com.github.yajatkaul.mega_showdown.gimmick.MaxGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import com.github.yajatkaul.mega_showdown.tag.MegaShowdownTags;
@@ -165,7 +166,9 @@ public class AspectUtils {
             });
             pokemon.getPersistentData().remove("is_tera");
             if (pokemon.getEntity() != null) {
-                pokemon.getEntity().removeEffect(MobEffects.GLOWING);
+                if (MegaShowdownConfig.legacyTeraEffect) {
+                    pokemon.getEntity().removeEffect(MobEffects.GLOWING);
+                }
             }
         }
 

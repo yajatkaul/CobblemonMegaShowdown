@@ -26,6 +26,7 @@ import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.cobblemon.mod.common.pokemon.properties.AspectPropertyType;
+import com.cobblemon.mod.common.pokemon.properties.UnaspectPropertyType;
 import com.github.yajatkaul.mega_showdown.advancement.AdvancementHelper;
 import com.github.yajatkaul.mega_showdown.api.event.DynamaxEndCallback;
 import com.github.yajatkaul.mega_showdown.api.event.DynamaxStartCallback;
@@ -49,6 +50,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -186,7 +188,15 @@ public class CobbleEvents {
         }
 
         if (pokemon.getPersistentData().getBoolean("is_tera")) {
-            pokemon.getPersistentData().putBoolean("is_tera", false);
+            pokemon.getAspects().stream().filter(a -> a.startsWith("msd:tera_")).forEach(name -> {
+                UnaspectPropertyType.INSTANCE.fromString("msd:tera_" + pokemon.getTeraType().showdownId()).apply(pokemon);
+            });
+            pokemon.getPersistentData().remove("is_tera");
+            if (pokemon.getEntity() != null) {
+                if (MegaShowdownConfig.legacyTeraEffect) {
+                    pokemon.getEntity().removeEffect(MobEffects.GLOWING);
+                }
+            }
         }
 
         if (pokemon.getPersistentData().getBoolean("is_max")) {
