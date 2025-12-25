@@ -4,6 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
+    "GameRendererMixin",
+    "ShaderInstanceMixin"
   ],
   "mixins": [
     "CobblemonDataProviderMixin",

@@ -28,6 +28,8 @@ public class MegaShowdownTags {
 
         public static final TagKey<Item> OMNI_RING = createTag("omni_ring");
 
+        public static final TagKey<Item> ROTOM_APPLIANCES = createTag("rotom_appliances");
+
         private static TagKey<Item> createTag(String string) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, string));
         }

@@ -102,8 +102,14 @@ public class PokemonRendererMixin {
             );
 
             // Render
-            MSDRenderTypes.teraShader.safeGetUniform("TeraTint").set(GlowHandler.getTeraColor(aspect.get()));
-            VertexConsumer vertexConsumer = buffer.getBuffer(MSDRenderTypes.pokemonShader(texture));
+            VertexConsumer vertexConsumer;
+            if (MegaShowdownConfig.legacyTeraEffect) {
+                vertexConsumer = buffer.getBuffer(RenderType.entityCutout(texture));
+            } else {
+                MSDRenderTypes.teraShader.safeGetUniform("TeraTint").set(GlowHandler.getTeraColor(aspect.get()));
+                vertexConsumer = buffer.getBuffer(MSDRenderTypes.pokemonShader(texture));
+            }
+
             model.render(mega_showdown$context, poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, -0x1);
 
             model.withLayerContext(

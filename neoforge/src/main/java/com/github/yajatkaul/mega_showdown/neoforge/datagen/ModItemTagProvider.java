@@ -1,6 +1,7 @@
 package com.github.yajatkaul.mega_showdown.neoforge.datagen;
 
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
+import com.github.yajatkaul.mega_showdown.block.MegaShowdownBlocks;
 import com.github.yajatkaul.mega_showdown.item.MegaShowdownItems;
 import com.github.yajatkaul.mega_showdown.tag.MegaShowdownTags;
 import net.minecraft.core.HolderLookup;
@@ -172,5 +173,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(MegaShowdownItems.STEEL_TERA_SHARD.get())
                 .add(MegaShowdownItems.FAIRY_TERA_SHARD.get());
 
+        tag(MegaShowdownTags.Items.TERA_SHARD)
+                .add(MegaShowdownItems.ROTOM_CATALOGUE.get())
+                .add(MegaShowdownBlocks.ROTOM_FAN.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_WASHING_MACHINE.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_OVEN.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_MOW.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_FRIDGE.get().asItem());
     }
 }

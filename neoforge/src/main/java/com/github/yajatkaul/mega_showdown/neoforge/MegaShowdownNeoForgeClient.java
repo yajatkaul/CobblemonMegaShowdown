@@ -5,13 +5,14 @@ import com.github.yajatkaul.mega_showdown.MegaShowdownClient;
 import com.github.yajatkaul.mega_showdown.block.MegaShowdownBlockEntities;
 import com.github.yajatkaul.mega_showdown.block.block_entity.renderer.PedestalBlockEntityRenderer;
 import com.github.yajatkaul.mega_showdown.render.ItemRenderingLoader;
+import com.github.yajatkaul.mega_showdown.render.RegisterShaderEvent;
+import com.github.yajatkaul.mega_showdown.render.renderTypes.IrisIgnoreShader;
 import com.github.yajatkaul.mega_showdown.render.renderTypes.MSDRenderTypes;
 import com.github.yajatkaul.mega_showdown.screen.MegaShowdownMenuTypes;
 import com.github.yajatkaul.mega_showdown.screen.custom.screen.TeraPouchScreen;
 import com.github.yajatkaul.mega_showdown.screen.custom.screen.ZygardeCubeScreen;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import dev.architectury.registry.ReloadListenerRegistry;
-import net.minecraft.client.renderer.ShaderInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -33,6 +34,14 @@ public class MegaShowdownNeoForgeClient {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         MegaShowdownClient.init();
+
+        RegisterShaderEvent.EVENT.register((shaderEvent) -> {
+            MSDRenderTypes.teraShader = shaderEvent.create(
+                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "tera_shader"),
+                    DefaultVertexFormat.NEW_ENTITY,
+                    true
+            );
+        });
     }
 
     @SubscribeEvent
@@ -53,7 +62,7 @@ public class MegaShowdownNeoForgeClient {
             return;
 
         event.addPackFinders(
-                ResourceLocation.fromNamespaceAndPath("mega_showdown", "resourcepacks/gyaradosjumpingmega"),
+                ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "resourcepacks/gyaradosjumpingmega"),
                 PackType.CLIENT_RESOURCES,
                 Component.translatable("message.mega_showdown.gyrados_jump_mega"),
                 PackSource.BUILT_IN,
@@ -62,7 +71,7 @@ public class MegaShowdownNeoForgeClient {
         );
 
         event.addPackFinders(
-                ResourceLocation.fromNamespaceAndPath("mega_showdown", "resourcepacks/regionbiasmsd"),
+                ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "resourcepacks/regionbiasmsd"),
                 PackType.CLIENT_RESOURCES,
                 Component.translatable("message.mega_showdown.region_bias_msd"),
                 PackSource.BUILT_IN,
@@ -73,8 +82,6 @@ public class MegaShowdownNeoForgeClient {
 
     @SubscribeEvent
     public static void shaderRegistry(RegisterShadersEvent event) throws IOException {
-        event.registerShader(new ShaderInstance(event.getResourceProvider(), ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "tera_shader"), DefaultVertexFormat.NEW_ENTITY), shaderInstance -> {
-            MSDRenderTypes.teraShader = shaderInstance;
-        });
+        event.registerShader(new IrisIgnoreShader(event.getResourceProvider(), ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "tera_shader"), DefaultVertexFormat.NEW_ENTITY), shaderInstance -> MSDRenderTypes.teraShader = shaderInstance);
     }
 }
