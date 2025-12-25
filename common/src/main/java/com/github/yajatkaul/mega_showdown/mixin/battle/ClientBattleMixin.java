@@ -4,7 +4,7 @@ import com.cobblemon.mod.common.battles.MoveActionResponse;
 import com.cobblemon.mod.common.battles.ShowdownMoveset;
 import com.cobblemon.mod.common.client.battle.ClientBattle;
 import com.cobblemon.mod.common.client.battle.SingleActionRequest;
-import com.github.yajatkaul.mega_showdown.utils.cobblemon.interfaces.ClientBattleDuck;
+import com.github.yajatkaul.mega_showdown.utils.duck.cobblemon.interfaces.ClientBattleDuck;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 

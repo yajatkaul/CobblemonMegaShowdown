@@ -12,6 +12,11 @@
       "aspects": ["msd:tera_steel"],
       "model": "cobblemon:steel_tera_hat.geo",
       "texture": "cobblemon:textures/tera_hat/steel_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_psychic"],
+      "model": "cobblemon:psychic_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/psychic_tera_hat.png"
     }
   ]
 }

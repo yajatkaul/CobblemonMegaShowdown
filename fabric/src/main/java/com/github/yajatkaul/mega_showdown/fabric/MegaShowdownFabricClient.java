@@ -6,6 +6,8 @@ import com.github.yajatkaul.mega_showdown.block.MegaShowdownBlockEntities;
 import com.github.yajatkaul.mega_showdown.block.MegaShowdownBlocks;
 import com.github.yajatkaul.mega_showdown.block.block_entity.renderer.PedestalBlockEntityRenderer;
 import com.github.yajatkaul.mega_showdown.render.ItemRenderingLoader;
+import com.github.yajatkaul.mega_showdown.render.RegisterShaderEvent;
+import com.github.yajatkaul.mega_showdown.render.renderTypes.IrisIgnoreShader;
 import com.github.yajatkaul.mega_showdown.render.renderTypes.MSDRenderTypes;
 import com.github.yajatkaul.mega_showdown.screen.MegaShowdownMenuTypes;
 import com.github.yajatkaul.mega_showdown.screen.custom.screen.TeraPouchScreen;
@@ -55,13 +57,11 @@ public final class MegaShowdownFabricClient implements ClientModInitializer {
 
         BlockEntityRenderers.register(MegaShowdownBlockEntities.PEDESTAL_BLOCK_ENTITY.get(), PedestalBlockEntityRenderer::new);
 
-        CoreShaderRegistrationCallback.EVENT.register(context -> {
-            context.register(
+        RegisterShaderEvent.EVENT.register((event) -> {
+            MSDRenderTypes.teraShader = event.create(
                     ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "tera_shader"),
                     DefaultVertexFormat.NEW_ENTITY,
-                    shader -> {
-                        MSDRenderTypes.teraShader = shader;
-                    }
+                    true
             );
         });
     }
