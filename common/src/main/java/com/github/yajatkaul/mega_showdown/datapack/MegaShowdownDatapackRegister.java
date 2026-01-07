@@ -3,7 +3,6 @@ package com.github.yajatkaul.mega_showdown.datapack;
 import com.cobblemon.mod.common.pokemon.helditem.CobblemonHeldItemManager;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.codec.*;
-import com.github.yajatkaul.mega_showdown.codec.teraHat.HatCodec;
 import com.github.yajatkaul.mega_showdown.gimmick.MaxGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import com.github.yajatkaul.mega_showdown.utils.RegistryLocator;

@@ -1,8 +1,7 @@
 package com.github.yajatkaul.mega_showdown.render;
 
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
-import com.github.yajatkaul.mega_showdown.codec.item.ItemRenderingCodec;
-import com.github.yajatkaul.mega_showdown.codec.teraHat.HatCodec;
+import com.github.yajatkaul.mega_showdown.codec.teraHat.LayerCodec;
 import com.google.gson.JsonParser;
 import com.mojang.serialization.JsonOps;
 import net.minecraft.client.Minecraft;
@@ -13,15 +12,13 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
-public class HatsDataLoader implements ResourceManagerReloadListener {
-    public static final HashMap<ResourceLocation ,HatCodec> REGISTRY = new HashMap<>();
+public class LayerDataLoader implements ResourceManagerReloadListener {
+    public static final HashMap<ResourceLocation , LayerCodec> REGISTRY = new HashMap<>();
     private static final String DIRECTORY = "msd_sizer";
 
     public static void load() {
@@ -34,7 +31,7 @@ public class HatsDataLoader implements ResourceManagerReloadListener {
 
         for (ResourceLocation id : resources) {
             try (var stream = rm.getResource(id).get().open()) {
-                HatCodec codec = HatCodec.CODEC.parse(
+                LayerCodec codec = LayerCodec.CODEC.parse(
                         JsonOps.INSTANCE,
                         JsonParser.parseReader(new InputStreamReader(stream))
                 ).result().orElseThrow();

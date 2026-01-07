@@ -1,4 +1,4 @@
-package com.github.yajatkaul.mega_showdown.block.block_entity.renderer.state;
+package com.github.yajatkaul.mega_showdown.render.layerEntities.states;
 
 import com.cobblemon.mod.common.api.scheduling.SchedulingTracker;
 import com.cobblemon.mod.common.client.render.models.blockbench.PosableState;

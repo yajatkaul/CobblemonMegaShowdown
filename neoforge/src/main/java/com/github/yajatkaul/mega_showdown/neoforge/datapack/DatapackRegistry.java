@@ -1,7 +1,6 @@
 package com.github.yajatkaul.mega_showdown.neoforge.datapack;
 
 import com.github.yajatkaul.mega_showdown.codec.*;
-import com.github.yajatkaul.mega_showdown.codec.teraHat.HatCodec;
 import com.github.yajatkaul.mega_showdown.gimmick.MaxGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
