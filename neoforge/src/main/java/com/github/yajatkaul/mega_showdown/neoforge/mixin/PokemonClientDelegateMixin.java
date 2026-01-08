@@ -22,6 +22,12 @@ public class PokemonClientDelegateMixin {
     public PokemonEntity currentEntity;
     @Unique
     private long mega_showdown$lastTeraParticle;
+    @Unique
+    private float mega_showdown$secondsSinceLastTeraParticle() {
+        return (System.currentTimeMillis() - mega_showdown$lastTeraParticle) / 1000F;
+    }
+    @Unique
+    private final float mega_showdown$teraParticleCooldown = 2.0F;
 
     @Inject(method = "tick(Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;)V", at = @At(value = "TAIL"))
     private void tick(PokemonEntity entity, CallbackInfo ci) {
@@ -45,12 +51,9 @@ public class PokemonClientDelegateMixin {
         if (distance > Cobblemon.config.getShinyNoticeParticlesDistance())
             return;
 
-        long now = System.currentTimeMillis();
-        long cooldown = 3500L;
-
-        if (now - mega_showdown$lastTeraParticle > cooldown && !entity.isBattling()) {
+        if (mega_showdown$secondsSinceLastTeraParticle() > mega_showdown$teraParticleCooldown) {
             KotlinHelperNeo.INSTANCE.playParticleEffect(TeraHelper.getTeraAnimationFromAspect(aspect.get()), "root", self.getRuntime());
-            mega_showdown$lastTeraParticle = now;
+            mega_showdown$lastTeraParticle = System.currentTimeMillis();
         }
     }
 }
