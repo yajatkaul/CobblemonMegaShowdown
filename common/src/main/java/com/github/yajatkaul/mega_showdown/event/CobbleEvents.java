@@ -129,8 +129,8 @@ public class CobbleEvents {
 
             Random random = new Random();
 
-            boolean otherSuccess = MegaShowdownConfig.teraShardDropRate <= 0 && random.nextDouble() < (MegaShowdownConfig.teraShardDropRate / 100.0);
-            boolean stellarSuccess = MegaShowdownConfig.stellarShardDropRate <= 0 && random.nextDouble() < (MegaShowdownConfig.stellarShardDropRate / 100.0);;
+            boolean otherSuccess = MegaShowdownConfig.teraShardDropRate > 0 && random.nextDouble() < (MegaShowdownConfig.teraShardDropRate / 100.0);
+            boolean stellarSuccess = MegaShowdownConfig.stellarShardDropRate > 0 && random.nextDouble() < (MegaShowdownConfig.stellarShardDropRate / 100.0);;
 
             if (otherSuccess) {
                 event.getDrops().add(teraShardDropEntry);
