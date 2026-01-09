@@ -2374,8 +2374,10 @@ class BattleActions {
     ) {
       return megaForme.name;
     }
+    // Also check baseSpecies for custom species variants (e.g. Pokemon with modified types)
+    const nameToCheck = species.baseSpecies || species.name;
     if (
-      item.megaEvolves?.includes(species.name) &&
+      (item.megaEvolves?.includes(species.name) || item.megaEvolves?.includes(nameToCheck)) &&
       item.megaStone !== species.name
     ) {
       return item.megaStone;
