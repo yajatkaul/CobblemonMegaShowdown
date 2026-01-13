@@ -42,6 +42,63 @@
       "aspects": ["msd:tera_dragon"],
       "model": "cobblemon:dragon_tera_hat.geo",
       "texture": "cobblemon:textures/tera_hat/dragon_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_electric"],
+      "model": "cobblemon:electric_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/electric_tera_hat.png",
+      "layers": [
+        {
+          "name": "translucent",
+          "translucent": true,
+          "texture": "cobblemon:textures/tera_hat/electric_bulb.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["msd:tera_fairy"],
+      "model": "cobblemon:fairy_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/fairy_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_fighting"],
+      "model": "cobblemon:fighting_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/fighting_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_flying"],
+      "model": "cobblemon:flying_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/flying_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_ghost"],
+      "model": "cobblemon:ghost_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/ghost_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_ground"],
+      "model": "cobblemon:ground_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/ground_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_poison"],
+      "model": "cobblemon:poison_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/poison_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_ice"],
+      "model": "cobblemon:ice_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/ice_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_rock"],
+      "model": "cobblemon:rock_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/rock_tera_hat.png"
+    },
+    {
+      "aspects": ["msd:tera_stellar"],
+      "model": "cobblemon:stellar_tera_hat.geo",
+      "texture": "cobblemon:textures/tera_hat/stellar_tera_hat.png"
     }
   ]
 }

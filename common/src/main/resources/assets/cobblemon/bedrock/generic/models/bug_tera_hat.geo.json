@@ -12,12 +12,12 @@
 			},
 			"bones": [
 				{
-					"name": "bone",
+					"name": "crown",
 					"pivot": [0, 0, 0]
 				},
 				{
-					"name": "crown",
-					"parent": "bone",
+					"name": "crown3",
+					"parent": "crown",
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{"origin": [-6, 0, -6], "size": [12, 7, 12], "uv": [0, 35]},
@@ -49,7 +49,7 @@
 				},
 				{
 					"name": "allhead2",
-					"parent": "crown",
+					"parent": "crown3",
 					"pivot": [-7, 26, 0]
 				},
 				{
@@ -78,7 +78,7 @@
 				},
 				{
 					"name": "allhead",
-					"parent": "crown",
+					"parent": "crown3",
 					"pivot": [7, 26, 0]
 				},
 				{
@@ -107,7 +107,7 @@
 				},
 				{
 					"name": "invertedface6",
-					"parent": "crown",
+					"parent": "crown3",
 					"pivot": [-3.5, 12, 0],
 					"cubes": [
 						{"origin": [-5.75, 11.5, 1.25], "size": [3.5, 8.25, -2.5], "pivot": [-3.5, 13.5, 2.5], "rotation": [0, 0, -45], "uv": [77, 5]},
@@ -116,7 +116,7 @@
 				},
 				{
 					"name": "invertedface5",
-					"parent": "crown",
+					"parent": "crown3",
 					"pivot": [3.5, 12, 0],
 					"cubes": [
 						{"origin": [2.25, 11.5, 1.25], "size": [3.5, 8.25, -2.5], "pivot": [3.5, 13.5, 2.5], "rotation": [0, 0, 45], "uv": [73, 67]},
@@ -125,7 +125,7 @@
 				},
 				{
 					"name": "invertedface4",
-					"parent": "crown",
+					"parent": "crown3",
 					"pivot": [0.5, 12.5, -5.25],
 					"cubes": [
 						{"origin": [-0.75, 10.85, -4], "size": [1.5, 1.5, -3], "pivot": [0.5, 11.6, -2.25], "rotation": [-17.5, 0, 0], "uv": [88, 6]},
@@ -134,7 +134,7 @@
 				},
 				{
 					"name": "invertedface3",
-					"parent": "crown",
+					"parent": "crown3",
 					"pivot": [0, 11, 3],
 					"cubes": [
 						{"origin": [-4.5, 10, 2.25], "size": [9, 3.5, -7.75], "uv": [64, 51]},
@@ -143,7 +143,7 @@
 				},
 				{
 					"name": "crystal",
-					"parent": "bone",
+					"parent": "crown",
 					"pivot": [0, 5.5, -9.25],
 					"cubes": [
 						{"origin": [-1.8, 0.5, -10.24], "size": [2.8, 2.8, 2], "pivot": [0, 1.5, -9.25], "rotation": [0, 0, 45], "uv": [78, 51]},

@@ -11,12 +11,12 @@
     0.98,
     0.0
   ],
-  "rootBone": "dmax_clouds",
+  "rootBone": "crown",
   "poses": {
     "idle": {
       "allPoseTypes": true,
       "animations": [
-        "q.bedrock('dmax_clouds', 'idle')"
+        "q.bedrock('crown', 'idle')"
       ]
     }
   }

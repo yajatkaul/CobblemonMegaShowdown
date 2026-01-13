@@ -1,7 +1,7 @@
 {
   "format_version": "1.8.0",
   "animations": {
-    "animation.dmax_clouds.ground_idle": {
+    "animation.dmax_clouds.idle": {
       "loop": true,
       "bones": {
         "dmax_clouds2": {

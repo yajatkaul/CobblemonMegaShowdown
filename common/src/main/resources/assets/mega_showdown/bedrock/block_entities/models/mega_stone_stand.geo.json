@@ -1,51 +1,51 @@
 {
-  "format_version": "1.21.20",
-  "minecraft:geometry": [
-    {
-      "description": {
-        "identifier": "geometry.megastonerock",
-        "texture_width": 64,
-        "texture_height": 64,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 2.5,
-        "visible_bounds_offset": [0, 0.75, 0]
-      },
-      "bones": [
-        {
-          "name": "megablockthing",
-          "pivot": [8.5, 0, -8]
-        },
-        {
-          "name": "bone",
-          "parent": "megablockthing",
-          "pivot": [8.5, 0, -8],
-          "cubes": [
-            {"origin": [-3.25766, -1, -5], "size": [8, 7, 10], "pivot": [-0.25766, 0, -1], "rotation": [0, 0, 5], "uv": [-2, 17]},
-            {"origin": [-5.5, 0, -6], "size": [3, 4, 3], "pivot": [-2.5, 0, -5], "rotation": [0, 0, -15], "uv": [0, 38]},
-            {"origin": [-5.5, 0, 3], "size": [3, 4, 3], "pivot": [-2.5, 0, 4], "rotation": [0, 0, -15], "uv": [0, 38]},
-            {"origin": [4.5, 0, 2], "size": [3, 4, 3], "pivot": [4.5, 0, 3], "rotation": [0, 0, 15], "uv": [0, 38], "mirror": true},
-            {"origin": [-2.1779, 4.7, -4.5], "size": [7, 10, 9], "inflate": -0.3, "pivot": [1.3221, 5.7, -0.5], "rotation": [0, 0, -5], "uv": [1, 0]},
-            {"origin": [-2, 13.6, -3.5], "size": [5, 5, 7], "uv": [33, 19]},
-            {"origin": [-3, 17.6, -3.5], "size": [7, 1, 7], "inflate": 0.2, "uv": [32, 31]}
-          ]
-        },
-        {
-          "name": "ball",
-          "parent": "bone",
-          "pivot": [0, 11.8, 1.5],
-          "cubes": [
-            {"origin": [-2, 18.8, -2.5], "size": [5, 5, 0], "uv": [30, 39]},
-            {"origin": [-2, 19.8, 0], "size": [5, 3, 0], "pivot": [0.5, 21.3, 0], "rotation": [0, 0, 15], "uv": [36, 15]},
-            {"origin": [-1, 19.3, 0], "size": [2, 1, 0], "pivot": [0, 21.3, 0], "rotation": [0, 0, 15], "uv": [36, 18]},
-            {"origin": [0, 22.3, 0], "size": [2, 1, 0], "pivot": [1, 21.3, 0], "rotation": [0, 0, 15], "uv": [12, 38]},
-            {"origin": [-2, 18.8, 2.5], "size": [5, 5, 0], "uv": [40, 39]},
-            {"origin": [-2, 23.8, -2.5], "size": [5, 0, 5], "uv": [0, 33]},
-            {"origin": [-2, 18.8, -2.5], "size": [5, 0, 5], "inflate": 0.01, "uv": [36, 0]},
-            {"origin": [3, 18.8, -2.5], "size": [0, 5, 5], "uv": [20, 33]},
-            {"origin": [-2, 18.8, -2.5], "size": [0, 5, 5], "uv": [36, 5]}
-          ]
-        }
-      ]
-    }
-  ]
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.megastonerock",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "megablockthing",
+					"pivot": [8.5, 0, -8]
+				},
+				{
+					"name": "bone",
+					"parent": "megablockthing",
+					"pivot": [8.5, 0, -8],
+					"cubes": [
+						{"origin": [-3.25766, -1, -5], "size": [8, 7, 10], "pivot": [-0.25766, 0, -1], "rotation": [0, 0, 5], "uv": [-2, 17]},
+						{"origin": [-5.5, 0, -6], "size": [3, 4, 3], "pivot": [-2.5, 0, -5], "rotation": [0, 0, -15], "uv": [0, 38]},
+						{"origin": [-5.5, 0, 3], "size": [3, 4, 3], "pivot": [-2.5, 0, 4], "rotation": [0, 0, -15], "uv": [0, 38]},
+						{"origin": [4.5, 0, 2], "size": [3, 4, 3], "pivot": [4.5, 0, 3], "rotation": [0, 0, 15], "uv": [0, 38], "mirror": true},
+						{"origin": [-2.1779, 4.7, -4.5], "size": [7, 10, 9], "inflate": -0.3, "pivot": [1.3221, 5.7, -0.5], "rotation": [0, 0, -5], "uv": [1, 0]},
+						{"origin": [-2, 13.6, -3.5], "size": [5, 5, 7], "uv": [33, 19]},
+						{"origin": [-3, 17.6, -3.5], "size": [7, 1, 7], "inflate": 0.2, "uv": [32, 31]}
+					]
+				},
+				{
+					"name": "ball",
+					"parent": "bone",
+					"pivot": [0, 11.8, 1.5],
+					"cubes": [
+						{"origin": [-2, 18.8, -2.5], "size": [5, 5, 0], "uv": [30, 39]},
+						{"origin": [-2, 19.8, 0], "size": [5, 3, 0], "pivot": [0.5, 21.3, 0], "rotation": [0, 0, 15], "uv": [36, 15]},
+						{"origin": [-1, 19.3, 0], "size": [2, 1, 0], "pivot": [0, 21.3, 0], "rotation": [0, 0, 15], "uv": [36, 18]},
+						{"origin": [0, 22.3, 0], "size": [2, 1, 0], "pivot": [1, 21.3, 0], "rotation": [0, 0, 15], "uv": [12, 38]},
+						{"origin": [-2, 18.8, 2.5], "size": [5, 5, 0], "uv": [40, 39]},
+						{"origin": [-2, 23.8, -2.5], "size": [5, 0, 5], "uv": [7, 41]},
+						{"origin": [-2, 18.8, -2.5], "size": [5, 0, 5], "inflate": 0.01, "uv": [36, 0]},
+						{"origin": [3, 18.8, -2.5], "size": [0, 5, 5], "uv": [20, 33]},
+						{"origin": [-2, 18.8, -2.5], "size": [0, 5, 5], "uv": [36, 5]}
+					]
+				}
+			]
+		}
+	]
 }

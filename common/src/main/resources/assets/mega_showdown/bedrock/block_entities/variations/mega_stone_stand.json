@@ -7,7 +7,13 @@
       "poser": "mega_showdown:mega_stone_stand",
       "model": "mega_showdown:mega_stone_stand.geo",
       "texture": "mega_showdown:textures/bedrock/block/mega_stone_stand.png",
-      "layers": []
+      "layers": [
+        {
+          "name": "translucent",
+          "translucent": true,
+          "texture": "mega_showdown:textures/bedrock/block/mega_stone.png"
+        }
+      ]
     }
   ]
 }
