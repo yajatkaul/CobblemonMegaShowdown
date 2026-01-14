@@ -1,7 +1,6 @@
 package com.github.yajatkaul.mega_showdown.gimmick;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectSetCodec;
 import com.github.yajatkaul.mega_showdown.utils.GlowHandler;
 import com.mojang.serialization.Codec;

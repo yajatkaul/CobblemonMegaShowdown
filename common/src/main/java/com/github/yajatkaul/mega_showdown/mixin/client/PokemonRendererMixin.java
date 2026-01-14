@@ -17,7 +17,6 @@ import com.github.yajatkaul.mega_showdown.render.LayerDataLoader;
 import com.github.yajatkaul.mega_showdown.render.layerEntities.DynamaxCloudsLayer;
 import com.github.yajatkaul.mega_showdown.render.layerEntities.TeraHatsLayer;
 import com.github.yajatkaul.mega_showdown.render.layerEntities.states.TeraCrystalState;
-import com.github.yajatkaul.mega_showdown.utils.duck.cobblemon.interfaces.ClientBattleDuck;
 import com.github.yajatkaul.mega_showdown.utils.duck.cobblemon.interfaces.PokemonEntityDuck;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
