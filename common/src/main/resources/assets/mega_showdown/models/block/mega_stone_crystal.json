@@ -1,4 +1,7 @@
 {
   "format_version": "1.21.6",
+  "textures": {
+    "particle": "mega_showdown:block/mega_meteorid_block"
+  },
   "elements": []
 }

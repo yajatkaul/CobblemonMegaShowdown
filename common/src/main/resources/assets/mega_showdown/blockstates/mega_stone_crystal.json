@@ -1,12 +1,5 @@
 {
   "variants": {
-    "facing=up": {
-      "model": "mega_showdown:block/mega_stone_crystal"
-    },
-    "facing=down": {
-      "model": "mega_showdown:block/mega_stone_crystal",
-      "x": 180
-    },
     "facing=north": {
       "model": "mega_showdown:block/mega_stone_crystal",
       "x": 90
