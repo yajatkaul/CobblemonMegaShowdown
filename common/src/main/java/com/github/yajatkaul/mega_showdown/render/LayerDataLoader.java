@@ -1,7 +1,7 @@
 package com.github.yajatkaul.mega_showdown.render;
 
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
-import com.github.yajatkaul.mega_showdown.codec.teraHat.LayerCodec;
+import com.github.yajatkaul.mega_showdown.codec.sizer.LayerCodec;
 import com.google.gson.JsonParser;
 import com.mojang.serialization.JsonOps;
 import net.minecraft.client.Minecraft;
