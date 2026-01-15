@@ -3476,7 +3476,7 @@ const Moves = {
 			}
 		}
 		if (source.terastallized) {
-			if (source.teraType !== "ghost") {
+			if (source.teraType !== "Ghost") {
 				move.target = move.nonGhostTarget;
 			} else if (source.isAlly(target)) {
 				move.target = "randomNormal";
@@ -3494,7 +3494,7 @@ const Moves = {
 		  }
 	  }
 	  if (source.terastallized) {
-		  if (source.teraType !== "ghost") {
+		  if (source.teraType !== "Ghost") {
 			  delete move.volatileStatus;
 			  delete move.onHit;
 			  move.self = { boosts: { spe: -1, atk: 1, def: 1 } };
