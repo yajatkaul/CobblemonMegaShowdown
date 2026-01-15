@@ -74,7 +74,7 @@ subprojects {
 
 publishMods {
     changelog = file("CHANGELOG.md").text
-    type = BETA
+    type = STABLE
     dryRun = env.MODRINTH_TOKEN.value == null || env.CURSEFORGE_TOKEN.value == null
 
     def cfOptions = curseforgeOptions {
