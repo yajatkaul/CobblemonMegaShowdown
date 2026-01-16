@@ -1,32 +1,26 @@
 package com.github.yajatkaul.mega_showdown.fabric.mixin;
 
-import com.cobblemon.mod.common.api.data.DataRegistry;
-import com.cobblemon.mod.common.api.scripting.CobblemonScripts;
 import com.cobblemon.mod.common.data.CobblemonDataProvider;
-import com.github.yajatkaul.mega_showdown.fabric.datapack.showdown.Conditions;
-import com.github.yajatkaul.mega_showdown.fabric.datapack.showdown.HeldItems;
-import com.github.yajatkaul.mega_showdown.fabric.datapack.showdown.Scripts;
-import com.github.yajatkaul.mega_showdown.fabric.datapack.showdown.TypeCharts;
+import com.github.yajatkaul.mega_showdown.datapack.CustomTypeRegistry;
+import com.github.yajatkaul.mega_showdown.fabric.datapack.showdown.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = CobblemonDataProvider.class, remap = false)
 public class CobblemonDataProviderMixin {
-    @Redirect(
-            method = "registerDefaults",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lcom/cobblemon/mod/common/data/CobblemonDataProvider;register(Lcom/cobblemon/mod/common/api/data/DataRegistry;Z)Lcom/cobblemon/mod/common/api/data/DataRegistry;"
-            )
-    )
-    private <T extends DataRegistry> T injectBeforeSpeciesRegister(CobblemonDataProvider instance, T registry, boolean reloadable) {
-        if (registry instanceof CobblemonScripts && registry == CobblemonScripts.INSTANCE) {
-            instance.register(Conditions.INSTANCE, true);
-            instance.register(HeldItems.INSTANCE, true);
-            instance.register(TypeCharts.INSTANCE, true);
-            instance.register(Scripts.INSTANCE, true);
-        }
-        return instance.register(registry, reloadable);
+
+    @Inject(method = "registerDefaults", at = @At(value = "HEAD"))
+    private void register(CallbackInfo ci) {
+        CobblemonDataProvider self = (CobblemonDataProvider) (Object) this;
+
+        self.register(CustomTypeRegistry.INSTANCE, true);
+        self.register(Moves.INSTANCE, true);
+        self.register(Abilities.INSTANCE, true);
+        self.register(Conditions.INSTANCE, true);
+        self.register(HeldItems.INSTANCE, true);
+        self.register(TypeCharts.INSTANCE, true);
+        self.register(Scripts.INSTANCE, true);
     }
 }

@@ -38,6 +38,12 @@ public class LoadShowdown {
                 if (!Files.exists(showdown_mod_data.resolve("typechart.js"))) {
                     yoink("/assets/mega_showdown/showdown/mods/typechart.js", showdown_mod_data.resolve("typechart.js"));
                 }
+                if (!Files.exists(showdown_mod_data.resolve("moves.js"))) {
+                    yoink("/assets/mega_showdown/showdown/mods/moves.js", showdown_mod_data.resolve("moves.js"));
+                }
+                if (!Files.exists(showdown_mod_data.resolve("abilities.js"))) {
+                    yoink("/assets/mega_showdown/showdown/mods/abilities.js", showdown_mod_data.resolve("abilities.js"));
+                }
 
                 MegaShowdown.LOGGER.info("All files are ready!");
             } catch (IOException e) {
