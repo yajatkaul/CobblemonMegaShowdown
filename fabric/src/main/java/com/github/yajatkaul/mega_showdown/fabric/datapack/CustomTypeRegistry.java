@@ -1,4 +1,4 @@
-package com.github.yajatkaul.mega_showdown.datapack;
+package com.github.yajatkaul.mega_showdown.fabric.datapack;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.data.JsonDataRegistry;
@@ -8,22 +8,26 @@ import com.cobblemon.mod.common.api.types.ElementalTypes;
 import com.cobblemon.mod.common.api.types.tera.TeraType;
 import com.cobblemon.mod.common.api.types.tera.TeraTypes;
 import com.cobblemon.mod.common.api.types.tera.elemental.ElementalTypeTeraType;
+import com.cobblemon.mod.common.battles.runner.graal.GraalShowdownService;
 import com.cobblemon.mod.common.util.MiscUtilsKt;
+import com.cobblemon.mod.relocations.graalvm.polyglot.Value;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.mixin.TeraTypesAccessor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import kotlin.Unit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.packs.PackType;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class CustomTypeRegistry implements JsonDataRegistry<CustomTypeRegistry.CustomTypeData> {
-
     public static final CustomTypeRegistry INSTANCE = new CustomTypeRegistry();
 
     public final List<ElementalType> customTypes = new ArrayList<>();
@@ -93,6 +97,13 @@ public class CustomTypeRegistry implements JsonDataRegistry<CustomTypeRegistry.C
                         .getTypes()
                         .put(MiscUtilsKt.cobblemonResource(typeData.id), newTeraType);
 
+                Cobblemon.INSTANCE.getShowdownThread().queue(showdownService -> {
+                    if (showdownService instanceof GraalShowdownService service) {
+                        Value receiveNewTypeDataFn = service.context.getBindings("js").getMember("receiveNewTypeData");
+                        receiveNewTypeDataFn.execute(typeData.name, typeData.maxTypeMove, typeData.zTypeMove);
+                    }
+                    return Unit.INSTANCE;
+                });
 //                Cobblemon.LOGGER.info("Loaded custom type: {} ({})", identifier, typeData.name);
             } catch (Exception e) {
                 Cobblemon.LOGGER.error("Error loading custom type {}: {}", identifier, e.getMessage());
@@ -108,15 +119,19 @@ public class CustomTypeRegistry implements JsonDataRegistry<CustomTypeRegistry.C
         public String id;
         public int hue;
         public String text;
+        public String zTypeMove;
+        public String maxTypeMove;
 
         // Gson requires a no-arg constructor
         public CustomTypeData() {}
 
-        public CustomTypeData(String name, String id, int hue, String text) {
+        public CustomTypeData(String name, String id, int hue, String text, String zTypeMove, String maxTypeMove) {
             this.name = name;
             this.id = id;
             this.hue = hue;
             this.text = text;
+            this.zTypeMove = zTypeMove;
+            this.maxTypeMove = maxTypeMove;
         }
     }
 }

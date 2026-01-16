@@ -113,6 +113,11 @@ function receiveCustomGmaxMove(pokemonId, moveId) {
   battleActions.gmaxMap[pokemonId] = moveId;
 }
 
+function receiveNewTypeData(type, max, z) {
+    battleActions.MAX_MOVES[type] = max;
+    battleActions.Z_MOVES[type] = z;
+}
+
 function receiveConditionData(conditionId, conditionData) {
   conditions.Conditions[conditionId] = eval(`(${conditionData})`);
 }

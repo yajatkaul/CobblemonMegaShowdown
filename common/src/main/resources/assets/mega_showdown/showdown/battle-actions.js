@@ -24,6 +24,8 @@ var battle_actions_exports = {};
 __export(battle_actions_exports, {
   BattleActions: () => BattleActions,
   gmaxMap: () => gmaxMap,
+  MAX_MOVES: () => MAX_MOVES,
+  Z_MOVES: () => Z_MOVES
 });
 module.exports = __toCommonJS(battle_actions_exports);
 var import_dex = require("./dex");
@@ -78,49 +80,51 @@ const gmaxMap = {
   urshifu: "gmaxoneblow",
   urshifurapidstrike: "gmaxrapidflow",
 };
+const MAX_MOVES = {
+    Flying: "Max Airstream",
+    Dark: "Max Darkness",
+    Fire: "Max Flare",
+    Bug: "Max Flutterby",
+    Water: "Max Geyser",
+    Status: "Max Guard",
+    Ice: "Max Hailstorm",
+    Fighting: "Max Knuckle",
+    Electric: "Max Lightning",
+    Psychic: "Max Mindstorm",
+    Poison: "Max Ooze",
+    Grass: "Max Overgrowth",
+    Ghost: "Max Phantasm",
+    Ground: "Max Quake",
+    Rock: "Max Rockfall",
+    Fairy: "Max Starfall",
+    Steel: "Max Steelspike",
+    Normal: "Max Strike",
+    Dragon: "Max Wyrmwind",
+    Newt: "Twinkle Tackle"
+};
+const Z_MOVES = {
+    Poison: "Acid Downpour",
+    Fighting: "All-Out Pummeling",
+    Dark: "Black Hole Eclipse",
+    Grass: "Bloom Doom",
+    Normal: "Breakneck Blitz",
+    Rock: "Continental Crush",
+    Steel: "Corkscrew Crash",
+    Dragon: "Devastating Drake",
+    Electric: "Gigavolt Havoc",
+    Water: "Hydro Vortex",
+    Fire: "Inferno Overdrive",
+    Ghost: "Never-Ending Nightmare",
+    Bug: "Savage Spin-Out",
+    Psychic: "Shattered Psyche",
+    Ice: "Subzero Slammer",
+    Flying: "Supersonic Skystrike",
+    Ground: "Tectonic Rage",
+    Fairy: "Twinkle Tackle",
+    Newt: "Twinkle Tackle"
+};
 class BattleActions {
   constructor(battle) {
-    this.MAX_MOVES = {
-      Flying: "Max Airstream",
-      Dark: "Max Darkness",
-      Fire: "Max Flare",
-      Bug: "Max Flutterby",
-      Water: "Max Geyser",
-      Status: "Max Guard",
-      Ice: "Max Hailstorm",
-      Fighting: "Max Knuckle",
-      Electric: "Max Lightning",
-      Psychic: "Max Mindstorm",
-      Poison: "Max Ooze",
-      Grass: "Max Overgrowth",
-      Ghost: "Max Phantasm",
-      Ground: "Max Quake",
-      Rock: "Max Rockfall",
-      Fairy: "Max Starfall",
-      Steel: "Max Steelspike",
-      Normal: "Max Strike",
-      Dragon: "Max Wyrmwind",
-    };
-    this.Z_MOVES = {
-      Poison: "Acid Downpour",
-      Fighting: "All-Out Pummeling",
-      Dark: "Black Hole Eclipse",
-      Grass: "Bloom Doom",
-      Normal: "Breakneck Blitz",
-      Rock: "Continental Crush",
-      Steel: "Corkscrew Crash",
-      Dragon: "Devastating Drake",
-      Electric: "Gigavolt Havoc",
-      Water: "Hydro Vortex",
-      Fire: "Inferno Overdrive",
-      Ghost: "Never-Ending Nightmare",
-      Bug: "Savage Spin-Out",
-      Psychic: "Shattered Psyche",
-      Ice: "Subzero Slammer",
-      Flying: "Supersonic Skystrike",
-      Ground: "Tectonic Rage",
-      Fairy: "Twinkle Tackle",
-    };
     this.battle = battle;
     this.dex = battle.dex;
     if (this.dex.data.Scripts.actions)
@@ -1818,7 +1822,7 @@ class BattleActions {
         if (move.category === "Status") {
           return move.name;
         } else if (move.zMove?.basePower) {
-          return this.Z_MOVES[move.type];
+          return Z_MOVES[move.type];
         }
       }
     }
@@ -1838,7 +1842,7 @@ class BattleActions {
       zMove2.isZOrMaxPowered = true;
       return zMove2;
     }
-    const zMove = this.dex.getActiveMove(this.Z_MOVES[move.type]);
+    const zMove = this.dex.getActiveMove(Z_MOVES[move.type]);
     zMove.basePower = move.zMove.basePower;
     zMove.category = move.category;
     zMove.priority = move.priority;
@@ -1901,8 +1905,17 @@ class BattleActions {
       if (gMaxMove.exists && gMaxMove.type === move.type) return gMaxMove;
     }
     const maxMove = this.dex.moves.get(
-      this.MAX_MOVES[move.category === "Status" ? move.category : move.type]
+      MAX_MOVES[move.category === "Status" ? move.category : move.type]
     );
+    if (move.name == "Absorb") {
+        console.log("====")
+        console.log(move.name);
+        console.log(move.type);
+        console.log(maxMove);
+        console.log(JSON.stringify(MAX_MOVES));
+        console.log("====")
+    }
+
     if (maxMove.exists) return maxMove;
   }
   getActiveMaxMove(move, pokemon) {
@@ -1919,7 +1932,7 @@ class BattleActions {
     }
 
     let maxMove = this.dex.getActiveMove(
-      this.MAX_MOVES[move.category === "Status" ? move.category : move.type]
+      MAX_MOVES[move.category === "Status" ? move.category : move.type]
     );
     if (move.category !== "Status") {
       if (GigantamaxMove) {
@@ -2265,14 +2278,6 @@ class BattleActions {
       }
       stab = this.battle.runEvent("ModifySTAB", pokemon, target, move, stab);
 	  baseDamage = this.battle.modify(baseDamage, stab);
-	  //console.log(`===================================`);
-      //console.log(`[DEBUG] Pokémon Name: ${pokemon.baseSpecies?.name}`);
-	  //console.log(`[DEBUG] Pokémon Types: ${pokemon.types.join(", ")}`);
-      //console.log(`[DEBUG] Pokémon Tera Type: ${tera}`);
-      //console.log(`[DEBUG] Move Name: ${move}`);
-	  //console.log(`[DEBUG] Move Type: ${type}`);
-	  //console.log(`[STAB]Final STAB: ${stab}`);
-	  //console.log(`===================================`);
     }
     let typeMod = target.runEffectiveness(move);
     typeMod = this.battle.clampIntRange(typeMod, -6, 6);

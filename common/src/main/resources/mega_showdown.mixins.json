@@ -35,7 +35,6 @@
     "battle.ShowdownInterpreterMixin",
     "battle.ShowdownSpeciesMixin",
     "battle.StartInstructionMixin",
-    "client.ui.TypeIconMixin",
     "minecraft.ItemStackMixin",
     "packet.MovePartyPokemonToPCHandlerMixin"
   ],

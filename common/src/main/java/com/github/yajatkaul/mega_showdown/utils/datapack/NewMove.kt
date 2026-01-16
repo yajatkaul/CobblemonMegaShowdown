@@ -1,11 +1,9 @@
 package com.github.yajatkaul.mega_showdown.utils.datapack
 
 import com.cobblemon.mod.common.api.moves.MoveTemplate
-import com.cobblemon.mod.common.api.moves.animations.ActionEffects
 import com.cobblemon.mod.common.api.moves.categories.DamageCategories
 import com.cobblemon.mod.common.api.types.ElementalTypes
 import com.cobblemon.mod.common.battles.MoveTarget
-import com.cobblemon.mod.common.util.asIdentifierDefaultingNamespace
 import com.github.yajatkaul.mega_showdown.mixin.MovesAccessor
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject

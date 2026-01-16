@@ -1,7 +1,7 @@
 package com.github.yajatkaul.mega_showdown.fabric.mixin;
 
 import com.cobblemon.mod.common.data.CobblemonDataProvider;
-import com.github.yajatkaul.mega_showdown.datapack.CustomTypeRegistry;
+import com.github.yajatkaul.mega_showdown.fabric.datapack.CustomTypeRegistry;
 import com.github.yajatkaul.mega_showdown.fabric.datapack.showdown.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

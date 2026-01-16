@@ -1,10 +1,10 @@
-package com.github.yajatkaul.mega_showdown.mixin.client.ui;
+package com.github.yajatkaul.mega_showdown.fabric.mixin;
 
 import com.cobblemon.mod.common.api.gui.GuiUtilsKt;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.client.gui.TypeIcon;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
-import com.github.yajatkaul.mega_showdown.datapack.CustomTypeRegistry;
+import com.github.yajatkaul.mega_showdown.fabric.datapack.CustomTypeRegistry;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.Nullable;
@@ -34,7 +34,6 @@ public class TypeIconMixin {
     @Shadow @Final private float doubleCenteredOffset;
     @Shadow @Final private float opacity;
 
-    // Cache these per instance since type is @Final
     @Unique
     private ResourceLocation primaryTexture;
     @Unique
@@ -58,15 +57,14 @@ public class TypeIconMixin {
     private boolean secondaryIsCustom;
 
     @Unique
-    private boolean initialized = false;
+    private boolean mega_showdown$initialized = false;
 
     @Unique
-    private void initializeTextures() {
-        if (initialized) return;
+    private void mega_showdown$initializeTextures() {
+        if (mega_showdown$initialized) return;
 
         float diameter = small ? (TYPE_ICON_DIAMETER / 2f) : TYPE_ICON_DIAMETER;
 
-        // Initialize primary type
         primaryIsCustom = CustomTypeRegistry.INSTANCE.customTypes.contains(type);
         if (primaryIsCustom) {
             primaryTexture = ResourceLocation.fromNamespaceAndPath(
@@ -86,7 +84,6 @@ public class TypeIconMixin {
             primaryWidth = diameter * 18;
         }
 
-        // Initialize secondary type if exists
         if (secondaryType != null) {
             secondaryIsCustom = CustomTypeRegistry.INSTANCE.customTypes.contains(secondaryType);
             if (secondaryIsCustom) {
@@ -108,7 +105,7 @@ public class TypeIconMixin {
             }
         }
 
-        initialized = true;
+        mega_showdown$initialized = true;
     }
 
     /**
@@ -117,14 +114,13 @@ public class TypeIconMixin {
      */
     @Overwrite(remap = true)
     public final void render(GuiGraphics context) {
-        initializeTextures();
+        mega_showdown$initializeTextures();
 
         float diameter = small ? (TYPE_ICON_DIAMETER / 2f) : TYPE_ICON_DIAMETER;
         float offsetX = centeredX
                 ? (((diameter / 2f) * SCALE) + (secondaryType != null ? doubleCenteredOffset : 0f))
                 : 0f;
 
-        // Render secondary type if exists
         if (secondaryType != null) {
             GuiUtilsKt.blitk(
                     context.pose(),
@@ -147,7 +143,6 @@ public class TypeIconMixin {
             );
         }
 
-        // Render primary type
         GuiUtilsKt.blitk(
                 context.pose(),
                 small ? primarySmallTexture : primaryTexture,
