@@ -20,6 +20,7 @@ import java.util.Map;
 public class TeraGimmick implements JsonDataRegistry<TeraGimmick.TeraData> {
     public static final TeraGimmick INSTANCE = new TeraGimmick();
 
+    public final HashMap<String, String> aspectColorMap = new HashMap<>();
     public final HashMap<String, ShaderInstance> teraShaderMap = new HashMap<>();
     private final SimpleObservable<TeraGimmick> observable = new SimpleObservable<>();
 
@@ -73,6 +74,10 @@ public class TeraGimmick implements JsonDataRegistry<TeraGimmick.TeraData> {
                     teraShaderMap.put(
                             entry.getKey(),
                             getColorShaderMap().get(entry.getValue())
+                    );
+                    aspectColorMap.put(
+                            entry.getKey(),
+                            entry.getValue()
                     );
                 }
             } catch (Exception e) {
