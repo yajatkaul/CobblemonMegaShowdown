@@ -7,3 +7,4 @@
 - fixed liko's pendant
 - fixed shader color bug
 - fixed some advancements not triggering
+- you can right clicked deoxys meteor to change its form

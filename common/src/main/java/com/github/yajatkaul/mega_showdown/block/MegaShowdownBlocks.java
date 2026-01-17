@@ -15,6 +15,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
@@ -175,12 +176,13 @@ public class MegaShowdownBlocks {
     }
 
     private static RegistrySupplier<Block> registerDeoxysMeteorite(String name) {
-        RegistrySupplier<Block> blockSupplier = BLOCKS.register(name, () -> new Block(
+        RegistrySupplier<Block> blockSupplier = BLOCKS.register(name, () -> new PokemonSelectingBlock(
                 BlockBehaviour.Properties.of()
                         .strength(3f)
                         .mapColor(MapColor.COLOR_PURPLE)
                         .requiresCorrectToolForDrops()
-                        .sound(SoundType.STONE)
+                        .sound(SoundType.STONE),
+                ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, name)
         ));
 
         MegaShowdownItems.ITEMS.register(name,
