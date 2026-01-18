@@ -180,5 +180,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(MegaShowdownBlocks.ROTOM_OVEN.get().asItem())
                 .add(MegaShowdownBlocks.ROTOM_MOW.get().asItem())
                 .add(MegaShowdownBlocks.ROTOM_FRIDGE.get().asItem());
+
+        tag(MegaShowdownTags.Items.ROTOM_APPLIANCES)
+                .add(MegaShowdownBlocks.ROTOM_FAN.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_MOW.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_FRIDGE.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_WASHING_MACHINE.get().asItem())
+                .add(MegaShowdownBlocks.ROTOM_OVEN.get().asItem());
     }
 }
