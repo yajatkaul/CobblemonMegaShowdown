@@ -21,6 +21,7 @@ import com.github.yajatkaul.mega_showdown.item.custom.fusion.DuFusion;
 import com.github.yajatkaul.mega_showdown.item.custom.fusion.SoloFusion;
 import com.github.yajatkaul.mega_showdown.item.custom.gimmick.*;
 import com.github.yajatkaul.mega_showdown.item.custom.mega.MegaStone;
+import com.github.yajatkaul.mega_showdown.item.custom.tera.CustomTeraShard;
 import com.github.yajatkaul.mega_showdown.item.custom.tera.LikosPendant;
 import com.github.yajatkaul.mega_showdown.item.custom.tera.TeraShard;
 import com.github.yajatkaul.mega_showdown.item.custom.z.ElementalZCrystal;
@@ -145,6 +146,8 @@ public class MegaShowdownItems {
     public static final RegistrySupplier<Item> STEEL_TERA_SHARD = registerTeraShards("steel_tera_shard", TeraTypes.getSTEEL());
     public static final RegistrySupplier<Item> FAIRY_TERA_SHARD = registerTeraShards("fairy_tera_shard", TeraTypes.getFAIRY());
     public static final RegistrySupplier<Item> STELLAR_TERA_SHARD = registerTeraShards("stellar_tera_shard", TeraTypes.getSTELLAR());
+
+    public static final RegistrySupplier<Item> CUSTOM_TERA_SHARD = registerCustomTeraShards("custom_tera_shard");
 
     public static final RegistrySupplier<Item> SPARKLING_STONE_LIGHT = registerItem("sparkling_stone_light", () -> new ToolTipItem(new Item.Properties().arch$tab(MegaShowdownTabs.Z_TAB)));
     public static final RegistrySupplier<Item> SPARKLING_STONE_DARK = registerItem("sparkling_stone_dark", () -> new ToolTipItem(new Item.Properties().arch$tab(MegaShowdownTabs.Z_TAB)));
@@ -1028,6 +1031,10 @@ public class MegaShowdownItems {
 
     private static RegistrySupplier<Item> registerTeraShards(String name, TeraType teraType) {
         return ITEMS.register(name, () -> new TeraShard(new Item.Properties().arch$tab(MegaShowdownTabs.TERA_TAB), teraType));
+    }
+
+    private static RegistrySupplier<Item> registerCustomTeraShards(String name) {
+        return ITEMS.register(name, () -> new CustomTeraShard(new Item.Properties().arch$tab(MegaShowdownTabs.TERA_TAB)));
     }
 
     private static RegistrySupplier<Item> registerZElementalCrystals(String name, ElementalType type) {

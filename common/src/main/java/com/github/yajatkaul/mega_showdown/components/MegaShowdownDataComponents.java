@@ -1,5 +1,6 @@
 package com.github.yajatkaul.mega_showdown.components;
 
+import com.cobblemon.mod.common.api.types.tera.TeraType;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.mojang.serialization.Codec;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -17,6 +18,13 @@ public class MegaShowdownDataComponents {
             "pokemon_storage",
             () -> DataComponentType.<PokemonStorge>builder()
                     .persistent(PokemonStorge.CODEC)
+                    .build()
+    );
+
+    public static final Supplier<DataComponentType<TeraType>> TERA_TYPE = REGISTRAR.register(
+            "tera_type",
+            () -> DataComponentType.<TeraType>builder()
+                    .persistent(TeraType.getBY_IDENTIFIER_CODEC())
                     .build()
     );
 
