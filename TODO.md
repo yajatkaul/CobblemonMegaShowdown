@@ -3,7 +3,6 @@
 - fix shader names
 - work on dynamic battle gui
 - make rayquaza type shii datapackable
-- weather ground, kyogre
 
 # Future
 - Make custom weather datapackable

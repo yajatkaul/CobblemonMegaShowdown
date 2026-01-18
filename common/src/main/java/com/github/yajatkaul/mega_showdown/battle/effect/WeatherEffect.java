@@ -18,6 +18,8 @@ public class WeatherEffect extends AbstractFieldHandler {
             case "sunnyday" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "sundrop");
             case "sandstorm" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "weather_sand");
             case "snow" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "weather_snow");
+            case "desolateland" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "weather_desolateland");
+            case "primordialsea" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "weather_primordialsea");
             case null, default -> null;
         };
     }

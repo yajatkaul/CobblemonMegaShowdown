@@ -2,16 +2,16 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "mega_showdown:weather_sun",
+			"identifier": "mega_showdown:weather_desolateland",
 			"basic_render_parameters": {
 				"material": "particles_blend",
-				"texture": "mega_showdown:textures/particles/sun"
+				"texture": "textures/particles/sun"
 			}
 		},
 		"events": {
-			"sundrop": {
+			"desolatesundrop": {
 				"particle_effect": {
-					"effect": "mega_showdown:sundrop",
+					"effect": "mega_showdown:desolatesundrop",
 					"type": "emitter"
 				}
 			}
@@ -24,7 +24,7 @@
 				"active_time": 1
 			},
 			"minecraft:emitter_lifetime_events": {
-				"creation_event": "sundrop"
+				"creation_event": "desolatesundrop"
 			},
 			"minecraft:emitter_shape_point": {
 				"offset": [0, 10, 0]
@@ -48,7 +48,7 @@
 				}
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": [1, 1, 1, 0.16078]
+				"color": [0.97255, 0.57255, 0.16471, 0]
 			}
 		}
 	}
