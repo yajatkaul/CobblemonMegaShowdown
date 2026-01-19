@@ -1,14 +1,12 @@
 {
   "showdown_id": "diancite",
-  "pokemons": [
-    "Diancie"
-  ],
-  "aspect": {
-    "apply_aspects": [
-      "mega_evolution=mega"
-    ],
-    "revert_aspects": [
-      "mega_evolution=none"
-    ]
+  "pokemons": ["Diancie"],
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["mega_evolution=mega"]
+    },
+    "revert": {
+      "aspects": ["mega_evolution=none"]
+    }
   }
 }

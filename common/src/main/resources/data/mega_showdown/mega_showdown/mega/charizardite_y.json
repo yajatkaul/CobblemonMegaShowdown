@@ -1,14 +1,12 @@
 {
   "showdown_id": "charizarditey",
-  "pokemons": [
-    "Charizard"
-  ],
-  "aspect": {
-    "apply_aspects": [
-      "mega_evolution=mega_y"
-    ],
-    "revert_aspects": [
-      "mega_evolution=none"
-    ]
+  "pokemons": ["Charizard"],
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["mega_evolution=mega_y"]
+    },
+    "revert": {
+      "aspects": ["mega_evolution=none"]
+    }
   }
 }

@@ -1,14 +1,12 @@
 {
   "showdown_id": "mawilite",
-  "pokemons": [
-    "Mawile"
-  ],
-  "aspect": {
-    "apply_aspects": [
-      "mega_evolution=mega"
-    ],
-    "revert_aspects": [
-      "mega_evolution=none"
-    ]
+  "pokemons": ["Mawile"],
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["mega_evolution=mega"]
+    },
+    "revert": {
+      "aspects": ["mega_evolution=none"]
+    }
   }
 }

@@ -1,9 +1,13 @@
 {
   "pokemons": ["Arceus"],
   "showdown_form_change_id": "fairy",
-  "aspects": {
-    "apply_aspects": ["multitype=fairy"],
-    "revert_aspects": ["multitype=normal"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["multitype=fairy"]
+    },
+    "revert": {
+      "aspects": ["multitype=normal"]
+    }
   },
   "effect": "mega_showdown:arceus_fairy"
 }

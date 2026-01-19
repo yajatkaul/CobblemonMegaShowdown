@@ -1,9 +1,13 @@
 {
   "pokemons": ["Castform"],
   "showdown_form_change_id": "sunny",
-  "aspects": {
-    "apply_aspects": ["forecast_form=sunny"],
-    "revert_aspects": ["forecast_form=normal"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["forecast_form=sunny"]
+    },
+    "revert": {
+      "aspects": ["forecast_form=normal"]
+    }
   },
   "effect": "mega_showdown:end_rod"
 }

@@ -1,9 +1,13 @@
 {
   "pokemons": ["Greninja"],
   "showdown_form_change_id": "ash",
-  "aspects": {
-    "apply_aspects": ["battle_bond=ash"],
-    "revert_aspects": ["battle_bond=bond"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["battle_bond=ash"]
+    },
+    "revert": {
+      "aspects": ["battle_bond=bond"]
+    }
   },
   "effect": "mega_showdown:ash_greninja"
 }

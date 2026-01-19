@@ -1,9 +1,13 @@
 {
   "pokemons": ["Arceus"],
   "showdown_form_change_id": "dark",
-  "aspects": {
-    "apply_aspects": ["multitype=dark"],
-    "revert_aspects": ["multitype=normal"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["multitype=dark"]
+    },
+    "revert": {
+      "aspects": ["multitype=normal"]
+    }
   },
   "effect": "mega_showdown:arceus_dark"
 }

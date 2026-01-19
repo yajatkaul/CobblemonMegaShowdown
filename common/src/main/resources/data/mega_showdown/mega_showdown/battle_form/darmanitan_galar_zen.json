@@ -1,10 +1,14 @@
 {
   "pokemons": ["Darmanitan"],
   "showdown_form_change_id": "zen",
-  "aspects": {
-    "apply_aspects": ["blazing_mode=zen"],
-    "revert_aspects": ["blazing_mode=standard"],
-	"required_aspects_apply": [["galarian"]]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["blazing_mode=zen"],
+      "required_aspects": [["galarian"]]
+    },
+    "revert": {
+      "aspects": ["blazing_mode=standard"]
+    }
   },
   "effect": "mega_showdown:darmanitan_galar_zen"
 }

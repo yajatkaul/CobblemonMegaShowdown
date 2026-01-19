@@ -1,8 +1,10 @@
 {
   "pokemons": ["Minior"],
   "showdown_form_change_id": "minior",
-  "aspects": {
-    "apply_aspects": ["meteor_shield=core"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["meteor_shield=core"]
+    }
   },
   "effect": "mega_showdown:minior_effect"
 }

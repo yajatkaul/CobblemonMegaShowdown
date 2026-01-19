@@ -6,7 +6,7 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.components.MegaShowdownDataComponents;
 import com.github.yajatkaul.mega_showdown.components.PokemonStorge;
-import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectSetCodec;
+import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectConditions;
 import com.github.yajatkaul.mega_showdown.utils.PlayerUtils;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -35,14 +35,14 @@ public record SoloFusion(
         List<String> pokemons,
         List<String> mainPokemons,
         Optional<ResourceLocation> effect,
-        AspectSetCodec aspect_conditions
+        AspectConditions aspect_conditions
 ) {
     public static final Codec<SoloFusion> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             Codec.STRING.listOf().fieldOf("fusions").forGetter(SoloFusion::fusions),
             Codec.STRING.listOf().fieldOf("pokemons").forGetter(SoloFusion::pokemons),
             Codec.STRING.listOf().fieldOf("main_pokemons").forGetter(SoloFusion::mainPokemons),
             ResourceLocation.CODEC.optionalFieldOf("effect").forGetter(SoloFusion::effect),
-            AspectSetCodec.CODEC.fieldOf("aspect_conditions").forGetter(SoloFusion::aspect_conditions)
+            AspectConditions.CODEC.fieldOf("aspect_conditions").forGetter(SoloFusion::aspect_conditions)
     ).apply(instance, SoloFusion::new));
 
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
@@ -87,7 +87,7 @@ public record SoloFusion(
                 }
 
                 if (aspect_conditions.validate_revert(pokemon)) {
-                    Effect.getEffect(effect.get()).revertEffects(pokemon, aspect_conditions.revert_aspects(), null);
+                    Effect.getEffect(effect.get()).revertEffects(pokemon, aspect_conditions.aspectRevert().aspects(), null);
                 } else {
                     return InteractionResultHolder.pass(stack);
                 }
@@ -106,7 +106,7 @@ public record SoloFusion(
                 stack.set(DataComponents.CUSTOM_NAME, Component.translatable("item.mega_showdown." + namespace + ".inactive"));
             } else if (pokemonStored != null && isMain) {
                 if (aspect_conditions.validate_apply(pokemon)) {
-                    Effect.getEffect(effect.get()).revertEffects(pokemon, aspect_conditions.apply_aspects(), null);
+                    Effect.getEffect(effect.get()).revertEffects(pokemon, aspect_conditions.aspectApply().aspects(), null);
                 } else {
                     return InteractionResultHolder.pass(stack);
                 }

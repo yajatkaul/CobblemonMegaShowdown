@@ -111,14 +111,14 @@ public class CobbleEvents {
                     && battleFormChange.pokemons().contains(pokemon.getSpecies().getName())
                     && battleFormChange.aspects().validate_apply(pokemon)) {
                 Effect.getEffect(battleFormChange.effect()).applyEffectsBattle(pokemon,
-                        battleFormChange.aspects().apply_aspects(),
+                        battleFormChange.aspects().aspectApply().aspects(),
                         null,
                         battlePokemon
                 );
 
                 AspectUtils.appendRevertDataPokemon(
                         Effect.getEffect(battleFormChange.effect()),
-                        battleFormChange.aspects().revert_aspects(),
+                        battleFormChange.aspects().aspectRevert().aspects(),
                         pokemon,
                         "battle_end_revert"
                 );

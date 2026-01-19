@@ -2,7 +2,7 @@ package com.github.yajatkaul.mega_showdown.codec;
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectSetCodec;
+import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectConditions;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.resources.ResourceLocation;
@@ -16,7 +16,7 @@ import java.util.Optional;
 
 public record FormChangeToggleInteractItem(
         List<String> form_apply_order,
-        Optional<List<AspectSetCodec>> aspect_conditions,
+        Optional<List<AspectConditions>> aspect_conditions,
         List<List<String>> form_aspect_apply_order,
         List<String> pokemons,
         List<ResourceLocation> effects,
@@ -24,7 +24,7 @@ public record FormChangeToggleInteractItem(
 ) {
     public static final Codec<FormChangeToggleInteractItem> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             Codec.STRING.listOf().fieldOf("form_apply_order").forGetter(FormChangeToggleInteractItem::form_apply_order),
-            AspectSetCodec.CODEC.listOf().optionalFieldOf("aspect_conditions").forGetter(FormChangeToggleInteractItem::aspect_conditions),
+            AspectConditions.CODEC.listOf().optionalFieldOf("aspect_conditions").forGetter(FormChangeToggleInteractItem::aspect_conditions),
             Codec.STRING.listOf().listOf().fieldOf("form_aspect_apply_order").forGetter(FormChangeToggleInteractItem::form_aspect_apply_order),
             Codec.STRING.listOf().fieldOf("pokemons").forGetter(FormChangeToggleInteractItem::pokemons),
             ResourceLocation.CODEC.listOf().fieldOf("effects").forGetter(FormChangeToggleInteractItem::effects),

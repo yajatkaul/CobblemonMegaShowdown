@@ -1,8 +1,9 @@
 {
   "pokemons": ["Castform"],
   "showdown_form_change_id": "castform",
-  "aspects": {
-    "apply_aspects": ["forecast_form=normal"],
-    "revert_aspects": []
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["forecast_form=normal"]
+    }
   }
 }

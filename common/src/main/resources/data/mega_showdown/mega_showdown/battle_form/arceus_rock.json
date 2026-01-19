@@ -1,9 +1,13 @@
 {
   "pokemons": ["Arceus"],
   "showdown_form_change_id": "rock",
-  "aspects": {
-    "apply_aspects": ["multitype=rock"],
-    "revert_aspects": ["multitype=normal"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["multitype=rock"]
+    },
+    "revert": {
+      "aspects": ["multitype=normal"]
+    }
   },
   "effect": "mega_showdown:arceus_rock"
 }

@@ -1,9 +1,13 @@
 {
   "pokemons": ["Arceus"],
   "showdown_form_change_id": "bug",
-  "aspects": {
-    "apply_aspects": ["multitype=bug"],
-    "revert_aspects": ["multitype=normal"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["multitype=bug"]
+    },
+    "revert": {
+      "aspects": ["multitype=normal"]
+    }
   },
   "effect": "mega_showdown:arceus_bug"
 }

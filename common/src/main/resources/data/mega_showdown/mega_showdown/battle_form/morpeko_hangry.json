@@ -1,9 +1,13 @@
 {
   "pokemons": ["Morpeko"],
   "showdown_form_change_id": "hangry",
-  "aspects": {
-    "apply_aspects": ["hunger_mode=hangry"],
-    "revert_aspects": ["hunger_mode=full_belly"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["hunger_mode=hangry"]
+    },
+    "revert": {
+      "aspects": ["hunger_mode=full_belly"]
+    }
   },
   "effect": "mega_showdown:angry_effect"
 }

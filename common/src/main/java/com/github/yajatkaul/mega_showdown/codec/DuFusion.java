@@ -6,7 +6,7 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.components.MegaShowdownDataComponents;
 import com.github.yajatkaul.mega_showdown.components.PokemonStorge;
-import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectSetCodec;
+import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectConditions;
 import com.github.yajatkaul.mega_showdown.utils.PlayerUtils;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -34,11 +34,11 @@ public record DuFusion(
         List<String> fusions1,
         List<String> fusions2,
         List<String> pokemons1,
-        AspectSetCodec pokemon_1_aspect_conditions,
+        AspectConditions pokemon_1_aspect_conditions,
         List<String> pokemons2,
-        AspectSetCodec pokemon_2_aspect_conditions,
+        AspectConditions pokemon_2_aspect_conditions,
         List<String> mainPokemons,
-        AspectSetCodec pokemon_main_aspect_conditions,
+        AspectConditions pokemon_main_aspect_conditions,
         Optional<ResourceLocation> effect1,
         Optional<ResourceLocation> effect2
 ) {
@@ -46,11 +46,11 @@ public record DuFusion(
             Codec.STRING.listOf().fieldOf("fusions1").forGetter(DuFusion::fusions1),
             Codec.STRING.listOf().fieldOf("fusions2").forGetter(DuFusion::fusions2),
             Codec.STRING.listOf().fieldOf("pokemons1").forGetter(DuFusion::pokemons1),
-            AspectSetCodec.CODEC.fieldOf("pokemon_1_aspect_conditions").forGetter(DuFusion::pokemon_1_aspect_conditions),
+            AspectConditions.CODEC.fieldOf("pokemon_1_aspect_conditions").forGetter(DuFusion::pokemon_1_aspect_conditions),
             Codec.STRING.listOf().fieldOf("pokemons2").forGetter(DuFusion::pokemons2),
-            AspectSetCodec.CODEC.fieldOf("pokemon_2_aspect_conditions").forGetter(DuFusion::pokemon_1_aspect_conditions),
+            AspectConditions.CODEC.fieldOf("pokemon_2_aspect_conditions").forGetter(DuFusion::pokemon_1_aspect_conditions),
             Codec.STRING.listOf().fieldOf("main_pokemons").forGetter(DuFusion::mainPokemons),
-            AspectSetCodec.CODEC.fieldOf("pokemon_main_aspect_conditions").forGetter(DuFusion::pokemon_1_aspect_conditions),
+            AspectConditions.CODEC.fieldOf("pokemon_main_aspect_conditions").forGetter(DuFusion::pokemon_1_aspect_conditions),
             ResourceLocation.CODEC.optionalFieldOf("effect_for_fusion1").forGetter(DuFusion::effect1),
             ResourceLocation.CODEC.optionalFieldOf("effect_for_fusion2").forGetter(DuFusion::effect2)
     ).apply(instance, DuFusion::new));
@@ -101,9 +101,9 @@ public record DuFusion(
 
                 if (pokemons1.contains(pokemonInside.getSpecies().getName()) &&
                         pokemon_1_aspect_conditions.validate_revert(pokemon)) {
-                    Effect.getEffect(effect1.get()).revertEffects(pokemon, pokemon_1_aspect_conditions.revert_aspects(), null);
+                    Effect.getEffect(effect1.get()).revertEffects(pokemon, pokemon_1_aspect_conditions.aspectRevert().aspects(), null);
                 } else if (pokemon_2_aspect_conditions.validate_revert(pokemon)) {
-                    Effect.getEffect(effect2.get()).revertEffects(pokemon, pokemon_2_aspect_conditions.revert_aspects(), null);
+                    Effect.getEffect(effect2.get()).revertEffects(pokemon, pokemon_2_aspect_conditions.aspectRevert().aspects(), null);
                 } else {
                     return InteractionResultHolder.pass(stack);
                 }
@@ -124,9 +124,9 @@ public record DuFusion(
 
                 if (pokemons1.contains(pokemonStored.getSpecies().getName()) &&
                         pokemon_1_aspect_conditions.validate_apply(pokemon)) {
-                    Effect.getEffect(effect1.get()).applyEffects(pokemon, pokemon_1_aspect_conditions.apply_aspects(), null);
+                    Effect.getEffect(effect1.get()).applyEffects(pokemon, pokemon_1_aspect_conditions.aspectApply().aspects(), null);
                 } else if (pokemon_2_aspect_conditions.validate_apply(pokemon)) {
-                    Effect.getEffect(effect1.get()).applyEffects(pokemon, pokemon_2_aspect_conditions.apply_aspects(), null);
+                    Effect.getEffect(effect1.get()).applyEffects(pokemon, pokemon_2_aspect_conditions.aspectApply().aspects(), null);
                 } else {
                     return InteractionResultHolder.pass(stack);
                 }

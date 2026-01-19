@@ -2,7 +2,7 @@ package com.github.yajatkaul.mega_showdown.codec;
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectSetCodec;
+import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectConditions;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.resources.ResourceLocation;
@@ -15,13 +15,13 @@ import java.util.List;
 import java.util.Optional;
 
 public record FormChangeInteractItem(
-        AspectSetCodec aspect_conditions,
+        AspectConditions aspect_conditions,
         List<String> pokemons,
         Optional<ResourceLocation> effect,
         int consume
 ) {
     public static final Codec<FormChangeInteractItem> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            AspectSetCodec.CODEC.fieldOf("aspect_conditions").forGetter(FormChangeInteractItem::aspect_conditions),
+            AspectConditions.CODEC.fieldOf("aspect_conditions").forGetter(FormChangeInteractItem::aspect_conditions),
             Codec.STRING.listOf().fieldOf("pokemons").forGetter(FormChangeInteractItem::pokemons),
             ResourceLocation.CODEC.optionalFieldOf("effect").forGetter(FormChangeInteractItem::effect),
             Codec.INT.optionalFieldOf("consume", 0).forGetter(FormChangeInteractItem::consume)
@@ -44,11 +44,11 @@ public record FormChangeInteractItem(
             }
 
             if (aspect_conditions.validate_apply(pokemon)) {
-                Effect.getEffect(effect.get()).applyEffects(pokemon, aspect_conditions.apply_aspects(), null);
+                Effect.getEffect(effect.get()).applyEffects(pokemon, aspect_conditions.aspectApply().aspects(), null);
                 stack.consume(consume, livingEntity);
                 return InteractionResult.SUCCESS;
             } else if (aspect_conditions.validate_revert(pokemon)) {
-                Effect.getEffect(effect.get()).revertEffects(pokemon, aspect_conditions.revert_aspects(), null);
+                Effect.getEffect(effect.get()).revertEffects(pokemon, aspect_conditions.aspectRevert().aspects(), null);
                 stack.consume(consume, livingEntity);
                 return InteractionResult.SUCCESS;
             }

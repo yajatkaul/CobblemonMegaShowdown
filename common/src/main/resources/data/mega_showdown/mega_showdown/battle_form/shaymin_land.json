@@ -1,8 +1,10 @@
 {
   "pokemons": ["Shaymin"],
   "showdown_form_change_id": "shaymin",
-  "aspects": {
-    "apply_aspects": ["gracidea_forme=land"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["gracidea_forme=land"]
+    }
   },
   "effect": "mega_showdown:shaymin_effect"
 }

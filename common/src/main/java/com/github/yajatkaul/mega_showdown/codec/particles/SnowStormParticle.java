@@ -71,7 +71,7 @@ public record SnowStormParticle(
                 Effect.empty(),
                 aspects,
                 context.getPokemon(),
-                "apply_aspects"
+                "aspects"
         );
 
         Optional<String> particle = isApply ? particle_apply : particle_revert;
@@ -129,7 +129,7 @@ public record SnowStormParticle(
         context.setNoAi(false);
 
         pokemonPersistentData.remove("form_changing");
-        pokemonPersistentData.remove("apply_aspects");
+        pokemonPersistentData.remove("aspects");
     }
 
     private void playSound(PokemonEntity context, boolean isApply) {

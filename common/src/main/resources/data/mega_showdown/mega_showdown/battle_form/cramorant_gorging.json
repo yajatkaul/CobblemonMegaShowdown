@@ -1,9 +1,13 @@
 {
   "pokemons": ["Cramorant"],
   "showdown_form_change_id": "gorging",
-  "aspects": {
-    "apply_aspects": ["missile_form=gorging"],
-    "revert_aspects": ["missile_form=none"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["missile_form=gorging"]
+    },
+    "revert": {
+      "aspects": ["missile_form=none"]
+    }
   },
   "effect": "mega_showdown:end_rod"
 }

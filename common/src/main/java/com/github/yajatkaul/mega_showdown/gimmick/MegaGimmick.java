@@ -9,7 +9,7 @@ import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.advancement.AdvancementHelper;
 import com.github.yajatkaul.mega_showdown.codec.Effect;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
-import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectSetCodec;
+import com.github.yajatkaul.mega_showdown.gimmick.codec.AspectConditions;
 import com.github.yajatkaul.mega_showdown.utils.AspectUtils;
 import com.github.yajatkaul.mega_showdown.utils.RegistryLocator;
 import com.mojang.serialization.Codec;
@@ -22,12 +22,12 @@ import java.util.List;
 public record MegaGimmick(
         String showdown_id,
         List<String> pokemons,
-        AspectSetCodec aspect_conditions
+        AspectConditions aspect_conditions
 ) {
     public static final Codec<MegaGimmick> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             Codec.STRING.fieldOf("showdown_id").forGetter(MegaGimmick::showdown_id),
             Codec.list(Codec.STRING).fieldOf("pokemons").forGetter(MegaGimmick::pokemons),
-            AspectSetCodec.CODEC.fieldOf("aspect").forGetter(MegaGimmick::aspect_conditions)
+            AspectConditions.CODEC.fieldOf("aspect_conditions").forGetter(MegaGimmick::aspect_conditions)
     ).apply(instance, MegaGimmick::new));
     public static final String IS_MEGA_TAG = "is_mega";
 
@@ -73,11 +73,11 @@ public record MegaGimmick(
                         "battle_end_revert"
                 );
             } else {
-                Effect.getEffect("mega_showdown:mega_evolution").applyEffectsBattle(pokemon, megaGimmick.aspect_conditions.apply_aspects(), null, battlePokemon);
+                Effect.getEffect("mega_showdown:mega_evolution").applyEffectsBattle(pokemon, megaGimmick.aspect_conditions.aspectApply().aspects(), null, battlePokemon);
 
                 AspectUtils.appendRevertDataPokemon(
                         Effect.getEffect("mega_showdown:mega_evolution"),
-                        megaGimmick.aspect_conditions.revert_aspects(),
+                        megaGimmick.aspect_conditions.aspectRevert().aspects(),
                         pokemon,
                         "battle_end_revert"
                 );
@@ -104,7 +104,7 @@ public record MegaGimmick(
         if (pokemon.getSpecies().getName().equals("Rayquaza")) {
             Effect.getEffect("mega_showdown:mega_evolution").applyEffects(pokemon, List.of("mega_evolution=mega"), null);
         } else if (megaGimmick != null) {
-            Effect.getEffect("mega_showdown:mega_evolution").applyEffects(pokemon, megaGimmick.aspect_conditions.apply_aspects(), null);
+            Effect.getEffect("mega_showdown:mega_evolution").applyEffects(pokemon, megaGimmick.aspect_conditions.aspectApply().aspects(), null);
         }
         pokemon.getPersistentData().putBoolean(IS_MEGA_TAG, true);
         pokemon.setTradeable(false);

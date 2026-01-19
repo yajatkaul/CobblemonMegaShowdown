@@ -25,7 +25,7 @@ public record Effect(
     public static final Codec<Effect> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             MinecraftParticle.CODEC.optionalFieldOf("minecraft").forGetter(Effect::minecraft),
             SnowStormParticle.CODEC.optionalFieldOf("snowstorm").forGetter(Effect::snowStorm),
-            Codec.FLOAT.optionalFieldOf("battle_pause").forGetter(Effect::battle_pause),
+            Codec.FLOAT.optionalFieldOf("battle_pause_apply").forGetter(Effect::battle_pause),
             Codec.FLOAT.optionalFieldOf("battle_pause_revert").forGetter(Effect::battle_pause_revert)
     ).apply(instance, Effect::new));
 

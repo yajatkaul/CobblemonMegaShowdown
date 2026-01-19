@@ -1,10 +1,14 @@
 {
   "pokemons": ["Zygarde"],
   "showdown_form_change_id": "complete",
-  "aspects": {
-    "apply_aspects": ["percent_cells=complete"],
-    "revert_aspects": ["percent_cells=10"],
-    "required_aspects_apply": [["10-percent"]]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["percent_cells=complete"],
+      "required_aspects": [["10-percent"]]
+    },
+    "revert": {
+      "aspects": ["percent_cells=10"]
+    }
   },
   "effect": "mega_showdown:zygarde_power_construct"
 }

@@ -1,9 +1,13 @@
 {
   "pokemons": ["Palafin"],
   "showdown_form_change_id": "hero",
-  "aspects": {
-    "apply_aspects": ["dolphin_form=hero"],
-    "revert_aspects": ["dolphin_form=zero"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["dolphin_form=hero"]
+    },
+    "revert": {
+      "aspects": ["dolphin_form=zero"]
+    }
   },
   "effect": "mega_showdown:palafin_effect"
 }

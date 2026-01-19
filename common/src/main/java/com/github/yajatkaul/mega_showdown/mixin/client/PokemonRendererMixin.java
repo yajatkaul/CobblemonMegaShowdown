@@ -69,7 +69,6 @@ public class PokemonRendererMixin {
         Optional<String> aspect = pokemon.getAspects().stream()
                 .filter(a -> a.startsWith("msd:tera_")).findFirst();
 
-
         boolean mega_showdown$teraCrystalPlayed = ((PokemonEntityDuck) entity).mega_showdown$isTeraCrystalPlayed();
         boolean mega_showdown$teraCrystalPass = ((PokemonEntityDuck) entity).mega_showdown$isTeraCrystalPass();
         if (tera_play && (!mega_showdown$teraCrystalPlayed || mega_showdown$teraCrystalPass)) {

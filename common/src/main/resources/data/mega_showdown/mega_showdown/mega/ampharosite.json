@@ -1,14 +1,12 @@
 {
   "showdown_id": "ampharosite",
-  "pokemons": [
-    "Ampharos"
-  ],
-  "aspect": {
-    "apply_aspects": [
-      "mega_evolution=mega"
-    ],
-    "revert_aspects": [
-      "mega_evolution=none"
-    ]
+  "pokemons": ["Ampharos"],
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["mega_evolution=mega"]
+    },
+    "revert": {
+      "aspects": ["mega_evolution=none"]
+    }
   }
 }

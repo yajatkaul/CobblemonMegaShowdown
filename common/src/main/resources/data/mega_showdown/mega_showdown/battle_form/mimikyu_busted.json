@@ -1,9 +1,13 @@
 {
   "pokemons": ["Mimikyu"],
   "showdown_form_change_id": "busted",
-  "aspects": {
-    "apply_aspects": ["disguise_form=busted"],
-    "revert_aspects": ["disguise_form=disguised"]
+  "aspect_conditions": {
+    "apply": {
+      "aspects": ["disguise_form=busted"]
+    },
+    "revert": {
+      "aspects": ["disguise_form=disguised"]
+    }
   },
   "effect": "mega_showdown:end_rod"
 }

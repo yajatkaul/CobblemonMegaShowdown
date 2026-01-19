@@ -134,17 +134,17 @@ public class AspectUtils {
             pokemon.getPersistentData().remove("battle_end_revert");
         }
 
-        if (pokemon.getPersistentData().contains("apply_aspects")) {
+        if (pokemon.getPersistentData().contains("aspects")) {
             List<EffectPair> aspects = AspectUtils.getRevertDataPokemon(
                     pokemon,
-                    "apply_aspects"
+                    "aspects"
             );
 
             for (EffectPair effectPair : aspects) {
                 effectPair.effect.revertEffects(pokemon, effectPair.aspects, null);
             }
 
-            pokemon.getPersistentData().remove("apply_aspects");
+            pokemon.getPersistentData().remove("aspects");
         }
 
         if (pokemon.getPersistentData().contains("revert_aspects")) {
