@@ -14,6 +14,7 @@ public record Conditions(
         Aspects aspect,
         Abilities ability,
         Moves moves,
+        Friendship friendship,
         List<String> aspects
 ) {
     public static final Codec<Conditions> CODEC = RecordCodecBuilder.create(instance -> instance.group(
@@ -21,6 +22,7 @@ public record Conditions(
             Aspects.CODEC.optionalFieldOf("aspect", Aspects.DEFAULT()).forGetter(Conditions::aspect),
             Abilities.CODEC.optionalFieldOf("ability", Abilities.DEFAULT()).forGetter(Conditions::ability),
             Moves.CODEC.optionalFieldOf("move", Moves.DEFAULT()).forGetter(Conditions::moves),
+            Friendship.CODEC.optionalFieldOf("friendship", Friendship.DEFAULT()).forGetter(Conditions::friendship),
             Codec.list(Codec.STRING).optionalFieldOf("aspects", List.of()).forGetter(Conditions::aspects)
     ).apply(instance, Conditions::new));
 
@@ -43,6 +45,27 @@ public record Conditions(
             return new Forms(
                     List.of(),
                     List.of()
+            );
+        }
+    }
+
+    public record Friendship(
+            Integer min_friendship,
+            Integer max_friendship
+    ) {
+        public static final Codec<Friendship> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                Codec.INT.optionalFieldOf("min_friendship", 0).forGetter(Friendship::min_friendship),
+                Codec.INT.optionalFieldOf("max_friendship", 255).forGetter(Friendship::max_friendship)
+        ).apply(instance, Friendship::new));
+
+        public boolean validate(Pokemon pokemon) {
+            return pokemon.getFriendship() >= min_friendship && pokemon.getFriendship() <= max_friendship;
+        }
+
+        public static Friendship DEFAULT() {
+            return new Friendship(
+                    0,
+                    255
             );
         }
     }
@@ -142,6 +165,7 @@ public record Conditions(
                 Aspects.DEFAULT(),
                 Abilities.DEFAULT(),
                 Moves.DEFAULT(),
+                Friendship.DEFAULT(),
                 List.of()
         );
     }
