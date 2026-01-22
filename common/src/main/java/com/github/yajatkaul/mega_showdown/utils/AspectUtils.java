@@ -197,23 +197,25 @@ public class AspectUtils {
         Pokemon pokemon = battlePokemon.getEntity().getPokemon();
         PokemonBattle battle = battlePokemon.getActor().getBattle();
 
-        if (battlePokemon.actor.getType().equals(ActorType.PLAYER)) {
-            battle.sendUpdate(new AbilityUpdatePacket(battlePokemon::getEffectedPokemon, pokemon.getAbility().getTemplate()));
+        if (battlePokemon.getActor().getType() == ActorType.PLAYER) {
+            battle.sendUpdate(new AbilityUpdatePacket(
+                    battlePokemon::getEffectedPokemon,
+                    pokemon.getAbility().getTemplate()
+            ));
+
             battle.sendUpdate(new BattleUpdateTeamPokemonPacket(pokemon));
         }
 
-        for (ActiveBattlePokemon activeBattlePokemon : battle.getActivePokemon()) {
-            if (!battlePokemon.actor.getType().equals(ActorType.PLAYER)) {
-                continue;
-            }
-            if (activeBattlePokemon.getBattlePokemon() != null &&
-                    activeBattlePokemon.getBattlePokemon().getEffectedPokemon().getOwnerPlayer() == battlePokemon.getEffectedPokemon().getOwnerPlayer()
-                    && activeBattlePokemon.getBattlePokemon() == battlePokemon) {
-                battle.sendSidedUpdate(activeBattlePokemon.getActor(),
-                        new BattleTransformPokemonPacket(activeBattlePokemon.getPNX(), battlePokemon, true),
-                        new BattleTransformPokemonPacket(activeBattlePokemon.getPNX(), battlePokemon, false),
-                        false);
-            }
+        for (ActiveBattlePokemon active : battle.getActivePokemon()) {
+            if (active.getBattlePokemon() == null) continue;
+            if (active.getBattlePokemon() != battlePokemon) continue;
+
+            battle.sendSidedUpdate(
+                    active.getActor(),
+                    new BattleTransformPokemonPacket(active.getPNX(), battlePokemon, true),
+                    new BattleTransformPokemonPacket(active.getPNX(), battlePokemon, false),
+                    false
+            );
         }
     }
 
