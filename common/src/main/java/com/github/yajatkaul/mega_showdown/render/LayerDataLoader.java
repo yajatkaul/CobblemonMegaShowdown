@@ -65,7 +65,7 @@ public class LayerDataLoader implements ResourceManagerReloadListener {
                 LAYER_REGISTRY.putIfAbsent(codec.pokemon(), new SizerRegStruct());
                 SizerRegStruct sizerRegStruct = LAYER_REGISTRY.get(codec.pokemon());
 
-                for (String form: codec.size_config().keySet()) {
+                for (String form : codec.size_config().keySet()) {
                     for (Map.Entry<String, LayerCodec.Settings> aspectSetting : codec.size_config().get(form).entrySet()) {
                         sizerRegStruct.addForm(form, aspectSetting.getKey(), aspectSetting.getValue());
                     }

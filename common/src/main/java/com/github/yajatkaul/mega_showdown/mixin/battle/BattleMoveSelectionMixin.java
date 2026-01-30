@@ -6,8 +6,8 @@ import com.cobblemon.mod.common.client.gui.battle.BattleGUI;
 import com.cobblemon.mod.common.client.gui.battle.subscreen.BattleBackButton;
 import com.cobblemon.mod.common.client.gui.battle.subscreen.BattleGimmickButton;
 import com.cobblemon.mod.common.client.gui.battle.subscreen.BattleMoveSelection;
+import com.cobblemon.mod.common.client.gui.battle.subscreen.BattleTargetSelection;
 import com.github.yajatkaul.mega_showdown.cobblemon.battle.button.BattleShiftButton;
-import com.github.yajatkaul.mega_showdown.cobblemon.battle.button.BattleTargetSelection;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -20,7 +20,6 @@ import java.util.List;
 
 @Mixin(value = BattleMoveSelection.class)
 public class BattleMoveSelectionMixin {
-
     @Final
     @Shadow(remap = false)
     private BattleBackButton backButton;

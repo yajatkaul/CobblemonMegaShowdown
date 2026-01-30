@@ -57,7 +57,7 @@ public class TeraHatsLayer extends LayerEntity {
         context.put(RenderContext.Companion.getSPECIES(), poserId);
         context.put(RenderContext.Companion.getPOSABLE_STATE(), state);
 
-        LayerCodec.Settings settings = LayerDataLoader.getSettings(pokemon,aspect);
+        LayerCodec.Settings settings = LayerDataLoader.getSettings(pokemon, aspect);
 
         poseStack.pushPose();
 

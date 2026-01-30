@@ -20,8 +20,8 @@ public record LayerCodec(
             List<Float> translate
     ) {
         public static final Codec<Settings> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                Codec.list(Codec.FLOAT).optionalFieldOf("scale", List.of(1f,1f,1f)).forGetter(Settings::scale),
-                Codec.list(Codec.FLOAT).optionalFieldOf("translate", List.of(0f,0f,0f)).forGetter(Settings::translate)
+                Codec.list(Codec.FLOAT).optionalFieldOf("scale", List.of(1f, 1f, 1f)).forGetter(Settings::scale),
+                Codec.list(Codec.FLOAT).optionalFieldOf("translate", List.of(0f, 0f, 0f)).forGetter(Settings::translate)
         ).apply(instance, Settings::new));
     }
 }

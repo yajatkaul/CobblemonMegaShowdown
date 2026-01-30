@@ -10,7 +10,6 @@ import com.cobblemon.mod.common.client.render.models.blockbench.repository.Varyi
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.codec.sizer.LayerCodec;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import com.github.yajatkaul.mega_showdown.render.LayerDataLoader;
@@ -170,7 +169,7 @@ public class PokemonRendererMixin {
         mega_showdown$context.put(RenderContext.Companion.getSPECIES(), mega_showdown$teraCrystalPoserId);
         mega_showdown$context.put(RenderContext.Companion.getPOSABLE_STATE(), mega_showdown$teraCrystalState);
 
-        LayerCodec.Settings settings = LayerDataLoader.getSettings(pokemon,"msd:tera_crystal");
+        LayerCodec.Settings settings = LayerDataLoader.getSettings(pokemon, "msd:tera_crystal");
 
         poseStack.pushPose();
 
