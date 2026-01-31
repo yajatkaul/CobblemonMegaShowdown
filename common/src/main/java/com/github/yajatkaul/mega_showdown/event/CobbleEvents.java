@@ -384,10 +384,6 @@ public class CobbleEvents {
     }
 
     private static void heldItemChange(HeldItemEvent.Pre event) {
-        if (event.getPokemon().getPersistentData().getBoolean("form_changing")) {
-            event.cancel();
-            return;
-        }
         Pokemon pokemon = event.getPokemon();
 
         ItemStack itemReceiving = event.getReceiving();

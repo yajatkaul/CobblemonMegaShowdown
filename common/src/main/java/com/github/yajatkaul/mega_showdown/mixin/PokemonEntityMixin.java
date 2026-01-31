@@ -10,6 +10,7 @@ import com.github.yajatkaul.mega_showdown.render.layerEntities.states.TeraCrysta
 import com.github.yajatkaul.mega_showdown.utils.duck.cobblemon.interfaces.PokemonEntityDuck;
 import dev.architectury.networking.NetworkManager;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -54,6 +55,34 @@ public abstract class PokemonEntityMixin implements PokemonEntityDuck {
             boolean canPokemonUltra = UltraGimmick.isUltra(pokemon) || UltraGimmick.canUltraBurst(pokemon);
 
             NetworkManager.sendToPlayer(player, new InteractionWheelPacket(shouldPokemonMega, shouldPokemonUltra, canPokemonMega, canPokemonUltra));
+        }
+    }
+
+    @Inject(
+            method = "tryMountingShoulder",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void injectShoulder(ServerPlayer player, CallbackInfoReturnable<Boolean> cir) {
+        PokemonEntity self = (PokemonEntity) (Object) this;
+        Pokemon pokemon = self.getPokemon();
+
+        if (pokemon.getPersistentData().getBoolean("form_changing")) {
+            cir.cancel();
+        }
+    }
+
+    @Inject(
+            method = "offerItem",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void injectShoulder(Player player, ItemStack stack, boolean isCosmetic, CallbackInfoReturnable<Boolean> cir) {
+        PokemonEntity self = (PokemonEntity) (Object) this;
+        Pokemon pokemon = self.getPokemon();
+
+        if (pokemon.getPersistentData().getBoolean("form_changing")) {
+            cir.cancel();
         }
     }
 
