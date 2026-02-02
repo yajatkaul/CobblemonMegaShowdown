@@ -77,7 +77,7 @@ public class Abilities implements DataRegistry {
     @Override
     public void reload(@NotNull ResourceManager resourceManager) {
         abilityScripts.clear();
-        resourceManager.listResources("mega_showdown/showdown/ability", path -> path.getPath().endsWith(".js")).forEach((id, resource) -> {
+        resourceManager.listResources("mega_showdown/showdown/abilities", path -> path.getPath().endsWith(".js")).forEach((id, resource) -> {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource.open(), StandardCharsets.UTF_8))) {
                 String js = reader.lines().collect(Collectors.joining("\n"));
                 String abilityId = new File(id.getPath()).getName().replace(".js", "");

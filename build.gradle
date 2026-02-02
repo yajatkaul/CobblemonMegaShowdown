@@ -75,7 +75,7 @@ subprojects {
 publishMods {
     changelog = file("CHANGELOG.md").text
     type = STABLE
-    dryRun = env.MODRINTH_TOKEN.value == null || env.CURSEFORGE_TOKEN.value == null
+    dryRun = env.MODRINTH_TOKEN.value == null || env.CURSEFORGE_TOKEN.value == null || env.WEBHOOK.value == null
 
     def cfOptions = curseforgeOptions {
         accessToken = env.CURSEFORGE_TOKEN.value
@@ -83,6 +83,7 @@ publishMods {
         clientRequired = true
         serverRequired = true
         minecraftVersions.add("1.21.1")
+        projectSlug = "cobblemon-mega-showdown"
     }
 
     def mrOptions = modrinthOptions {
