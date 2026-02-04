@@ -1,7 +1,7 @@
 package com.github.yajatkaul.mega_showdown.mixin.client;
 
-import com.github.yajatkaul.mega_showdown.codec.item.ItemRenderingCodec;
-import com.github.yajatkaul.mega_showdown.codec.item.PerspectivesCodec;
+import com.github.yajatkaul.mega_showdown.api.codec.item.ItemRenderingCodec;
+import com.github.yajatkaul.mega_showdown.api.codec.item.PerspectivesCodec;
 import com.github.yajatkaul.mega_showdown.render.ItemRenderingLoader;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.client.renderer.ItemModelShaper;

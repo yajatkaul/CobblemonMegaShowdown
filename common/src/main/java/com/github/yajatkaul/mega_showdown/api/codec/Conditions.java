@@ -1,4 +1,4 @@
-package com.github.yajatkaul.mega_showdown.codec;
+package com.github.yajatkaul.mega_showdown.api.codec;
 
 import com.cobblemon.mod.common.api.moves.Move;
 import com.cobblemon.mod.common.pokemon.Pokemon;

@@ -1,7 +1,7 @@
 package com.github.yajatkaul.mega_showdown.item.custom.form_change;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.codec.Effect;
+import com.github.yajatkaul.mega_showdown.api.codec.Effect;
 import com.github.yajatkaul.mega_showdown.item.custom.PokemonSelectingItem;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResultHolder;

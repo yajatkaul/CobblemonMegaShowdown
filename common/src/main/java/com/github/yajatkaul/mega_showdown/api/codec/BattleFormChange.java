@@ -1,4 +1,4 @@
-package com.github.yajatkaul.mega_showdown.codec;
+package com.github.yajatkaul.mega_showdown.api.codec;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

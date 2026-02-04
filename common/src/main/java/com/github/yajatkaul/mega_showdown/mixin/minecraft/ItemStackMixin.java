@@ -1,10 +1,10 @@
 package com.github.yajatkaul.mega_showdown.mixin.minecraft;
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.github.yajatkaul.mega_showdown.codec.DuFusion;
-import com.github.yajatkaul.mega_showdown.codec.FormChangeInteractItem;
-import com.github.yajatkaul.mega_showdown.codec.FormChangeToggleInteractItem;
-import com.github.yajatkaul.mega_showdown.codec.SoloFusion;
+import com.github.yajatkaul.mega_showdown.api.codec.DuFusion;
+import com.github.yajatkaul.mega_showdown.api.codec.FormChangeInteractItem;
+import com.github.yajatkaul.mega_showdown.api.codec.FormChangeToggleInteractItem;
+import com.github.yajatkaul.mega_showdown.api.codec.SoloFusion;
 import com.github.yajatkaul.mega_showdown.utils.RegistryLocator;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

@@ -2,7 +2,7 @@ package com.github.yajatkaul.mega_showdown.render;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
-import com.github.yajatkaul.mega_showdown.codec.sizer.LayerCodec;
+import com.github.yajatkaul.mega_showdown.api.codec.sizer.LayerCodec;
 import com.google.gson.JsonParser;
 import com.mojang.serialization.JsonOps;
 import net.minecraft.client.Minecraft;

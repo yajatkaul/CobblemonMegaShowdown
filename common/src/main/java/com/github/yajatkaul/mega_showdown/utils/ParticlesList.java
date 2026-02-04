@@ -1,8 +1,8 @@
 package com.github.yajatkaul.mega_showdown.utils;
 
-import com.github.yajatkaul.mega_showdown.codec.particles.AnimationData;
-import com.github.yajatkaul.mega_showdown.codec.particles.MinecraftParticle;
-import com.github.yajatkaul.mega_showdown.codec.particles.SoundCodec;
+import com.github.yajatkaul.mega_showdown.api.codec.particles.AnimationData;
+import com.github.yajatkaul.mega_showdown.api.codec.particles.MinecraftParticle;
+import com.github.yajatkaul.mega_showdown.api.codec.particles.SoundCodec;
 
 import java.util.List;
 import java.util.Optional;

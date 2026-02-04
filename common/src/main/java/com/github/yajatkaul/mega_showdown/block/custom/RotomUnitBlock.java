@@ -1,7 +1,7 @@
 package com.github.yajatkaul.mega_showdown.block.custom;
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.github.yajatkaul.mega_showdown.codec.Effect;
+import com.github.yajatkaul.mega_showdown.api.codec.Effect;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;

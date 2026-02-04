@@ -1,4 +1,4 @@
-package com.github.yajatkaul.mega_showdown.codec.particles;
+package com.github.yajatkaul.mega_showdown.api.codec.particles;
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.github.yajatkaul.mega_showdown.utils.PokemonBehaviourHelper;

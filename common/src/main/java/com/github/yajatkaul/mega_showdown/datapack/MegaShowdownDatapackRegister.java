@@ -2,7 +2,7 @@ package com.github.yajatkaul.mega_showdown.datapack;
 
 import com.cobblemon.mod.common.pokemon.helditem.CobblemonHeldItemManager;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
-import com.github.yajatkaul.mega_showdown.codec.*;
+import com.github.yajatkaul.mega_showdown.api.codec.*;
 import com.github.yajatkaul.mega_showdown.gimmick.MaxGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import com.github.yajatkaul.mega_showdown.utils.RegistryLocator;
@@ -35,6 +35,8 @@ public class MegaShowdownDatapackRegister {
             ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "z_crystal_item"));
     public static final ResourceKey<Registry<BattleFormChange>> BATTLE_FORM_CHANGE_REGISTRY_KEY =
             ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "battle_form"));
+    public static final ResourceKey<Registry<BattleEffect>> BATTLE_EFFECT_REGISTRY_KEY =
+            ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "battle_effect"));
 
     public static Registry<MegaGimmick> MEGA_REGISTRY;
     public static Registry<ShowdownItem> SHOWDOWN_ITEM_REGISTRY;
@@ -47,6 +49,7 @@ public class MegaShowdownDatapackRegister {
     public static Registry<Effect> EFFECT_REGISTRY;
     public static Registry<FormChangeInteractItem> FORM_CHANGE_INTERACT_REGISTRY;
     public static Registry<ZCrystal> Z_CRYSTAL_ITEM_REGISTRY;
+    public static Registry<BattleEffect> BATTLE_EFFECT_REGISTRY;
 
     public static void registerShowdownDatapackItems(MinecraftServer server) {
         EFFECT_REGISTRY = server.registryAccess().registryOrThrow(MegaShowdownDatapackRegister.EFFECT_REGISTRY_KEY);
@@ -60,6 +63,7 @@ public class MegaShowdownDatapackRegister {
         BATTLE_FORM_CHANGE_REGISTRY = server.registryAccess().registryOrThrow(MegaShowdownDatapackRegister.BATTLE_FORM_CHANGE_REGISTRY_KEY);
         FORM_CHANGE_INTERACT_REGISTRY = server.registryAccess().registryOrThrow(MegaShowdownDatapackRegister.FORM_CHANGE_INTERACT_REGISTRY_KEY);
         Z_CRYSTAL_ITEM_REGISTRY = server.registryAccess().registryOrThrow(MegaShowdownDatapackRegister.Z_CRYSTAL_ITEM_REGISTRY_KEY);
+        BATTLE_EFFECT_REGISTRY = server.registryAccess().registryOrThrow(MegaShowdownDatapackRegister.BATTLE_EFFECT_REGISTRY_KEY);
 
         CobblemonHeldItemManager.INSTANCE.registerStackRemap(stack -> {
             ShowdownItem showdownItem = RegistryLocator.getComponent(ShowdownItem.class, stack);

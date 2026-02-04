@@ -2,6 +2,8 @@ package com.github.yajatkaul.mega_showdown.battle.effect;
 
 import com.cobblemon.mod.common.api.battles.model.PokemonBattle;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
+import com.github.yajatkaul.mega_showdown.api.codec.BattleEffect;
+import com.github.yajatkaul.mega_showdown.datapack.MegaShowdownDatapackRegister;
 import net.minecraft.resources.ResourceLocation;
 
 public class WeatherEffect extends AbstractFieldHandler {
@@ -13,6 +15,14 @@ public class WeatherEffect extends AbstractFieldHandler {
     }
 
     private static ResourceLocation getParticleId(String weather) {
+        for (BattleEffect battleEffect : MegaShowdownDatapackRegister.BATTLE_EFFECT_REGISTRY) {
+            if (battleEffect.type().equals(BattleEffect.BattleEffectType.WEATHER)) {
+                if (battleEffect.name().equals(weather)) {
+                    return battleEffect.id();
+                }
+            }
+        }
+
         return switch (weather) {
             case "raindance" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "weather_rain");
             case "sunnyday" -> ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "sundrop");

@@ -2,7 +2,7 @@ package com.github.yajatkaul.mega_showdown.item.custom.form_change;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.advancement.AdvancementHelper;
-import com.github.yajatkaul.mega_showdown.codec.Effect;
+import com.github.yajatkaul.mega_showdown.api.codec.Effect;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import com.github.yajatkaul.mega_showdown.item.custom.PokemonSelectingItem;
 import net.minecraft.ChatFormatting;

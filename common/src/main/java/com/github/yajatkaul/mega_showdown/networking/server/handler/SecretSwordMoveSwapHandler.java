@@ -2,7 +2,7 @@ package com.github.yajatkaul.mega_showdown.networking.server.handler;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.codec.Effect;
+import com.github.yajatkaul.mega_showdown.api.codec.Effect;
 import com.github.yajatkaul.mega_showdown.networking.server.packet.SecretSwordMoveSwapPacket;
 import dev.architectury.networking.NetworkManager;
 import net.minecraft.server.level.ServerPlayer;

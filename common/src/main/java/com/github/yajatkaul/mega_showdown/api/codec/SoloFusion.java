@@ -1,4 +1,4 @@
-package com.github.yajatkaul.mega_showdown.codec;
+package com.github.yajatkaul.mega_showdown.api.codec;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;

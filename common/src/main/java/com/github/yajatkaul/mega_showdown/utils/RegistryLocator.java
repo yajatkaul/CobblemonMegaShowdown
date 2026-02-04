@@ -1,6 +1,6 @@
 package com.github.yajatkaul.mega_showdown.utils;
 
-import com.github.yajatkaul.mega_showdown.codec.*;
+import com.github.yajatkaul.mega_showdown.api.codec.*;
 import com.github.yajatkaul.mega_showdown.components.MegaShowdownDataComponents;
 import com.github.yajatkaul.mega_showdown.datapack.MegaShowdownDatapackRegister;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;

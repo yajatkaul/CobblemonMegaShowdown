@@ -1,6 +1,6 @@
 package com.github.yajatkaul.mega_showdown.mixin.client;
 
-import com.github.yajatkaul.mega_showdown.codec.item.ItemRenderingCodec;
+import com.github.yajatkaul.mega_showdown.api.codec.item.ItemRenderingCodec;
 import com.github.yajatkaul.mega_showdown.render.ItemRenderingLoader;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;

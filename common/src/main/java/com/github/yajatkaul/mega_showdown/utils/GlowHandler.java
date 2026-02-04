@@ -1,7 +1,7 @@
 package com.github.yajatkaul.mega_showdown.utils;
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.github.yajatkaul.mega_showdown.codec.ZCrystal;
+import com.github.yajatkaul.mega_showdown.api.codec.ZCrystal;
 import net.minecraft.ChatFormatting;
 import net.minecraft.server.ServerScoreboard;
 import net.minecraft.server.level.ServerLevel;

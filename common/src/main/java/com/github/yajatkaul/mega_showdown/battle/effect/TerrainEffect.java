@@ -57,10 +57,10 @@ public class TerrainEffect extends AbstractFieldHandler {
     @Nullable
     private static ElementalType getTypeForTerrain(String terrain) {
         return switch (terrain) {
-            case "mistyterrain" -> ElementalTypes.INSTANCE.getFAIRY();
-            case "electricterrain" -> ElementalTypes.INSTANCE.getELECTRIC();
-            case "grassyterrain" -> ElementalTypes.INSTANCE.getGRASS();
-            case "psychicterrain" -> ElementalTypes.INSTANCE.getPSYCHIC();
+            case "mistyterrain" -> ElementalTypes.FAIRY;
+            case "electricterrain" -> ElementalTypes.ELECTRIC;
+            case "grassyterrain" -> ElementalTypes.GRASS;
+            case "psychicterrain" -> ElementalTypes.PSYCHIC;
             default -> null;
         };
     }

@@ -1,6 +1,8 @@
 package com.github.yajatkaul.mega_showdown.battle.effect;
 
 import com.cobblemon.mod.common.battles.BattleSide;
+import com.github.yajatkaul.mega_showdown.api.codec.BattleEffect;
+import com.github.yajatkaul.mega_showdown.datapack.MegaShowdownDatapackRegister;
 
 public class HazardEffect extends AbstractSideHandler {
     public static void handleHazard(BattleSide side, String hazardName, int ticks) {
@@ -15,6 +17,14 @@ public class HazardEffect extends AbstractSideHandler {
     }
 
     private static EffectWrapper getEffect(String hazard) {
+        for (BattleEffect battleEffect : MegaShowdownDatapackRegister.BATTLE_EFFECT_REGISTRY) {
+            if (battleEffect.type().equals(BattleEffect.BattleEffectType.HAZARD)) {
+                if (battleEffect.name().equals(hazard)) {
+                    return new EffectWrapper(battleEffect.tickInterval(), battleEffect.id());
+                }
+            }
+        }
+
         return switch (hazard) {
             case "stealthrock" -> EffectWrapper.STEALTH_ROCKS;
             case "stickyweb" -> EffectWrapper.STICKY_WEB;
