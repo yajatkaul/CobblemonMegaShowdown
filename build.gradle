@@ -92,8 +92,9 @@ publishMods {
 
     String modrinthToken = resolveEnv("MODRINTH_TOKEN")
     String curseforgeToken = resolveEnv("CURSEFORGE_TOKEN")
+    String discordWebhook = resolveEnv("DISCORD_WEBHOOK")
 
-    dryRun = modrinthToken == null || curseforgeToken == null
+    dryRun = modrinthToken == null || curseforgeToken == null || discordWebhook == null
 
     def cfOptions = curseforgeOptions {
         accessToken = curseforgeToken
@@ -148,5 +149,19 @@ publishMods {
         requires("accessories")
         requires("architectury-api")
         requires("owo-lib")
+    }
+
+    discord {
+        webhookUrl = discordWebhook
+        dryRunWebhookUrl = discordWebhook
+        username = "Mega Showdown Changelog"
+        avatarUrl = "https://cdn.modrinth.com/data/SszvX85I/62338ad15814a49df76dfbece1edba24ebca4135.png"
+        content = changelog.map { "# A new version has been released! \n" + it}
+
+        style {
+            look = "MODERN"
+            thumbnailUrl = "https://cdn.modrinth.com/data/SszvX85I/62338ad15814a49df76dfbece1edba24ebca4135.png"
+            color = "#266e10"
+        }
     }
 }

@@ -57,12 +57,12 @@ function sendBattleMessage(battleId, messages) {
 }
 
 function endBattle(battleId) {
-	const battleStream = battleMap.get(battleId);
+  const battleStream = battleMap.get(battleId);
 
-	if (battleStream != null) {
-		battleStream._writeEnd();
-		battleMap.delete(battleId);
-	}
+  if (battleStream != null) {
+    battleStream._writeEnd();
+    battleMap.delete(battleId);
+  }
 }
 
 function getTypeChart() {
@@ -123,8 +123,8 @@ function receiveCustomGmaxMove(pokemonId, moveId) {
 }
 
 function receiveNewTypeData(type, max, z) {
-    battleActions.MAX_MOVES[type] = max;
-    battleActions.Z_MOVES[type] = z;
+  battleActions.MAX_MOVES[type] = max;
+  battleActions.Z_MOVES[type] = z;
 }
 
 function receiveConditionData(conditionId, conditionData) {
@@ -132,7 +132,38 @@ function receiveConditionData(conditionId, conditionData) {
 }
 
 function receiveTypeChartData(typeChartId, typeChartData) {
-  typechart.TypeChart[typeChartId] = eval(`(${typeChartData})`);
+  const parsed =
+    typeof typeChartData === "string"
+      ? eval(`(${typeChartData})`)
+      : typeChartData;
+
+  // Ensure base object exists
+  if (!typechart.TypeChart[typeChartId]) {
+    typechart.TypeChart[typeChartId] = {};
+  }
+
+  const existing = typechart.TypeChart[typeChartId];
+
+  typechart.TypeChart[typeChartId] = {
+    ...existing,
+
+    // merge damageTaken instead of replacing it
+    damageTaken: {
+      ...(existing.damageTaken ?? {}),
+      ...(parsed.damageTaken ?? {}),
+    },
+
+    // merge other fields normally
+    HPivs: {
+      ...(existing.HPivs ?? {}),
+      ...(parsed.HPivs ?? {}),
+    },
+
+    HPdvs: {
+      ...(existing.HPdvs ?? {}),
+      ...(parsed.HPdvs ?? {}),
+    },
+  };
 }
 
 function receiveScriptData(scriptId, scriptData) {
