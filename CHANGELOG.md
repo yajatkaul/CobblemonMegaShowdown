@@ -1,3 +1,2 @@
-# 1.6.9+1.7.3-release
-- Now datapacking typechart appends the data instead of overwriting it
-- Added pokemon properties field
+# 1.6.10+1.7.3-release
+- Optimized particle spawning
