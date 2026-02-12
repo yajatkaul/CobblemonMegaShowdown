@@ -1,11 +1,9 @@
 package com.github.yajatkaul.mega_showdown.utils
 
-import com.cobblemon.mod.common.CobblemonNetwork
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.net.messages.client.animation.PlayPosableAnimationPacket
 import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormEntityParticlePacket
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.Entity
 
 class PokemonBehaviourHelper {
