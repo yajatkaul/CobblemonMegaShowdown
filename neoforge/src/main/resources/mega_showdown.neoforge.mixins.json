@@ -3,10 +3,9 @@
   "package": "com.github.yajatkaul.mega_showdown.neoforge.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
-  "client": [],
+  "client": ["PokemonClientDelegateMixin"],
   "mixins": [
-    "CobblemonDataProviderMixin",
-    "PokemonClientDelegateMixin"
+    "CobblemonDataProviderMixin"
   ],
   "injectors": {
     "defaultRequire": 1

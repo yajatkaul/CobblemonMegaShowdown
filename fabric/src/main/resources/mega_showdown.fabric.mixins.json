@@ -5,12 +5,12 @@
   "minVersion": "0.8",
   "client": [
     "GameRendererMixin",
-    "ShaderInstanceMixin"
+    "ShaderInstanceMixin",
+    "PokemonClientDelegateMixin"
   ],
   "mixins": [
     "CobblemonDataProviderMixin",
-    "CobblemonInitialiserMixin",
-    "PokemonClientDelegateMixin"
+    "CobblemonInitialiserMixin"
   ],
   "injectors": {
     "defaultRequire": 1
