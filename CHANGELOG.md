@@ -1,3 +1,2 @@
-# 1.6.10+1.7.3-release
-- Optimized particle spawning
-- Fixed spread moves AGAIN...
+# 1.6.11+1.7.3-release
+- Send mixins from server to client
