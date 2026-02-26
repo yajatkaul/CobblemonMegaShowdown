@@ -131,8 +131,8 @@ public record DuFusion(
                 }
 
             } else if (pokemonStored == null &&
-                    pokemons1.contains(pokemon.getSpecies().getName()) ||
-                    pokemons2.contains(pokemon.getSpecies().getName())
+                    (pokemons1.contains(pokemon.getSpecies().getName()) ||
+                    pokemons2.contains(pokemon.getSpecies().getName()))
             ) {
                 stack.set(MegaShowdownDataComponents.POKEMON_STORAGE.get(), pokemonStorge.save(registryAccess, pokemon));
                 stack.set(DataComponents.CUSTOM_NAME, Component.translatable("item.mega_showdown." + namespace + ".charged"));
