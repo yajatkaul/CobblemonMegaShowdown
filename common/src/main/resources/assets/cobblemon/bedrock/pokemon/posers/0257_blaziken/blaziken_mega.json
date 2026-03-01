@@ -1,0 +1,85 @@
+{
+  "portraitScale": 1.63,
+  "portraitTranslation": [-0.59, 3.12, 0],
+  "profileScale": 0.42,
+  "profileTranslation": [0, 1.12, 0],
+  "rootBone": "blaziken",
+  "animations": {
+    "cry": "q.bedrock_primary('blaziken_mega', 'battle_cry', q.curve('symmetrical_wide'))",
+    "recoil": "q.bedrock_stateful('blaziken_mega', 'recoil')",
+    "physical": "q.bedrock_primary('blaziken_mega', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('blaziken_mega', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('blaziken_mega', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "portrait": {
+      "poseTypes": ["PORTRAIT"],
+      "animations": [
+        "q.bedrock('blaziken_mega', 'battle_idle')",
+        "q.bedrock('blaziken_mega', 'flame')"
+      ]
+    },
+    "profile": {
+      "poseTypes": ["PROFILE"],
+      "animations": [
+        "q.bedrock('blaziken_mega', 'ground_idle')",
+        "q.bedrock('blaziken_mega', 'flame')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('blaziken_mega', 'battle_idle')",
+        "q.bedrock('blaziken_mega', 'flame')"
+      ],
+      "quirks": ["q.bedrock_quirk('blaziken_mega', 'blink', 2, 5, 1)"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('blaziken_mega', 'ground_idle')",
+        "q.bedrock('blaziken_mega', 'flame')"
+      ],
+      "quirks": ["q.bedrock_quirk('blaziken_mega', 'blink', 2, 5, 1)"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLOAT", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('blaziken_mega', 'ground_walk')",
+        "q.bedrock('blaziken_mega', 'flame')"
+      ],
+      "quirks": ["q.bedrock_quirk('blaziken_mega', 'blink', 2, 5, 1)"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "FLOAT", "SWIM"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('blaziken_mega', 'ground_run')",
+        "q.bedrock('blaziken_mega', 'flame')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('blaziken_mega', 'ground_jog')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('blaziken_mega', 'blink', 2, 5, 1)"]
+    },
+    "battle-sleep": {
+      "poseTypes": ["SLEEP"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('blaziken_mega', 'battle_sleep')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('blaziken_mega', 'sleep')"
+      ]
+    }
+  }
+}

@@ -5,6 +5,7 @@
     {
       "aspects": ["mega"],
       "model": "cobblemon:blaziken_mega.geo",
+      "poser": "cobblemon:blaziken_mega",
       "texture": "cobblemon:textures/pokemon/0257_blaziken/blaziken_mega.png",
       "layers": [
         {
