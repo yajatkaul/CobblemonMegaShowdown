@@ -5,6 +5,7 @@ import com.cobblemon.mod.common.api.battles.model.PokemonBattle;
 import com.cobblemon.mod.common.battles.BattleSide;
 import com.cobblemon.mod.common.battles.interpreter.ContextManager;
 import com.github.yajatkaul.mega_showdown.battle.effect.*;
+import com.github.yajatkaul.mega_showdown.battle.messaging.BattlePacketManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -47,5 +48,10 @@ public abstract class PokemonBattleMixin {
             if (tailwind != null)
                 tailwind.stream().findAny().ifPresent(context -> TailwindEffect.handleTailwind(side, context.getId()));
         }
+    }
+
+    @Inject(method = "turn", at = @At("HEAD"))
+    private void updateBattleGuiPackets (int newTurnNumber, CallbackInfo info) {
+        BattlePacketManager.update((PokemonBattle)(Object)this);
     }
 }

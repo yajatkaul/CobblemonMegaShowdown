@@ -649,5 +649,14 @@
   "item.mega_showdown.tera_pouch_green": "Tera Pouch Green",
   "item.mega_showdown.tera_pouch_red": "Tera Pouch Red",
   "item.mega_showdown.tera_pouch_black": "Tera Pouch Black",
-  "tooltip.mega_showdown.tera_pouch.tooltip": "A pouch to store all your tera shards at one place"
+  "tooltip.mega_showdown.tera_pouch.tooltip": "A pouch to store all your tera shards at one place",
+
+  "gui.battle.mega_showdown.ability": "Ability",
+  "gui.battle.mega_showdown.ability.temp": "%1$s (%2$s)",
+  "gui.battle.mega_showdown.field.empty": "---",
+  "gui.battle.mega_showdown.field.unknown": "???",
+  "gui.battle.mega_showdown.form": "Form",
+  "gui.battle.mega_showdown.item": "Item",
+  "gui.battle.mega_showdown.move.pp": "%1$s / %2$s",
+  "gui.battle.mega_showdown.moves": "Moves"
 }

@@ -12,6 +12,7 @@ import com.github.yajatkaul.mega_showdown.networking.server.MegaShowdownNetworkH
 import com.github.yajatkaul.mega_showdown.screen.MegaShowdownMenuTypes;
 import com.github.yajatkaul.mega_showdown.sound.MegaShowdownSounds;
 import dev.architectury.event.events.common.CommandRegistrationEvent;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

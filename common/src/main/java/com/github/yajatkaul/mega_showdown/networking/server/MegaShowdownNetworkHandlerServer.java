@@ -1,5 +1,6 @@
 package com.github.yajatkaul.mega_showdown.networking.server;
 
+import com.github.yajatkaul.mega_showdown.api.lilycobble.networking.battle.BattleStatePacketS2C;
 import com.github.yajatkaul.mega_showdown.networking.client.packet.ConfigSyncPacket;
 import com.github.yajatkaul.mega_showdown.networking.client.packet.InteractionWheelPacket;
 import com.github.yajatkaul.mega_showdown.networking.server.handler.MegaEvoHandler;
@@ -29,6 +30,10 @@ public class MegaShowdownNetworkHandlerServer {
         NetworkManager.registerS2CPayloadType(
                 ConfigSyncPacket.TYPE,
                 ConfigSyncPacket.STREAM_CODEC
+        );
+        NetworkManager.registerS2CPayloadType(
+                BattleStatePacketS2C.ID,
+                BattleStatePacketS2C.PACKET_CODEC
         );
     }
 
