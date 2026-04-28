@@ -1,0 +1,8 @@
+{
+  "type": "choice",
+  "keys": ["appliance"],
+  "default": "none",
+  "choices": ["none", "heat", "wash", "frost", "fan", "mow"],
+  "isAspect": true,
+  "aspectFormat": "{{choice}}-appliance"
+}

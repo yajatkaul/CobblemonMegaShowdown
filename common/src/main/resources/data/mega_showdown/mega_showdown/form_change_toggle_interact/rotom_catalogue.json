@@ -1,0 +1,67 @@
+{
+  "form_apply_order": [
+    "none-appliance",
+    "heat-appliance",
+    "fan-appliance",
+    "mow-appliance",
+    "frost-appliance",
+    "wash-appliance"
+  ],
+  "aspect_conditions": [
+    {
+      "apply": {
+        "aspects": ["appliance=none"]
+      }
+    },
+    {
+      "apply": {
+        "aspect": {
+          "required_aspects": [["none-appliance"]]
+        },
+        "aspects": ["appliance=heat"]
+      }
+    },
+    {
+      "apply": {
+        "aspect": {
+          "required_aspects": [["heat-appliance"]]
+        },
+        "aspects": ["appliance=fan"]
+      }
+    },
+    {
+      "apply": {
+        "aspect": {
+          "required_aspects": [["fan-appliance"]]
+        },
+        "aspects": ["appliance=mow"]
+      }
+    },
+    {
+      "apply": {
+        "aspect": {
+          "required_aspects": [["mow-appliance"]]
+        },
+        "aspects": ["appliance=frost"]
+      }
+    },
+    {
+      "apply": {
+        "aspect": {
+          "required_aspects": [["frost-appliance"]]
+        },
+        "aspects": ["appliance=wash"]
+      }
+    }
+  ],
+  "pokemons": ["Rotom"],
+  "effects": [
+    "mega_showdown:rotom_effect",
+    "mega_showdown:rotom_heat_effect",
+    "mega_showdown:rotom_fan_effect",
+    "mega_showdown:rotom_mow_effect",
+    "mega_showdown:rotom_frost_effect",
+    "mega_showdown:rotom_wash_effect"
+  ],
+  "consume": 0
+}

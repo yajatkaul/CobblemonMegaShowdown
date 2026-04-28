@@ -7,20 +7,11 @@
   "maleRatio": -1,
   "height": 3,
   "weight": 3,
-  "pokedex": [
-    "cobblemon.species.rotom.desc"
-  ],
-  "labels": [
-    "gen4"
-  ],
-  "aspects": [],
-  "abilities": [
-    "levitate",
-    "h:levitate"
-  ],
-  "eggGroups": [
-    "amorphous"
-  ],
+  "pokedex": ["cobblemon.species.rotom.desc"],
+  "labels": ["gen4"],
+  "aspects": ["none-appliance"],
+  "abilities": ["levitate", "h:levitate"],
+  "eggGroups": ["amorphous"],
   "baseStats": {
     "hp": 50,
     "attack": 50,
@@ -166,15 +157,9 @@
         "height": 1.6,
         "fixed": false
       },
-      "pokedex": [
-        "cobblemon.species.rotom-heat.desc"
-      ],
-      "labels": [
-        "gen4"
-      ],
-      "aspects": [
-        "heat-appliance"
-      ],
+      "pokedex": ["cobblemon.species.rotom-heat.desc"],
+      "labels": ["gen4"],
+      "aspects": ["heat-appliance"],
       "baseStats": {
         "hp": 50,
         "attack": 65,
@@ -305,15 +290,9 @@
         "height": 1.7,
         "fixed": false
       },
-      "pokedex": [
-        "cobblemon.species.rotom-wash.desc"
-      ],
-      "labels": [
-        "gen4"
-      ],
-      "aspects": [
-        "wash-appliance"
-      ],
+      "pokedex": ["cobblemon.species.rotom-wash.desc"],
+      "labels": ["gen4"],
+      "aspects": ["wash-appliance"],
       "baseStats": {
         "hp": 50,
         "attack": 65,
@@ -444,15 +423,9 @@
         "height": 1.6,
         "fixed": false
       },
-      "pokedex": [
-        "cobblemon.species.rotom-frost.desc"
-      ],
-      "labels": [
-        "gen4"
-      ],
-      "aspects": [
-        "frost-appliance"
-      ],
+      "pokedex": ["cobblemon.species.rotom-frost.desc"],
+      "labels": ["gen4"],
+      "aspects": ["frost-appliance"],
       "baseStats": {
         "hp": 50,
         "attack": 65,
@@ -583,15 +556,9 @@
         "height": 2.1,
         "fixed": false
       },
-      "pokedex": [
-        "cobblemon.species.rotom-fan.desc"
-      ],
-      "labels": [
-        "gen4"
-      ],
-      "aspects": [
-        "fan-appliance"
-      ],
+      "pokedex": ["cobblemon.species.rotom-fan.desc"],
+      "labels": ["gen4"],
+      "aspects": ["fan-appliance"],
       "baseStats": {
         "hp": 50,
         "attack": 65,
@@ -722,15 +689,9 @@
         "height": 1.65,
         "fixed": false
       },
-      "pokedex": [
-        "cobblemon.species.rotom-mow.desc"
-      ],
-      "labels": [
-        "gen4"
-      ],
-      "aspects": [
-        "mow-appliance"
-      ],
+      "pokedex": ["cobblemon.species.rotom-mow.desc"],
+      "labels": ["gen4"],
+      "aspects": ["mow-appliance"],
       "baseStats": {
         "hp": 50,
         "attack": 65,
