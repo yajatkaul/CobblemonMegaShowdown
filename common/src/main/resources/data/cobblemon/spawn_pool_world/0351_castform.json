@@ -19,7 +19,7 @@
         "maxSkyLight": 15,
         "isRaining": false,
         "biomes": [
-          "#minecraft:is_sparse"
+          "#cobblemon:is_plains"
         ]
       },
       "anticondition": {
@@ -65,7 +65,7 @@
         "maxSkyLight": 15,
         "isRaining": true,
         "biomes": [
-          "#minecraft:is_sparse"
+          "#cobblemon:is_plains"
         ]
       },
       "anticondition": {
