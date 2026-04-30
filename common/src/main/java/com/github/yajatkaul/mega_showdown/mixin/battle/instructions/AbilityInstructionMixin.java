@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.Optional;
 
-@Mixin(AbilityInstruction.class)
+@Mixin(value = AbilityInstruction.class, remap = false)
 public class AbilityInstructionMixin {
     @Final @Shadow
     private BattleMessage message;

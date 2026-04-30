@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.Optional;
 
-@Mixin(EndItemInstruction.class)
+@Mixin(value = EndItemInstruction.class, remap = false)
 public class ItemInstructionMixin {
     @Final @Shadow
     private BattleMessage message;
