@@ -333,8 +333,6 @@ public class BattleHUD {
                             case "special_attack" -> "spa";
                             case "special_defence" -> "spd";
                             case "speed" -> "spe";
-                            case "accuracy" -> "acc";
-                            case "evasion" -> "eva";
                             default -> key;
                         };
 

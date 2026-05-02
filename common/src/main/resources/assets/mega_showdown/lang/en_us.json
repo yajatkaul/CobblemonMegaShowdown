@@ -662,5 +662,15 @@
   "gui.battle.mega_showdown.form": "Form",
   "gui.battle.mega_showdown.item": "Item",
   "gui.battle.mega_showdown.move.pp": "%1$s / %2$s",
-  "gui.battle.mega_showdown.moves": "Moves"
+  "gui.battle.mega_showdown.moves": "Moves",
+  "gui.battle.mega_showdown.stat": "%1$s %2$s",
+  "gui.battle.mega_showdown.stat.atk": "ATK",
+  "gui.battle.mega_showdown.stat.def": "DEF",
+  "gui.battle.mega_showdown.stat.spa": "SPA",
+  "gui.battle.mega_showdown.stat.spd": "SPD",
+  "gui.battle.mega_showdown.stat.spe": "SPE",
+  "gui.battle.mega_showdown.stat.accuracy": "ACC",
+  "gui.battle.mega_showdown.stat.evasion": "EVA",
+  "gui.battle.mega_showdown.stat.crt": "CRT",
+  "gui.battle.mega_showdown.move.power_with_stab": "%1$s §e(%2$s§e)"
 }

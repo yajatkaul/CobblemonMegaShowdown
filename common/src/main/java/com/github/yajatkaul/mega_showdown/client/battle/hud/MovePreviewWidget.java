@@ -12,7 +12,6 @@ import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CommonColors;
 
@@ -30,7 +29,7 @@ public class MovePreviewWidget extends AbstractWidget {
     }
 
     @Override
-    protected void renderWidget(GuiGraphics context, int mouseX, int mouseY, float delta) {
+    protected void renderWidget (GuiGraphics context, int mouseX, int mouseY, float delta) {
         this.realignToScreen();
         context.pose().pushPose();
         context.pose().translate(0, 0, 100);
@@ -40,7 +39,7 @@ public class MovePreviewWidget extends AbstractWidget {
         Component none = Component.literal("-");
         Component power = this.move.getPower() > 0 ? this.stabPower() : none;
         Component effectChance = this.move.getEffectChances().length == 0 ? Component.literal("-") : Component.literal(String.valueOf(this.move.getEffectChances()[0].intValue())).append("%");
-        Component accuracy = this.move.getAccuracy() > 0 ? Component.literal(String.valueOf((int) this.move.getAccuracy())).append("%") : none;
+        Component accuracy = this.move.getAccuracy() > 0 ? Component.literal(String.valueOf((int)this.move.getAccuracy())).append("%") : none;
 
         int powerWidth = TEXT_RENDERER.width(power);
         int effectWidth = TEXT_RENDERER.width(effectChance);
@@ -50,13 +49,13 @@ public class MovePreviewWidget extends AbstractWidget {
         context.pose().pushPose();
         context.pose().scale(scale, scale, 1);
 
-        int leftTextStart = (int) ((this.getX() + 15) / scale);
+        int leftTextStart = (int)((this.getX() + 15) / scale);
         int leftNumberStart = leftTextStart + 104;
-        int rightTextStart = (int) ((this.getX() + 107.5) / scale);
+        int rightTextStart = (int)((this.getX() + 107.5) / scale);
         int rightNumberStart = rightTextStart + 106;
 
-        int row1Y = (int) ((this.getY() + 6.5) / scale);
-        int row2Y = (int) ((this.getY() + 18.5) / scale);
+        int row1Y = (int)((this.getY() + 6.5) / scale);
+        int row2Y = (int)((this.getY() + 18.5) / scale);
 
         context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.power"), leftTextStart, row1Y, CommonColors.WHITE, false);
         context.drawString(TEXT_RENDERER, power, rightNumberStart - powerWidth, row1Y, CommonColors.WHITE, false);
@@ -67,7 +66,7 @@ public class MovePreviewWidget extends AbstractWidget {
         context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.accuracy"), rightTextStart, row2Y, CommonColors.WHITE, false);
         context.drawString(TEXT_RENDERER, accuracy, rightNumberStart - accuracyWidth, row2Y, CommonColors.WHITE, false);
 
-        context.drawWordWrap(TEXT_RENDERER, this.move.getDescription(), (int) ((this.getX() + 6) / scale), (int) ((this.getY() + 35) / scale), (int) (182 / scale), CommonColors.WHITE);
+        context.drawWordWrap(TEXT_RENDERER, this.move.getDescription(), (int)((this.getX() + 6) / scale), (int)((this.getY() + 35) / scale), (int)(182 / scale), CommonColors.WHITE);
         context.pose().popPose();
 
         context.pose().popPose();
@@ -78,31 +77,31 @@ public class MovePreviewWidget extends AbstractWidget {
 
     }
 
-    private void realignToScreen() {
+    private void realignToScreen () {
         int screenHeight = Minecraft.getInstance().getWindow().getGuiScaledHeight();
 
         this.setX(TeamPreviewWidget.WIDTH + 2);
         this.setY(screenHeight - HEIGHT - 90);
     }
 
-    public void setSTAB(Pokemon pokemon, ElementalType type) {
+    public void setSTAB (Pokemon pokemon, ElementalType type) {
         if (pokemon.getPrimaryType().equals(type)) this.isSTAB = true;
         else this.isSTAB = pokemon.getSecondaryType() != null && pokemon.getSecondaryType().equals(type);
     }
 
-    private Component stabPower() {
+    private Component stabPower () {
         if (this.move.getPower() <= 1) { // Z-Moves have a power of 1
             return Component.literal("???");
         }
 
-        MutableComponent base = Component.literal(String.valueOf((int) this.move.getPower()));
+        int power = (int)this.move.getPower();
+        MutableComponent text = Component.literal(String.valueOf(power));
         if (this.isSTAB) {
-            int stabValue = (int) (this.move.getPower() * 1.5);
-            MutableComponent stabBonus = Component.literal(" (").append(String.valueOf(stabValue)).append(")");
-            stabBonus.setStyle(Style.EMPTY.withColor(ChatFormatting.YELLOW));
-            base.append(stabBonus);
+            int stabValue = (int)(this.move.getPower() * 1.5);
+            Component stabText = Component.literal(String.valueOf(stabValue)).withStyle(ChatFormatting.YELLOW);
+            text = Component.translatable("gui.battle.mega_showdown.move.power_with_stab", power, stabText);
         }
 
-        return base;
+        return text;
     }
 }

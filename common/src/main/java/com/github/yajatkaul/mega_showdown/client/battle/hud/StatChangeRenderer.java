@@ -34,9 +34,10 @@ public final class StatChangeRenderer {
         for (Map.Entry<String, Integer> statChange : memory.getStatChanges().entrySet()) {
             if (statChange.getValue() == 0) continue;
 
-            MutableComponent text = Component.literal(statChange.getKey().toUpperCase(Locale.ROOT));
-            if (statChange.getValue() > 0) text.append(" +" + statChange.getValue());
-            else text.append(" " + statChange.getValue());
+            Component stat = Component.translatableWithFallback("gui.battle.mega_showdown.stat." + statChange.getKey(), statChange.getKey().toLowerCase(Locale.ROOT));
+
+            String statString = statChange.getValue() > 0 ? "+" + statChange.getValue() : String.valueOf(statChange.getValue());
+            MutableComponent text = Component.translatable("gui.battle.mega_showdown.stat", stat, statString);
 
             text.setStyle(Style.EMPTY.withFont(CobblemonResources.INSTANCE.getDEFAULT_LARGE()).withBold(true));
 
