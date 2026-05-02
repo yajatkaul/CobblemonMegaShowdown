@@ -37,7 +37,10 @@ public class DynamaxCloudsLayer extends LayerEntity {
 
         if (entity.getPokemon().getSpecies().getName().equals("Calyrex")) {
             aspects.add("blue");
+        } else {
+            aspects.remove("blue");
         }
+
         state.setCurrentAspects(aspects);
 
         Map<String, MatrixWrapper> locatorStates = clientDelegate.getLocatorStates();
