@@ -1,0 +1,17 @@
+{
+  "id": "cobblemon:xerneas",
+  "speciesId": "cobblemon:xerneas",
+  "displayAspects": ["neutral-mode"],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": ["Normal"]
+    },
+    {
+      "displayForm": "Active",
+      "unlockForms": ["Active"]
+    }
+  ],
+  "variations": []
+}
