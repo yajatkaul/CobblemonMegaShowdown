@@ -2,4 +2,25 @@
 - Fixed terapagos and ogerpon tera type being changed
 - Added particles for AbilityUsage, BagItem, Item and ItemEnd usage
 - Fixed calyrex cloud issues
-- REAL Darmanitan Fix (Thats all)
+- Darmanitan Fix
+- Simple Battle HUD Fixes
+- Fixed Cramorant Gulp Missile Persisting Between Battles
+- Fixed Zen Darmanitan not changing back mid-battle (visually)
+- Fixed Zen Mode >50% HP won't revert to Base Darmanitan visually
+- Fixed Animation Bug Reshiram / Zekrom / Kyurem
+- Fixed Reshiram T-poses when Asleep, Kyurem's Attack animation is looped, Zygarde's Tera Crown rotation is off
+- Fixed Venusaur & Alola-Bias Gmax Pikachu pulls a non-existent Emissive in it's Resolver
+- Fixed Cherubi, Orbeetle and Eternatus are (Unimplemented)
+- Fixed May's Bracelet worn off-hand is offset
+- New Mega Charizard X Model
+- New Mega Charizard Y Model
+- New Mega Salamence Model
+- Adjusted Mega Blastoise Texture
+- Fix Mega Banette Poser
+- Fixed Mega Pinsir/Mawile/Banette hitboxes
+- New Zygarde Core Animations / model
+- New Zygarde Core Cry
+- Fixed Zygarde Core/Cell Item texture
+- New Zygarde 50% Animations
+- Retextures for Ogerpon Textures
+- Fixed Steelix Model (Pivot Point)
