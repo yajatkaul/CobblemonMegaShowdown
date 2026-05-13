@@ -23,8 +23,8 @@
         "stats": {
           "ACCELERATION": "30-60",
           "JUMP": "30-65",
-          "SKILL": "50-80",
-          "SPEED": "20-40",
+          "SKILL": "20-50",
+          "SPEED": "50-80",
           "STAMINA": "60-95"
         }
       }
@@ -320,7 +320,7 @@
     "moving": {
       "canLook": false,
       "walk": {
-        "walkSpeed": 0.5,
+        "walkSpeed": 0.6,
         "canWalk": true,
         "avoidsLand": false
       },
@@ -328,7 +328,7 @@
         "canFly": false
       },
       "swim": {
-        "swimSpeed": 0.5,
+        "swimSpeed": 0.6,
         "canSwimInWater": false,
         "canBreatheUnderwater": false
       }

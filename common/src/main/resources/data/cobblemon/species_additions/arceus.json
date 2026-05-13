@@ -79,7 +79,7 @@
     "moving": {
       "canLook": true,
       "walk": {
-        "walkSpeed": 0.6,
+        "walkSpeed": 0.28,
         "canWalk": true,
         "avoidsLand": false
       },
