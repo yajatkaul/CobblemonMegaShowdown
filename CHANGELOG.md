@@ -25,3 +25,4 @@
 - Retextures for Ogerpon Textures
 - Fixed Steelix Model (Pivot Point)
 - Xerneas Dex Fix
+- Removed custom types datapacking cuz it was bloat and buggy

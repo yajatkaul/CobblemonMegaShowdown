@@ -14,12 +14,13 @@ import java.util.Locale;
 import java.util.Map;
 
 public final class StatChangeRenderer {
-    private StatChangeRenderer () {}
+    private StatChangeRenderer() {
+    }
 
     private static final int TEXT_HEIGHT = 11;
     private static final Font TEXT_RENDERER = Minecraft.getInstance().font;
 
-    public static void render (GuiGraphics context, BattlePokemonMemory memory, boolean isLeft, int order, boolean isCompact) {
+    public static void render(GuiGraphics context, BattlePokemonMemory memory, boolean isLeft, int order, boolean isCompact) {
         int screenWidth = Minecraft.getInstance().getWindow().getGuiScaledWidth();
 
         int startingLeftX = isCompact ? BattleOverlay.HORIZONTAL_INSET + BattleOverlay.TILE_WIDTH - 5 - order * 4 : BattleOverlay.HORIZONTAL_INSET;
@@ -43,8 +44,7 @@ public final class StatChangeRenderer {
 
             if (isLeft) {
                 x += renderBorderedText(context, x, y, text);
-            }
-            else {
+            } else {
                 int textWidth = TEXT_RENDERER.width(text);
                 x -= textWidth + 4;
                 renderBorderedText(context, x, y, text);
@@ -57,7 +57,7 @@ public final class StatChangeRenderer {
         }
     }
 
-    private static int renderBorderedText (GuiGraphics context, int x, int y, Component text) {
+    private static int renderBorderedText(GuiGraphics context, int x, int y, Component text) {
         int textWidth = TEXT_RENDERER.width(text) + 5;
         context.fill(x, y, x + textWidth, y + TEXT_HEIGHT, 0xFF8D8D8D);
         context.fill(x + 2, y + 2, x + textWidth - 2, y + TEXT_HEIGHT - 2, 0xFF676767);

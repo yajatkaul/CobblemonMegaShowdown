@@ -7,7 +7,6 @@ import com.cobblemon.mod.common.api.pokemon.status.Status;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.pokemon.status.PersistentStatusContainer;
-import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.api.lilycobble.pokemon.PokemonPropertiesSupplier;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -96,12 +95,13 @@ public record BattlePokemonState(
         if (volatiles != null) {
             for (BattleContext vol : volatiles) {
                 switch (vol.getId()) {
-                    case "focusenergy" -> statChanges.compute("crt",(key, value) -> (value == null ? 0 : value) + 2);
+                    case "focusenergy" -> statChanges.compute("crt", (key, value) -> (value == null ? 0 : value) + 2);
                     case "dragoncheer" -> {
                         boolean isDragon = pokemon.getEffectedPokemon().getPrimaryType() == ElementalTypes.DRAGON || pokemon.getEffectedPokemon().getSecondaryType() == ElementalTypes.DRAGON;
-                        statChanges.compute("crt",(key, value) -> (value == null ? 0 : value) + (isDragon ? 2 : 1));
+                        statChanges.compute("crt", (key, value) -> (value == null ? 0 : value) + (isDragon ? 2 : 1));
                     }
-                    default -> {}
+                    default -> {
+                    }
                 }
             }
         }

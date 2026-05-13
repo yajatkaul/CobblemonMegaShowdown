@@ -22,10 +22,12 @@ public class PokemonClientDelegateMixin {
     public PokemonEntity currentEntity;
     @Unique
     private long mega_showdown$lastTeraParticle;
+
     @Unique
     private float mega_showdown$secondsSinceLastTeraParticle() {
         return (System.currentTimeMillis() - mega_showdown$lastTeraParticle) / 1000F;
     }
+
     @Unique
     private final float mega_showdown$teraParticleCooldown = 2.0F;
 

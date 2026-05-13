@@ -26,7 +26,7 @@ public class TeraShard extends MSDPokemonSelectingItem {
     public @Nullable InteractionResultHolder<ItemStack> applyToPokemon(@NotNull ServerPlayer player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon) {
         if (pokemon.getSpecies().getName().equals("Ogerpon") ||
                 !pokemon.getSpecies().getName().equals("Terapagos") ||
-                    pokemon.getTeraType() == teraType) {
+                pokemon.getTeraType() == teraType) {
             return InteractionResultHolder.pass(itemStack);
         }
 

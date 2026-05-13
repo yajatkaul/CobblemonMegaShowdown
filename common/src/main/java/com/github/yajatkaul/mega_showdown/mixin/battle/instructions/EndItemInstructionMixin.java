@@ -18,7 +18,8 @@ import java.util.Optional;
 
 @Mixin(value = EndItemInstruction.class, remap = false)
 public class EndItemInstructionMixin {
-    @Final @Shadow
+    @Final
+    @Shadow
     private BattleMessage message;
 
     @Inject(method = "invoke", at = @At("TAIL"))

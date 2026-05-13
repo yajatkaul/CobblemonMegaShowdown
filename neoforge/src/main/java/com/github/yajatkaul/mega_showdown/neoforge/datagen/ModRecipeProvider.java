@@ -759,7 +759,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(recipeOutput, "polished_meteor_from_blasting");
 
 
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MegaShowdownItems.TERA_POUCH_WHITE.get())
                 .pattern(" D ")
                 .pattern("LPL")

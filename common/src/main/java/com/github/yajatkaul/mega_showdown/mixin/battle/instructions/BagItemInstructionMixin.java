@@ -18,7 +18,8 @@ import java.util.Optional;
 
 @Mixin(value = BagItemInstruction.class, remap = false)
 public class BagItemInstructionMixin {
-    @Final @Shadow
+    @Final
+    @Shadow
     private BattleMessage message;
 
     @Inject(method = "invoke", at = @At("TAIL"))
