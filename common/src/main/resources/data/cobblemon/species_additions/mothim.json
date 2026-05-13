@@ -9,7 +9,7 @@
   "behaviour": {
     "moving": {
       "walk": {
-        "walkSpeed": 0.31
+        "walkSpeed": 0.27
       },
       "fly": {
         "canFly": true,

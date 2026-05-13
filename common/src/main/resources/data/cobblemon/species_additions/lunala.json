@@ -10,7 +10,7 @@
     "moving": {
       "walk": {
         "canWalk": false,
-        "walkSpeed": 0.6
+        "walkSpeed": 0.28
       },
       "fly": {
         "canFly": true,

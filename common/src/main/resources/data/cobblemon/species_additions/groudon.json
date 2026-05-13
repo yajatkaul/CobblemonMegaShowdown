@@ -25,23 +25,21 @@
       }
     ]
   },
-  "baseScale": 1,
-  "hitbox": {
-    "width": 5.5,
-    "height": 6,
-    "fixed": false
-  },
   "behaviour": {
     "moving": {
       "canLook": true,
       "walk": {
-        "walkSpeed": 0.6,
-        "canWalk": true,
-        "avoidsLand": false
+        "walkSpeed": 0.27
       },
       "swim": {
         "canSwimInLava": true
       }
     }
+  },
+  "baseScale": 1,
+  "hitbox": {
+    "width": 5.5,
+    "height": 6,
+    "fixed": false
   }
 }
