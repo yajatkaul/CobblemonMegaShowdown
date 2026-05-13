@@ -280,7 +280,7 @@ public class AspectUtils {
     }
 
     public static void updatePackets(BattlePokemon battlePokemon) {
-        Pokemon pokemon = battlePokemon.getEntity().getPokemon();
+        Pokemon pokemon = battlePokemon.getEffectedPokemon();
         PokemonBattle battle = battlePokemon.getActor().getBattle();
 
         if (battlePokemon.getActor().getType() == ActorType.PLAYER) {

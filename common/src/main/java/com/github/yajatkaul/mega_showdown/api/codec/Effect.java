@@ -140,7 +140,7 @@ public record Effect(
             return;
         }
 
-        if (context.getEntity() == null) {
+        if (entity == null) {
             AspectUtils.applyAspects(context, aspects);
             AspectUtils.applyProperties(context, properties);
             AspectUtils.updatePackets(battlePokemon);
