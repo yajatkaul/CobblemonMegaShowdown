@@ -21,9 +21,10 @@ public class ModPlacedFeatures {
 
         register(context, MAX_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAX_MUSHROOM_KEY),
                 List.of(
-                        RarityFilter.onAverageOnceEvery(8),
+                        CountPlacement.of(2),
+                        RarityFilter.onAverageOnceEvery(2),
                         InSquarePlacement.spread(),
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-59), VerticalAnchor.absolute(64)),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(0)),
                         BiomeFilter.biome()));
     }
 

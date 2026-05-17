@@ -2,8 +2,12 @@
   "feature": "mega_showdown:max_mushroom",
   "placement": [
     {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
       "type": "minecraft:rarity_filter",
-      "chance": 8
+      "chance": 2
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +17,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 64
+          "absolute": 0
         },
         "min_inclusive": {
-          "absolute": -59
+          "absolute": -40
         }
       }
     },

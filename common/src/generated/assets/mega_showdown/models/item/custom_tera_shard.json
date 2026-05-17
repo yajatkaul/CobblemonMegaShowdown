@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "mega_showdown:item/custom_tera_shard"
-  }
-}
