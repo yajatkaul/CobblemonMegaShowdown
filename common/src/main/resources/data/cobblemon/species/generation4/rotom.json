@@ -48,6 +48,36 @@
     "height": 2.4,
     "fixed": false
   },
+  "behaviour": {
+    "resting": {
+      "times": ["any"],
+      "drowsyChance": 0.0014,
+      "rouseChance": 0.0042
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInLava": true
+      },
+      "fly": {
+        "canFly": true
+      },
+      "walk": {
+        "canWalk": true
+      }
+    },
+    "combat": {
+      "willDefendOwner": true
+    },
+    "herd": {
+      "maxSize": "4"
+    },
+    "fireImmune": true
+  },
+  "lightingData": {
+    "lightLevel": 8,
+    "liquidGlowMode": "BOTH"
+  },
   "moves": [
     "1:astonish",
     "1:doubleteam",
