@@ -1,143 +1,36 @@
 {
   "head": "head",
   "portraitScale": 1.7,
-  "portraitTranslation": [
-    -0.2,
-    0,
-    0
-  ],
+  "portraitTranslation": [-0.2, 0, 0],
   "profileScale": 0.9,
-  "profileTranslation": [
-    0,
-    0.5,
-    0
-  ],
+  "profileTranslation": [0, 0.5, 0],
   "animations": {
     "cry": "q.bedrock_stateful('rotom_heat', 'cry')"
   },
   "poses": {
     "battle-standing": {
-      "poseTypes": [
-        "STAND",
-        "WALK"
-      ],
+      "poseTypes": ["STAND"],
       "isBattle": true,
-      "animations": [
-        "q.bedrock('rotom_heat', 'ground_idle')"
-      ],
+      "animations": ["q.bedrock('rotom_heat', 'battle_idle')"],
       "quirks": [
-        {
-          "name": "quirk",
-          "animations": [
-            "bedrock(rotom_heat, cry)"
-          ]
-        },
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(rotom_heat, blink)"
-          ]
-        },
-        {
-          "name": "quirk2",
-          "animations": [
-            "bedrock(rotom_heat, special)"
-          ]
-        }
+        "q.bedrock_quirk('rotom_heat', 'cry', 7, 15, 1)",
+        "q.bedrock_quirk('rotom_heat', 'blink', 2, 5, 1)",
+        "q.bedrock_quirk('rotom_heat', 'special', 10, 17, 1)"
       ]
     },
     "standing": {
-      "poseName": "standing",
-      "transformTicks": 10,
-      "poseTypes": [
-        "STAND",
-        "NONE",
-        "PORTRAIT",
-        "PROFILE"
-      ],
-      "animations": [
-        "bedrock(rotom_heat, ground_idle)"
-      ],
+      "poseTypes": ["STAND", "HOVER", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": ["q.bedrock('rotom_heat', 'ground_idle')"],
       "quirks": [
-        {
-          "name": "quirk",
-          "animations": [
-            "bedrock(rotom_heat, cry)"
-          ]
-        },
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(rotom_heat, blink)"
-          ]
-        },
-        {
-          "name": "quirk2",
-          "animations": [
-            "bedrock(rotom_heat, special)"
-          ]
-        }
+        "q.bedrock_quirk('rotom_heat', 'cry', 7, 15, 1)",
+        "q.bedrock_quirk('rotom_heat', 'blink', 2, 5, 1)",
+        "q.bedrock_quirk('rotom_heat', 'special', 10, 17, 1)"
       ]
     },
     "walking": {
-      "poseName": "walking",
-      "transformTicks": 10,
-      "poseTypes": [
-        "WALK"
-      ],
-      "animations": [
-        "bedrock(rotom_heat, ground_walk)"
-      ]
-    },
-    "hovering": {
-      "poseName": "hovering",
-      "transformTicks": 10,
-      "poseTypes": [
-        "HOVER"
-      ],
-      "animations": [
-        "look",
-        "bedrock(rotom_heat, ground_idle)"
-      ],
-      "quirks": [
-        {
-          "name": "quirk",
-          "animations": [
-            "bedrock(rotom_heat, cry)"
-          ]
-        },
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(rotom_heat, blink)"
-          ]
-        },
-        {
-          "name": "quirk2",
-          "animations": [
-            "bedrock(rotom_heat, special)"
-          ]
-        }
-      ]
-    },
-    "flying": {
-      "poseName": "flying",
-      "transformTicks": 10,
-      "poseTypes": [
-        "FLY"
-      ],
-      "animations": [
-        "look",
-        "bedrock(rotom_heat, ground_walk)"
-      ],
-      "quirks": [
-        {
-          "name": "blink",
-          "animations": [
-            "bedrock(rotom_heat, blink)"
-          ]
-        }
-      ]
+      "poseTypes": ["WALK", "FLY"],
+      "animations": ["bedrock(rotom_heat, ground_walk)"],
+      "quirks": ["q.bedrock_quirk('rotom_heat', 'blink', 2, 5, 1)"]
     }
   }
 }
