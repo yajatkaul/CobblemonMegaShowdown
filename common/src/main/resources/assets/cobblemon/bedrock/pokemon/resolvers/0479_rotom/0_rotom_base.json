@@ -9,9 +9,10 @@
       "texture": "cobblemon:textures/pokemon/0479_rotom/rotom.png",
       "layers": [
         {
-          "name": "glow",
-          "texture": "cobblemon:textures/pokemon/0479_rotom/rotom_emissive.png",
-          "emissive": true
+          "name": "emissive",
+          "translucent": true,
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0479_rotom/rotom_emissive.png"
         }
       ]
     },
@@ -20,9 +21,10 @@
       "texture": "cobblemon:textures/pokemon/0479_rotom/rotom_shiny.png",
       "layers": [
         {
-          "name": "glow",
-          "texture": "cobblemon:textures/pokemon/0479_rotom/rotom_shiny_emissive.png",
-          "emissive": true
+          "name": "emissive",
+          "translucent": true,
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0479_rotom/rotom_shiny_emissive.png"
         }
       ]
     }

@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:rotom",
+  "order": 3,
+  "variations": [
+    {
+      "aspects": ["frost-appliance"],
+      "poser": "cobblemon:rotom_frost",
+      "model": "cobblemon:rotom_frost.geo",
+      "texture": "cobblemon:textures/pokemon/0479_rotom/frost/rotom_frost.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "translucent": true,
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0479_rotom/frost/rotom_frost_emissive.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["frost-appliance","shiny"],
+      "texture": "cobblemon:textures/pokemon/0479_rotom/frost/rotom_frost_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "translucent": true,
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0479_rotom/frost/rotom_frost_shiny_emissive.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:rotom",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["heat-appliance"],
+      "poser": "cobblemon:rotom_heat",
+      "model": "cobblemon:rotom_heat.geo",
+      "texture": "cobblemon:textures/pokemon/0479_rotom/heat/rotom_heat.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "translucent": true,
+          "emissive": true,  
+          "texture": "cobblemon:textures/pokemon/0479_rotom/heat/rotom_heat_emissive2.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["heat-appliance","shiny"],
+      "texture": "cobblemon:textures/pokemon/0479_rotom/heat/rotom_heat_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "translucent": true,
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0479_rotom/heat/rotom_heat_shiny_emissive.png"
+        }
+      ]
+    }
+  ]
+}
