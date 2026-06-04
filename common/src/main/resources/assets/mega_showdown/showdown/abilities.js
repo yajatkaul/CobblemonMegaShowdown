@@ -1225,6 +1225,28 @@ const Abilities = {
     rating: 3.5,
     num: 88,
   },
+  dragonize: {
+    isNonstandard: "Future",
+    onModifyTypePriority: -1,
+    onModifyType(move, pokemon) {
+    	const noModifyType = [
+    	'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+    	];
+    	if (move.type === 'Normal' && (!noModifyType.includes(move.id) || this.activeMove?.isMax) &&
+    	!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+    	move.type = 'Dragon';
+    	move.typeChangerBoosted = this.effect;
+    	}
+    },
+    onBasePowerPriority: 23,
+    onBasePower(basePower, pokemon, target, move) {
+    	if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+    },
+    flags: {},
+    name: "Dragonize",
+    rating: 4,
+    num: 312
+  },
   dragonsmaw: {
     onModifyAtkPriority: 5,
     onModifyAtk(atk, attacker, defender, move) {
@@ -3016,6 +3038,19 @@ const Abilities = {
     rating: 3,
     num: 178,
   },
+  megasol: {
+    isNonstandard: "Future",
+    onWeatherModifyDamagePriority: 1,
+    onWeatherModifyDamage(damage, attacker, defender, move) {
+    	this.dex.conditions.getByID('sunnyday').onWeatherModifyDamage
+    		.call(this, damage, attacker, defender, move);
+    	return damage;
+    },
+    flags: {},
+    name: "Mega Sol",
+    rating: 3,
+    num: 315,
+  },
   merciless: {
     onModifyCritRatio(critRatio, source, target) {
       if (target && ["psn", "tox"].includes(target.status)) return 5;
@@ -3847,6 +3882,40 @@ const Abilities = {
     name: "Pickup",
     rating: 0.5,
     num: 53,
+  },
+  piercingdrill: {
+    onModifyMove(move) {
+      if (move.flags["contact"]) {
+        delete move.flags["protect"];
+        move.onBasePowerPriority = 10;
+        move.onBasePower = function (basePower, pokemon, target) {
+          const protectVolatiles = [
+            "protect",
+            "kingsshield",
+            "spikyshield",
+            "banefulbunker",
+            "obstruct",
+            "silktrap",
+            "matblock",
+          ];
+          const protectSideConditions = [
+            "quickguard",
+            "wideguard",
+            "craftyshield",
+          ];
+          if (
+            protectVolatiles.some((vol) => target.volatiles[vol]) ||
+            protectSideConditions.some((sc) => target.side.sideConditions[sc])
+          ) {
+            return this.chainModify(0.25);
+          }
+        };
+      }
+    },
+    flags: {},
+    name: "Piercing Drill",
+    rating: 2.5,
+    num: 206,
   },
   pixilate: {
     onModifyTypePriority: -1,
@@ -5220,6 +5289,15 @@ const Abilities = {
     name: "Speed Boost",
     rating: 4.5,
     num: 3,
+  },
+  spicyspray: {
+    onDamagingHit(damage, target, source, move) {
+        source.trySetStatus("brn", target);
+    },
+    flags: {},
+    name: "Spicy Spray",
+    rating: 5,
+    num: 211
   },
   stakeout: {
     onModifyAtkPriority: 5,

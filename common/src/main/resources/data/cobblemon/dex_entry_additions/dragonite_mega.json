@@ -1,0 +1,9 @@
+{
+  "entryId": "cobblemon:dragonite",
+  "forms": [
+    {
+      "displayForm": "Mega",
+      "unlockForms": ["Mega"]
+    }
+  ]
+}

@@ -1,11 +1,8 @@
 {
-  "showdown_id": "slowbronite",
-  "pokemons": ["Slowbro"],
+  "showdown_id": "meowsticite",
+  "pokemons": ["Meowstic"],
   "aspect_conditions": {
     "apply": {
-      "aspect": {
-        "blacklist_aspects": [["galarian"]]
-      },
       "aspects": ["mega_evolution=mega"]
     },
     "revert": {

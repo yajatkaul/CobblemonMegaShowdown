@@ -1,0 +1,30 @@
+{
+  "target": "cobblemon:victreebel",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "labels": ["gen1", "mega"],
+      "aspects": ["mega"],
+      "abilities": ["innardsout", "h:innardsout"],
+      "baseStats": {
+        "hp": 80,
+        "attack": 125,
+        "defence": 85,
+        "special_attack": 135,
+        "special_defence": 95,
+        "speed": 70
+      },
+      "baseScale": 1.3,
+      "hitbox": {
+        "width": 1.8,
+        "height": 3,
+        "fixed": false
+      },
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "height": 45,
+      "weight": 1255
+    }
+  ]
+}

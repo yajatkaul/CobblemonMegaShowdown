@@ -1,0 +1,25 @@
+{
+  "target": "cobblemon:golurk",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.golurk-mega.desc"],
+      "abilities": ["unseenfist", "unseenfist", "h:unseenfist"],
+      "labels": ["gen5", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 89,
+        "attack": 159,
+        "defence": 105,
+        "special_attack": 70,
+        "special_defence": 105,
+        "speed": 55
+      },
+      "height": 40,
+      "weight": 3300
+    }
+  ]
+}

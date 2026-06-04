@@ -1,0 +1,59 @@
+{
+  "target": "cobblemon:delphox",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.delphox-mega.desc"],
+      "labels": ["gen6", "mega"],
+      "aspects": ["mega"],
+      "abilities": ["levitate", "h:levitate"],
+      "baseStats": {
+        "hp": 75,
+        "attack": 69,
+        "defence": 72,
+        "special_attack": 159,
+        "special_defence": 125,
+        "speed": 134
+      },
+      "behaviour": {
+        "moving": {
+          "walk": {
+            "walkSpeed": 0.55
+          },
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInLava": true
+          },
+          "fly": {
+            "canFly": true,
+            "flySpeedHorizontal": 0.65
+          },
+          "herd": {
+            "maxSize": "5"
+          },
+          "resting": {
+            "times": ["day"],
+            "drowsyChance": 0.0033,
+            "rouseChance": 0.0042
+          },
+          "combat": {
+            "willDefendSelf": true,
+            "willDefendOwner": true,
+            "willFlee": false
+          },
+          "fireImmune": true
+        }
+      },
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "hitbox": {
+        "width": 1.5,
+        "height": 3.8,
+        "fixed": false
+      },
+      "height": 15,
+      "weight": 390
+    }
+  ]
+}

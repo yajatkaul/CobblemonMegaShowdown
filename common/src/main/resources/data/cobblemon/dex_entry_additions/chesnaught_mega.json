@@ -1,0 +1,9 @@
+{
+  "entryId": "cobblemon:chesnaught",
+  "forms": [
+    {
+      "displayForm": "Mega",
+      "unlockForms": ["Mega"]
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "showdown_id": "slowbronite",
-  "pokemons": ["Slowbro"],
+  "showdown_id": "floettite",
+  "pokemons": ["Floette"],
   "aspect_conditions": {
     "apply": {
       "aspect": {
-        "blacklist_aspects": [["galarian"]]
+        "required_aspects": [["flower-eternal"]]
       },
       "aspects": ["mega_evolution=mega"]
     },

@@ -1,0 +1,29 @@
+{
+  "pokemon": [
+    "clefable",
+    "victreebel",
+    "starmie",
+    "dragonite",
+    "meganium",
+    "feraligatr",
+    "skarmory",
+    "chimecho",
+    "froslass",
+    "emboar",
+    "excadrill",
+    "chandelure",
+    "golurk",
+    "chesnaught",
+    "delphox",
+    "greninja",
+    "floette",
+    "meowstic",
+    "hawlucha",
+    "crabominable",
+    "drampa",
+    "scovillain",
+    "glimmora",
+    "raichu"
+  ],
+  "features": ["mega_evolution"]
+}

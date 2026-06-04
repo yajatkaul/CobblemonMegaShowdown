@@ -1,0 +1,59 @@
+{
+  "target": "cobblemon:greninja",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.greninja-mega.desc"],
+      "labels": ["gen6", "mega"],
+      "aspects": ["mega"],
+      "abilities": ["protean", "h:protean"],
+      "baseStats": {
+        "hp": 72,
+        "attack": 125,
+        "defence": 77,
+        "special_attack": 133,
+        "special_defence": 81,
+        "speed": 142
+      },
+      "behaviour": {
+        "moving": {
+          "walk": {
+            "walkSpeed": 0.55
+          },
+          "swim": {
+            "avoidsWater": false,
+            "canSwimInLava": false
+          },
+          "fly": {
+            "canFly": true,
+            "flySpeedHorizontal": 0.65
+          },
+          "herd": {
+            "maxSize": "5"
+          },
+          "resting": {
+            "times": ["day"],
+            "drowsyChance": 0.0033,
+            "rouseChance": 0.0042
+          },
+          "combat": {
+            "willDefendSelf": true,
+            "willDefendOwner": true,
+            "willFlee": false
+          },
+          "fireImmune": false
+        }
+      },
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "hitbox": {
+        "width": 1.1,
+        "height": 4,
+        "fixed": false
+      },
+      "height": 15,
+      "weight": 400
+    }
+  ]
+}

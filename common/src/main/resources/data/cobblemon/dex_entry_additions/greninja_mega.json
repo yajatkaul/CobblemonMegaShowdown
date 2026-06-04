@@ -1,0 +1,9 @@
+{
+  "entryId": "cobblemon:greninja",
+  "forms": [
+    {
+      "displayForm": "Mega",
+      "unlockForms": ["Mega"]
+    }
+  ]
+}

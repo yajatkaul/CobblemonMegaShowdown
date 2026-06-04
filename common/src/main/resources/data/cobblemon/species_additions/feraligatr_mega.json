@@ -1,0 +1,33 @@
+{
+  "target": "cobblemon:feraligatr",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "primaryType": "water",
+      "secondaryType": "dragon",
+      "pokedex": ["cobblemon.species.feraligatr-mega.desc"],
+      "abilities": ["dragonize", "h:dragonize"],
+      "labels": ["gen2", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 85,
+        "attack": 160,
+        "defence": 125,
+        "special_attack": 89,
+        "special_defence": 93,
+        "speed": 78
+      },
+      "baseScale": 1.25,
+      "hitbox": {
+        "width": 1.8,
+        "height": 4.5,
+        "fixed": false
+      },
+      "height": 23,
+      "weight": 1080
+    }
+  ]
+}

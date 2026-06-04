@@ -1,12 +1,12 @@
 {
-  "showdown_id": "slowbronite",
-  "pokemons": ["Slowbro"],
+  "showdown_id": "raichunitey",
+  "pokemons": ["Raichu"],
   "aspect_conditions": {
     "apply": {
       "aspect": {
-        "blacklist_aspects": [["galarian"]]
+        "blacklist_aspects": [["alolan"]]
       },
-      "aspects": ["mega_evolution=mega"]
+      "aspects": ["mega_evolution=mega_y"]
     },
     "revert": {
       "aspects": ["mega_evolution=none"]

@@ -1,0 +1,9 @@
+{
+  "entryId": "cobblemon:emboar",
+  "forms": [
+    {
+      "displayForm": "Mega",
+      "unlockForms": ["Mega"]
+    }
+  ]
+}

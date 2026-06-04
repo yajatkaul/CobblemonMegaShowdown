@@ -1,0 +1,30 @@
+{
+  "target": "cobblemon:glimmora",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.glimmora-mega.desc"],
+      "abilities": ["adaptability", "h:adaptability"],
+      "labels": ["gen9", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 83,
+        "attack": 90,
+        "defence": 105,
+        "special_attack": 150,
+        "special_defence": 96,
+        "speed": 101
+      },
+      "hitbox": {
+        "width": 1.2,
+        "height": 3.5,
+        "fixed": false
+      },
+      "height": 28,
+      "weight": 770
+    }
+  ]
+}

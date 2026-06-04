@@ -1719,15 +1719,27 @@ class Pokemon {
    * Like Field.effectiveWeather(), but ignores sun and rain if
    * the Utility Umbrella is active for the Pokemon.
    */
-  effectiveWeather() {
+  effectiveWeather(sourceEffect, message) {
+    if (!sourceEffect && this.battle.effect) sourceEffect = this.battle.effect;
     const weather = this.battle.field.effectiveWeather();
+    if (
+      this.battle.activePokemon?.hasAbility('megasol') &&
+      sourceEffect &&
+      (sourceEffect.id === 'megasol' ||
+        sourceEffect.effectType === 'Move' ||
+        sourceEffect.effectType === 'Weather') &&
+      sourceEffect.id !== 'electroshot'
+    ) {
+      if (weather !== 'sunnyday' && message)
+        this.battle.add('-activate', this, 'ability: Mega Sol');
+      return 'sunnyday';
+    }
     switch (weather) {
-      case "sunnyday":
-      case "raindance":
-      case "desolateland":
-      case "primordialsea":
-        if (this.hasItem("utilityumbrella"))
-          return "";
+      case 'sunnyday':
+      case 'raindance':
+      case 'desolateland':
+      case 'primordialsea':
+        if (this.hasItem('utilityumbrella')) return '';
     }
     return weather;
   }

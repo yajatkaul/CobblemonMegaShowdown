@@ -1,0 +1,32 @@
+{
+  "target": "cobblemon:hawlucha",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "primaryType": "fighting",
+      "secondaryType": "flying",
+      "pokedex": ["cobblemon.species.hawlucha-mega.desc"],
+      "labels": ["gen6", "mega"],
+      "aspects": ["mega"],
+      "abilities": ["noguard", "h:noguard"],
+      "baseStats": {
+        "hp": 78,
+        "attack": 137,
+        "defence": 100,
+        "special_attack": 74,
+        "special_defence": 93,
+        "speed": 118
+      },
+      "hitbox": {
+        "width": 1.3,
+        "height": 2.3,
+        "fixed": false
+      },
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "height": 10,
+      "weight": 250
+    }
+  ]
+}

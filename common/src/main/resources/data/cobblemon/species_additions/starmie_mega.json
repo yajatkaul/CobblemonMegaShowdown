@@ -1,0 +1,44 @@
+{
+  "target": "cobblemon:starmie",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.starmie-mega.desc"],
+      "abilities": ["hugepower", "hugepower", "h:hugepower"],
+      "labels": ["gen1", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 60,
+        "attack": 100,
+        "defence": 105,
+        "special_attack": 130,
+        "special_defence": 105,
+        "speed": 120
+      },
+      "baseScale": 1.2,
+      "behaviour": {
+        "moving": {
+          "walk": {
+            "walkSpeed": 0.75
+          },
+          "swim": {
+            "swimSpeed": 0.8,
+            "canBreatheUnderwater": true,
+            "canSwimInWater": true,
+            "canSwimInLava": false
+          }
+        }
+      },
+      "hitbox": {
+        "width": 1.3,
+        "height": 3.2,
+        "fixed": false
+      },
+      "height": 23,
+      "weight": 800
+    }
+  ]
+}

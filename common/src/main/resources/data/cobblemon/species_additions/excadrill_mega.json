@@ -1,0 +1,26 @@
+{
+  "target": "cobblemon:excadrill",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.excadrill-mega.desc"],
+      "abilities": ["piercingdrill", "piercingdrill", "h:piercingdrill"],
+      "labels": ["gen5", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 110,
+        "attack": 165,
+        "defence": 100,
+        "special_attack": 65,
+        "special_defence": 65,
+        "speed": 103
+      },
+      "baseScale": 0.95,
+      "height": 9,
+      "weight": 600
+    }
+  ]
+}

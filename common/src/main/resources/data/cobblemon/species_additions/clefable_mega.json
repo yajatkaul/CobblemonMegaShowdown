@@ -1,0 +1,44 @@
+{
+  "target": "cobblemon:clefable",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "primaryType": "fairy",
+      "secondaryType": "flying",
+      "pokedex": ["cobblemon.species.clefable-mega.desc"],
+      "abilities": ["magicbounce", "magicbounce", "h:magicbounce"],
+      "labels": ["gen1", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 95,
+        "attack": 80,
+        "defence": 93,
+        "special_attack": 135,
+        "special_defence": 110,
+        "speed": 70
+      },
+      "baseScale": 0.8,
+      "behaviour": {
+        "moving": {
+          "walk": {
+            "walkSpeed": 0.147
+          },
+          "fly": {
+            "canFly": true,
+            "flySpeedHorizontal": 0.6
+          }
+        }
+      },
+      "hitbox": {
+        "width": 1.5,
+        "height": 3,
+        "fixed": false
+      },
+      "height": 17,
+      "weight": 423
+    }
+  ]
+}

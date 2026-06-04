@@ -1,0 +1,31 @@
+{
+  "target": "cobblemon:drampa",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.drampa-mega.desc"],
+      "abilities": ["berserk", "berserk", "h:berserk"],
+      "labels": ["gen7", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 78,
+        "attack": 85,
+        "defence": 110,
+        "special_attack": 160,
+        "special_defence": 116,
+        "speed": 36
+      },
+      "baseScale": 1,
+      "hitbox": {
+        "width": 1.5,
+        "height": 4,
+        "fixed": false
+      },
+      "height": 30,
+      "weight": 2405
+    }
+  ]
+}

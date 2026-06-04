@@ -2339,42 +2339,23 @@ class BattleActions {
   // #region MEGA EVOLUTION
   // ==================================================================
   canMegaEvo(pokemon) {
-    const species = pokemon.species;
-    const item = pokemon.getItem();
-    if (
-      species.baseSpecies === "Rayquaza" &&
-      (pokemon.terastallized || pokemon.getItem().zMove)
-    ) {
-      return null;
-    }
-    if (
-      species.baseSpecies === "Rayquaza" &&
-      pokemon.baseMoves.includes("dragonascent")
-    ) {
-      return "Rayquaza-Mega";
-    }
-    const megaKey = species.otherFormes?.find((form) =>
-      /.*-Mega(-[a-zA-Z])?/.test(form)
-    );
-    const megaForme = megaKey && this.dex.species.get(megaKey);
-
-    if (
-      (this.battle.gen <= 7 || this.battle.ruleTable.has("+pokemontag:past")) &&
-      megaForme?.requiredMove &&
-      pokemon.baseMoves.includes(
-        (0, import_dex.toID)(megaForme.requiredMove)
-      ) &&
-      !item.zMove
-    ) {
-      return megaForme.name;
-    }
-    if (
-      item.megaEvolves?.includes(species.name) &&
-      item.megaStone !== species.name
-    ) {
-      return item.megaStone;
-    }
-    return null;
+      const species = pokemon.species;
+      const stone = pokemon.getItem().megaStone;
+      const altFormes = {
+          dragonascent: {
+              megaStone: {Rayquaza: "Rayquaza-Mega"},
+          },
+      };
+      for (const move of pokemon.baseMoves) {
+          const megaEvolution = altFormes[move]?.megaStone?.[species.name];
+          if (megaEvolution) {
+              if (pokemon.volatiles["dynamax"] || pokemon.terastallized) return null;
+              return megaEvolution;
+          }
+      }
+      if (!stone) return null;
+      const megaEvolution = stone[species.name];
+      return megaEvolution
   }
   canUltraBurst(pokemon) {
     if (

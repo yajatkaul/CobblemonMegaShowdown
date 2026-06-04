@@ -1,0 +1,9 @@
+{
+  "entryId": "cobblemon:glimmora",
+  "forms": [
+    {
+      "displayForm": "Mega",
+      "unlockForms": ["Mega"]
+    }
+  ]
+}

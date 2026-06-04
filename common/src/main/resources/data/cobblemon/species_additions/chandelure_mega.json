@@ -1,0 +1,31 @@
+{
+  "target": "cobblemon:chandelure",
+  "features": ["mega_evolution"],
+  "forms": [
+    {
+      "name": "Mega",
+      "pokedex": ["cobblemon.species.chandelure-mega.desc"],
+      "abilities": ["infiltrator", "infiltrator", "h:infiltrator"],
+      "labels": ["gen5", "mega"],
+      "aspects": ["mega"],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "baseStats": {
+        "hp": 60,
+        "attack": 75,
+        "defence": 110,
+        "special_attack": 175,
+        "special_defence": 110,
+        "speed": 90
+      },
+      "baseScale": 1.05,
+      "hitbox": {
+        "width": 1.5,
+        "height": 3,
+        "fixed": false
+      },
+      "height": 25,
+      "weight": 696
+    }
+  ]
+}
