@@ -140,6 +140,11 @@ public record DuFusion(
                 playerPartyStore.remove(pokemon);
             }
         } else if (pokemonStored != null) {
+            if (!pokemonStored.getTradeable() && pokemonStored.getOwnerPlayer() != player) {
+                player.displayClientMessage(Component.translatable("message.mega_showdown.untradable")
+                        .withStyle(ChatFormatting.RED), true);
+                return InteractionResultHolder.pass(stack);
+            }
             playerPartyStore.add(pokemonStored);
             stack.remove(MegaShowdownDataComponents.POKEMON_STORAGE.get());
             stack.set(DataComponents.CUSTOM_NAME, Component.translatable("item.mega_showdown." + namespace + ".inactive"));

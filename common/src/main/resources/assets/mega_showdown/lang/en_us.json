@@ -672,5 +672,7 @@
   "gui.battle.mega_showdown.stat.accuracy": "ACC",
   "gui.battle.mega_showdown.stat.evasion": "EVA",
   "gui.battle.mega_showdown.stat.crt": "CRT",
-  "gui.battle.mega_showdown.move.power_with_stab": "%1$s §e(%2$s§e)"
+  "gui.battle.mega_showdown.move.power_with_stab": "%1$s §e(%2$s§e)",
+
+  "message.mega_showdown.untradable": "Pokémon cannot be traded and you don't own this Pokémon"
 }
