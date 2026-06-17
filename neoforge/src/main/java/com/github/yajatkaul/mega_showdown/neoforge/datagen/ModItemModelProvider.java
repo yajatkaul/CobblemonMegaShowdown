@@ -88,6 +88,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(MegaShowdownItems.SKARMORITE.get());
         basicItem(MegaShowdownItems.STARMINITE.get());
         basicItem(MegaShowdownItems.VICTREEBELITE.get());
+        basicItem(MegaShowdownItems.STARAPTITE.get());
+        basicItem(MegaShowdownItems.SCOLIPITE.get());
+        basicItem(MegaShowdownItems.SCRAFTINITE.get());
+        basicItem(MegaShowdownItems.EELEKTROSSITE.get());
+        basicItem(MegaShowdownItems.PYROARITE.get());
+        basicItem(MegaShowdownItems.MALAMARITE.get());
+        basicItem(MegaShowdownItems.BARBARACITE.get());
+        basicItem(MegaShowdownItems.DRAGALGITE.get());
+        basicItem(MegaShowdownItems.FALINKSITE.get());
 
         basicItem(MegaShowdownItems.NORMAL_TERA_SHARD.get());
         basicItem(MegaShowdownItems.FIRE_TERA_SHARD.get());

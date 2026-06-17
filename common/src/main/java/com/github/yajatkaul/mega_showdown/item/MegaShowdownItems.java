@@ -120,6 +120,15 @@ public class MegaShowdownItems {
     public static final RegistrySupplier<Item> SKARMORITE = registerMegaStone("skarmorite");
     public static final RegistrySupplier<Item> STARMINITE = registerMegaStone("starminite");
     public static final RegistrySupplier<Item> VICTREEBELITE = registerMegaStone("victreebelite");
+    public static final RegistrySupplier<Item> STARAPTITE = registerMegaStone("staraptite");
+    public static final RegistrySupplier<Item> SCOLIPITE = registerMegaStone("scolipite");
+    public static final RegistrySupplier<Item> SCRAFTINITE = registerMegaStone("scraftinite");
+    public static final RegistrySupplier<Item> EELEKTROSSITE = registerMegaStone("eelektrossite");
+    public static final RegistrySupplier<Item> PYROARITE = registerMegaStone("pyroarite");
+    public static final RegistrySupplier<Item> MALAMARITE = registerMegaStone("malamarite");
+    public static final RegistrySupplier<Item> BARBARACITE = registerMegaStone("barbaracite");
+    public static final RegistrySupplier<Item> DRAGALGITE = registerMegaStone("dragalgite");
+    public static final RegistrySupplier<Item> FALINKSITE = registerMegaStone("falinksite");
 
     public static final RegistrySupplier<Item> RED_ORB = registerFormChangeHeldItems(
             "red_orb",
