@@ -60,69 +60,7 @@
     },
     "seats": [
       {
-        "offset": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "poseOffsets": [
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["STAND"]
-          },
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["WALK"]
-          },
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["HOVER"]
-          },
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["FLY"]
-          },
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["FLOAT"]
-          },
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["SWIM"]
-          },
-          {
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "poseTypes": ["GLIDE"]
-          }
-        ]
+        "locator": "seat_1"
       }
     ]
   }
