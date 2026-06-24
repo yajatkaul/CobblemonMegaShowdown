@@ -66,83 +66,7 @@
         },
         "seats": [
             {
-                "offset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "poseOffsets": [
-                    {
-                        "offset": {
-                            "x": 0.0,
-                            "y": -1.0283693,
-                            "z": 0.81891286
-                        },
-                        "poseTypes": [
-                            "STAND"
-                        ]
-                    },
-                    {
-                        "offset": {
-                            "x": -0.015338191,
-                            "y": -1.0352079,
-                            "z": 0.86715484
-                        },
-                        "poseTypes": [
-                            "WALK"
-                        ]
-                    },
-                    {
-                        "offset": {
-                            "x": 0.009587893,
-                            "y": -0.98346996,
-                            "z": 0.82437676
-                        },
-                        "poseTypes": [
-                            "HOVER"
-                        ]
-                    },
-                    {
-                        "offset": {
-                            "x": 0.009587893,
-                            "y": -0.98346996,
-                            "z": 0.82437676
-                        },
-                        "poseTypes": [
-                            "FLY"
-                        ]
-                    },
-                    {
-                        "offset": {
-                            "x": -0.015338191,
-                            "y": -1.0352079,
-                            "z": 0.86715484
-                        },
-                        "poseTypes": [
-                            "FLOAT"
-                        ]
-                    },
-                    {
-                        "offset": {
-                            "x": -0.015338191,
-                            "y": -1.0352079,
-                            "z": 0.86715484
-                        },
-                        "poseTypes": [
-                            "SWIM"
-                        ]
-                    },
-                    {
-                        "offset": {
-                            "x": 0.009587893,
-                            "y": -0.98346996,
-                            "z": 0.82437676
-                        },
-                        "poseTypes": [
-                            "GLIDE"
-                        ]
-                    }
-                ]
+                "locator": "seat_1"
             }
         ]
     },
@@ -383,18 +307,21 @@
                     ]
                 },
                 "moving": {
-                    "fly": {
-                        "canFly": true
-                    },
+                    "canLook": false,
                     "swim": {
                         "avoidsWater": true,
+                        "canSwimInWater": false,
                         "canSwimInLava": true
                     },
                     "walk": {
                         "canWalk": false
+                    },
+                    "fly": {
+                        "canFly": true
                     }
                 },
                 "resting": {
+                    "depth": "comatose",
                     "drowsyChance": 0.0333,
                     "rouseChance": 0.0042
                 }
@@ -763,9 +690,13 @@
                 },
                 "moving": {
                     "canLook": false,
+                    "fly": {
+                        "canFly": true
+                    },
                     "swim": {
                         "avoidsWater": true,
-                        "canSwimInWater": false
+                        "canSwimInWater": false,
+                        "canSwimInLava": true
                     },
                     "walk": {
                         "canWalk": false

@@ -65,87 +65,16 @@
     },
     "seats": [
       {
-        "offset": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "poseOffsets": [
-          {
-            "offset": {
-              "x": -0.011616215,
-              "y": -1.3666525,
-              "z": -0.28912854
-            },
-            "poseTypes": [
-              "STAND"
-            ]
-          },
-          {
-            "offset": {
-              "x": 0.041163683,
-              "y": -1.4031144,
-              "z": -0.28313723
-            },
-            "poseTypes": [
-              "WALK"
-            ]
-          },
-          {
-            "offset": {
-              "x": -0.013957404,
-              "y": -1.4664029,
-              "z": -0.13922381
-            },
-            "poseTypes": [
-              "HOVER"
-            ]
-          },
-          {
-            "offset": {
-              "x": -0.013957404,
-              "y": -1.4664029,
-              "z": -0.13922381
-            },
-            "poseTypes": [
-              "FLY"
-            ]
-          },
-          {
-            "offset": {
-              "x": -0.013957404,
-              "y": -1.4664029,
-              "z": -0.13922381
-            },
-            "poseTypes": [
-              "FLOAT"
-            ]
-          },
-          {
-            "offset": {
-              "x": 0.041163683,
-              "y": -1.4031144,
-              "z": -0.28313723
-            },
-            "poseTypes": [
-              "SWIM"
-            ]
-          },
-          {
-            "offset": {
-              "x": -0.013957404,
-              "y": -1.4664029,
-              "z": -0.13922381
-            },
-            "poseTypes": [
-              "GLIDE"
-            ]
-          }
-        ]
+        "locator": "seat_1"
       }
     ]
   },
   "behaviour": {
+    "combat": {
+      "willDefendOwner": true,
+      "willDefendSelf": true,
+      "willFlee": false
+    },
     "herd": {
       "maxSize": "7",
       "toleratedLeaders": [
@@ -156,26 +85,21 @@
       ]
     },
     "moving": {
-      "walk": {
-        "walkSpeed": 0.135
-      },
       "swim": {
         "avoidsWater": true
+      },
+      "walk": {
+        "walkSpeed": 0.135
       }
     },
     "resting": {
       "canSleep": true,
+      "drowsyChance": 0.0333,
       "light": "0-4",
+      "rouseChance": 0.0042,
       "times": [
         "night, noon"
-      ],
-      "drowsyChance": 0.0333,
-      "rouseChance": 0.0042
-    },
-    "combat": {
-      "willDefendSelf": true,
-      "willDefendOwner": true,
-      "willFlee": false
+      ]
     }
   },
   "drops": {
@@ -366,26 +290,49 @@
         "speed": 80
       },
       "baseExperienceYield": 313,
+      "riding": {
+        "behaviour": {
+          "key": "cobblemon:land/horse"
+        },
+        "seats": [],
+        "stats": {
+          "ACCELERATION": {
+            "ranges": "10-65"
+          },
+          "JUMP": {
+            "ranges": "20-40"
+          },
+          "SKILL": {
+            "ranges": "40-85"
+          },
+          "SPEED": {
+            "ranges": "20-50"
+          },
+          "STAMINA": {
+            "ranges": "40-85"
+          }
+        }
+      },
       "behaviour": {
+        "combat": {
+          "willDefendOwner": true,
+          "willDefendSelf": true,
+          "willFlee": false
+        },
         "herd": {
           "maxSize": "8"
-        },
-        "resting": {
-          "times": [
-            "night, noon"
-          ],
-          "drowsyChance": 0.0333,
-          "rouseChance": 0.0042
         },
         "moving": {
           "swim": {
             "avoidsWater": true
           }
         },
-        "combat": {
-          "willDefendSelf": true,
-          "willDefendOwner": true,
-          "willFlee": false
+        "resting": {
+          "drowsyChance": 0.0333,
+          "rouseChance": 0.0042,
+          "times": [
+            "night, noon"
+          ]
         }
       },
       "evolutions": [],
