@@ -14,14 +14,18 @@
   ],
   "animations": {
     "cry": "q.bedrock_stateful('scizor_mega', 'cry')",
-	"status": "q.bedrock_stateful('scizor_mega', 'cry', q.curve('symmetrical_wide'))",
     "recoil": "q.bedrock_stateful('scizor_mega', 'recoil')",
 	"bulletpunch": "q.bedrock_primary('scizor_mega', 'bulletpunch', q.curve('symmetrical_wide'))",
 	"air_bulletpunch": "q.bedrock_primary('scizor_mega', 'air_bulletpunch', q.curve('symmetrical_wide'))",
+	"closecombat": "q.bedrock_primary('scizor_mega', 'closecombat', q.curve('symmetrical_wide'))",
+	"air_closecombat": "q.bedrock_primary('scizor_mega', 'air_closecombat', q.curve('symmetrical_wide'))",
 	"physical": "q.bedrock_primary('scizor_mega', 'physical', q.curve('symmetrical_wide'))",
 	"special": "q.bedrock_primary('scizor_mega', 'special', q.curve('symmetrical_wide'))",
+	"battle_cry": "q.bedrock_primary('scizor_mega', 'battle_cry', q.curve('symmetrical_wide'))",
+	"status": "q.bedrock_primary('scizor_mega', 'battle_cry', q.curve('symmetrical_wide'))",
 	"air_physical": "q.bedrock_primary('scizor_mega', 'air_physical', q.curve('symmetrical_wide'))",
 	"air_special": "q.bedrock_primary('scizor_mega', 'air_special', q.curve('symmetrical_wide'))",
+	"air_status": "q.bedrock_primary('scizor_mega', 'air_battle_cry', q.curve('symmetrical_wide'))",
 	"faint": "q.bedrock_stateful('scizor_mega', 'faint', q.curve('symmetrical_wide'))"
   },
   "poses": {
@@ -32,7 +36,10 @@
       "animations": ["q.look('head_pivot')", "q.bedrock('scizor_mega', 'ground_idle')"],
       "quirks": [
 	  "q.bedrock_quirk('scizor_mega', 'blink')",
-	  "q.bedrock_quirk('scizor_mega', 'snap_quirk', 6, 32, 1)"]
+	  "q.bedrock_quirk('scizor_mega', 'snap_quirk', 6, 32, 1)"],
+	  "namedAnimations": {
+       "cry": "q.bedrock_primary('scizor_mega', 'battle_cry', q.curve('symmetrical_wide'))"
+	  }
     },
 	"battle-flying": {
       "poseTypes": ["HOVER", "FLOAT"],
@@ -45,9 +52,12 @@
         "q.bedrock_quirk('scizor_mega', 'blink')"
       ],
       "namedAnimations": {
+        "cry": "q.bedrock_primary('scizor_mega', 'air_battle_cry', q.curve('symmetrical_wide'))",
         "bulletpunch": "q.bedrock_primary('scizor_mega', 'air_bulletpunch', q.curve('symmetrical_wide'))",
-        "physical": "q.bedrock_primary('scizor_mega', 'air_physical', q.curve('symmetrical'))",
-		"special": "q.bedrock_primary('scizor_mega', 'air_special', q.curve('symmetrical'))"
+        "closecombat": "q.bedrock_primary('scizor_mega', 'air_closecombat', q.curve('symmetrical_wide'))",
+        "physical": "q.bedrock_primary('scizor_mega', 'air_physical', q.curve('symmetrical_wide'))",
+		"special": "q.bedrock_primary('scizor_mega', 'air_special', q.curve('symmetrical_wide'))",
+		"status": "q.bedrock_primary('scizor_mega', 'air_battle_cry', q.curve('symmetrical_wide'))"
       }
     },
     "standing": {
@@ -73,7 +83,7 @@
       ],
       "animations": [
 	    "q.look('head_pivot')",
-        "q.bedrock('scizor_mega', 'air_fly')"
+        "q.bedrock('scizor_mega', 'ground_walk')"
       ],
       "quirks": [
         "q.bedrock_quirk('scizor_mega', 'blink')"
