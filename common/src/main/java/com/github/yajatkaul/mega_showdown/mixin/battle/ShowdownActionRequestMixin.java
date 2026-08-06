@@ -33,8 +33,12 @@ public class ShowdownActionRequestMixin {
     @Shadow
     private ShowdownSide side;
 
+    // Must stay transient: Cobblemon deserializes ShowdownActionRequest with Gson
+    // (BattleRegistry.gson in RequestInstruction). Gson walks every declared field,
+    // so a non-transient BattleActor here drags the whole live battle graph into
+    // reflective adapter construction and dies on java.util.Optional under Java 21+.
     @Unique
-    private BattleActor mega_showdown$battleActor;
+    private transient BattleActor mega_showdown$battleActor;
 
     @Inject(method = "sanitize", at = @At("HEAD"), remap = false)
     private void beforeSanitize(PokemonBattle battle, BattleActor battleActor, CallbackInfo ci) {
