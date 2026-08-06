@@ -2,6 +2,8 @@ package com.github.yajatkaul.mega_showdown.mixin.battle;
 
 import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
 import com.cobblemon.mod.common.battles.*;
+import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
+import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import kotlin.Pair;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -26,6 +28,15 @@ public class MoveActionResponseMixin {
     public boolean isValid(ActiveBattlePokemon activeBattlePokemon, ShowdownMoveset showdownMoveSet, boolean forceSwitch) {
         if (forceSwitch || showdownMoveSet == null) {
             return false;
+        }
+
+        if (gimmickID != null && gimmickID.equalsIgnoreCase(ShowdownMoveset.Gimmick.MEGA_EVOLUTION.getId())) {
+            BattlePokemon battlePokemon = activeBattlePokemon.getBattlePokemon();
+            if (!showdownMoveSet.getCanMegaEvo()
+                    || battlePokemon == null
+                    || !MegaGimmick.hasRequiredMegaFriendship(battlePokemon.getOriginalPokemon())) {
+                return false;
+            }
         }
 
         InBattleMove move = showdownMoveSet.getMoves().stream()

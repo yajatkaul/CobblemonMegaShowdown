@@ -1,5 +1,6 @@
 package com.github.yajatkaul.mega_showdown.config;
 
+import com.cobblemon.mod.common.Cobblemon;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,6 +25,7 @@ public class MegaShowdownConfig {
 
     public static int teraShardRequired = 50;
     public static boolean outSideMega = true;
+    public static int megaFriendshipRequirement = 255;
     public static boolean outSideUltraBurst = true;
     public static boolean multipleMegas = false;
     public static boolean msdPatchAutoUpdate = true;
@@ -93,6 +95,8 @@ public class MegaShowdownConfig {
     }
 
     public static void load() {
+        megaFriendshipRequirement = Cobblemon.INSTANCE.getConfig().getMaxPokemonFriendship();
+
         File file = new File(FILE_PATH);
         if (!file.exists()) {
             MegaShowdown.LOGGER.info("MegaShowdown config not found, creating default.");

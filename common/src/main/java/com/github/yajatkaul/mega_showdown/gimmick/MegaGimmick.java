@@ -36,6 +36,12 @@ public record MegaGimmick(
         return pokemon.getPersistentData().getBoolean(IS_MEGA_TAG);
     }
 
+    public static boolean hasRequiredMegaFriendship(Pokemon pokemon) {
+        return pokemon != null
+                && (!pokemon.isPlayerOwned()
+                || pokemon.getFriendship() >= MegaShowdownConfig.megaFriendshipRequirement);
+    }
+
     public static boolean hasMega(ServerPlayer player) {
         if (MegaShowdownConfig.multipleMegas) {
             return false;
@@ -94,7 +100,7 @@ public record MegaGimmick(
         }
         if (pokemon.getPersistentData().getBoolean(IS_MEGA_TAG)) {
             unmegaEvolve(pokemon);
-        } else {
+        } else if (canMega(pokemon)) {
             AdvancementHelper.grantAdvancement(pokemon.getOwnerPlayer(), "mega/mega_evolve");
             megaEvolve(pokemon);
         }
@@ -121,6 +127,10 @@ public record MegaGimmick(
 
     public static boolean canMega(Pokemon pokemon) {
         ServerPlayer player = pokemon.getOwnerPlayer();
+
+        if (!hasRequiredMegaFriendship(pokemon)) {
+            return false;
+        }
 
         if (player != null && !GimmickTurnCheck.hasGimmick(ShowdownMoveset.Gimmick.MEGA_EVOLUTION, player)) {
             return false;
