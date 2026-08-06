@@ -36,12 +36,6 @@ public record MegaGimmick(
         return pokemon.getPersistentData().getBoolean(IS_MEGA_TAG);
     }
 
-    public static boolean hasRequiredMegaFriendship(Pokemon pokemon) {
-        return pokemon != null
-                && (!pokemon.isPlayerOwned()
-                || pokemon.getFriendship() >= MegaShowdownConfig.megaFriendshipRequirement);
-    }
-
     public static boolean hasMega(ServerPlayer player) {
         if (MegaShowdownConfig.multipleMegas) {
             return false;
@@ -128,7 +122,7 @@ public record MegaGimmick(
     public static boolean canMega(Pokemon pokemon) {
         ServerPlayer player = pokemon.getOwnerPlayer();
 
-        if (!hasRequiredMegaFriendship(pokemon)) {
+        if (!MaxBond.hasRequiredFriendship(pokemon)) {
             return false;
         }
 
