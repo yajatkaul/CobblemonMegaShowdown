@@ -2,6 +2,8 @@ package com.github.yajatkaul.mega_showdown.mixin.battle;
 
 import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
 import com.cobblemon.mod.common.battles.*;
+import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
+import com.github.yajatkaul.mega_showdown.gimmick.MaxBond;
 import kotlin.Pair;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -28,6 +30,36 @@ public class MoveActionResponseMixin {
             return false;
         }
 
+        ShowdownMoveset.Gimmick selectedGimmick = null;
+        if (gimmickID != null) {
+            for (ShowdownMoveset.Gimmick gimmick : ShowdownMoveset.Gimmick.values()) {
+                if (gimmick.getId().equals(gimmickID)) {
+                    selectedGimmick = gimmick;
+                    break;
+                }
+            }
+            if (selectedGimmick == null) {
+                return false;
+            }
+        }
+
+        boolean isMegaEvolution = selectedGimmick == ShowdownMoveset.Gimmick.MEGA_EVOLUTION;
+        boolean isZMove = selectedGimmick == ShowdownMoveset.Gimmick.Z_POWER;
+
+        if (isMegaEvolution || isZMove) {
+            BattlePokemon battlePokemon = activeBattlePokemon.getBattlePokemon();
+            if (battlePokemon == null || !MaxBond.hasRequiredFriendship(battlePokemon.getOriginalPokemon())) {
+                return false;
+            }
+
+            if (isMegaEvolution && !showdownMoveSet.getCanMegaEvo()) {
+                return false;
+            }
+            if (isZMove && showdownMoveSet.getCanZMove() == null) {
+                return false;
+            }
+        }
+
         InBattleMove move = showdownMoveSet.getMoves().stream()
                 .filter(m -> m.getId().equals(moveName))
                 .findFirst()
@@ -36,12 +68,18 @@ public class MoveActionResponseMixin {
 
         InBattleGimmickMove gimmickMove = move.getGimmickMove();
         boolean validGimmickMove = gimmickMove != null && !gimmickMove.getDisabled();
+        if (isZMove && !validGimmickMove) {
+            return false;
+        }
         if (!validGimmickMove && !move.canBeUsed()) {
             return false;
         }
 
         List<Targetable> availableTargets;
-        if (gimmickID != null && validGimmickMove && !gimmickID.equalsIgnoreCase("mega") && !gimmickID.equalsIgnoreCase("terastal")) {
+        if (selectedGimmick != null
+                && validGimmickMove
+                && selectedGimmick != ShowdownMoveset.Gimmick.MEGA_EVOLUTION
+                && selectedGimmick != ShowdownMoveset.Gimmick.TERASTALLIZATION) {
             availableTargets = gimmickMove.getTarget().getTargetList().invoke(activeBattlePokemon);
         } else {
             availableTargets = move.getTarget().getTargetList().invoke(activeBattlePokemon);
