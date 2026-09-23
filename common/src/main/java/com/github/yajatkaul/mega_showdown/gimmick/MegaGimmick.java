@@ -94,7 +94,7 @@ public record MegaGimmick(
         }
         if (pokemon.getPersistentData().getBoolean(IS_MEGA_TAG)) {
             unmegaEvolve(pokemon);
-        } else {
+        } else if (canMega(pokemon)) {
             AdvancementHelper.grantAdvancement(pokemon.getOwnerPlayer(), "mega/mega_evolve");
             megaEvolve(pokemon);
         }
@@ -121,6 +121,10 @@ public record MegaGimmick(
 
     public static boolean canMega(Pokemon pokemon) {
         ServerPlayer player = pokemon.getOwnerPlayer();
+
+        if (!MaxBond.hasRequiredFriendship(pokemon)) {
+            return false;
+        }
 
         if (player != null && !GimmickTurnCheck.hasGimmick(ShowdownMoveset.Gimmick.MEGA_EVOLUTION, player)) {
             return false;
