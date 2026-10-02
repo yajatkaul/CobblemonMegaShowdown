@@ -1,5 +1,2 @@
-# 1.1.3+1.8+1.21.1-release
-- Fixed Alolan-Bias Cosplay Pikachu forms
-- Made Mega Delphox rideable
-- New dynamax band model
-- Fixed corviknight gmax poser
+# 1.3.0+1.8.1+1.21.1-release
+- 

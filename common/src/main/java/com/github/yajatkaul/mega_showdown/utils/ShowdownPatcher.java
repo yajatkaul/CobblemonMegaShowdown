@@ -13,7 +13,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
 public class ShowdownPatcher {
-    private static final String SHOWDOWN_VERSION = "1.3.1";
+    private static final String SHOWDOWN_VERSION = "1.3.2";
     private static final Gson GSON = new Gson();
 
     public static void patch() {
