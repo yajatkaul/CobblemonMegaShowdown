@@ -6,7 +6,7 @@
       "primaryType": "dark",
       "secondaryType": "ghost",
       "pokedex": ["cobblemon.species.absol-mega-z.desc"],
-      "labels": ["gen3", "mega_z"],
+      "labels": ["gen3", "mega"],
       "aspects": ["mega_z"],
       "abilities": ["sharpness", "sharpness", "h:sharpness"],
       "baseStats": {
@@ -28,7 +28,7 @@
             "rideSounds": [],
             "stats": {
               "ACCELERATION": "75-85",
-              "JUMP": "20-40",
+              "JUMP": "30-50",
               "SKILL": "60-80",
               "SPEED": "50-70",
               "STAMINA": "35-55"
