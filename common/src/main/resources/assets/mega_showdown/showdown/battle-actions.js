@@ -2368,21 +2368,44 @@ class BattleActions {
     }
     return null;
   }
-  runMegaEvo(pokemon) {
-    const speciesid = pokemon.canMegaEvo || pokemon.canUltraBurst;
-    if (!speciesid) return false;
-    pokemon.formeChange(speciesid, pokemon.getItem(), true);
-    const wasMega = pokemon.canMegaEvo;
-    for (const ally of pokemon.side.pokemon) {
-      if (wasMega) {
-        ally.canMegaEvo = null;
-      } else {
-        ally.canUltraBurst = null;
-      }
-    }
-    this.battle.runEvent("AfterMega", pokemon);
-    return true;
-  }
+	runMegaEvo(pokemon) {
+		const speciesid = pokemon.canMegaEvo || pokemon.canUltraBurst;
+		if (!speciesid) return false;
+
+		pokemon.formeChange(speciesid, pokemon.getItem(), true);
+		const swap = pokemon.getItem().megaSwap?.[pokemon.species.name];
+		if (swap) {
+			for (const [oldId, newId] of swap) {
+				const move = this.dex.moves.get(newId);
+				for (const slot of [...pokemon.baseMoveSlots, ...pokemon.moveSlots]) {
+					if (slot.id !== oldId) continue;
+				
+					slot.id = move.id;
+					slot.move = move.name;
+					slot.target = move.target;
+					slot.pp = Math.floor(slot.pp * (move.pp / this.dex.moves.get(oldId).pp));
+				
+					for (const action of this.battle.queue.list) {
+						if (
+							action.choice === 'move' &&
+							action.pokemon === pokemon &&
+							action.moveid === oldId
+						) {
+							action.moveid = move.id;
+							action.move = this.dex.getActiveMove(move.id);
+						}
+					}
+				}
+			}
+		}
+		const wasMega = !!pokemon.canMegaEvo;
+		pokemon.side.hasMegaEvolved = true;
+		for (const ally of pokemon.side.pokemon) {
+			wasMega ? ally.canMegaEvo = null : ally.canUltraBurst = null;
+		}
+		this.battle.runEvent('AfterMega', pokemon);
+		return true;
+	}
   canTerastallize(pokemon) {
     if (
       pokemon.species.baseSpecies === "Rayquaza" &&
