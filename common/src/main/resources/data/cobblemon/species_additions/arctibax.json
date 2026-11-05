@@ -1,4 +1,5 @@
 {
+  "implemented": true,
   "target": "cobblemon:arctibax",
   "hitbox": {
    "width": 1.5,
