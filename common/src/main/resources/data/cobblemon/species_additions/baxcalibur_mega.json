@@ -1,4 +1,5 @@
 {
+  "implemented": true,
   "target": "cobblemon:baxcalibur",
   "hitbox": {
     "width": 3,
