@@ -15,6 +15,16 @@
         },
         {
           "type": "minecraft:item",
+          "name": "cobblemon:vivichoke",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:medicinal_brew",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:carrot",
           "weight": 13
         },

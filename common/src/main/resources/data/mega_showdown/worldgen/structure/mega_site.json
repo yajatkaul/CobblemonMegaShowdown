@@ -3,7 +3,7 @@
   "biomes": "#minecraft:is_overworld",
   "step": "underground_decoration",
   "spawn_overrides": {},
-  "terrain_adaptation": "beard_box",
+  "terrain_adaptation": "bury",
   "start_pool": "mega_showdown:mega_site",
   "size": 1,
   "start_height": {
