@@ -1,0 +1,50 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:brush",
+          "weight": 1,
+          "functions": []
+        }
+      ]
+    },
+    {
+      "rolls": 13,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:blank_tm",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_copper",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_shard",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:relic_coin",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "cobblemon:sets/any_type_gem",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

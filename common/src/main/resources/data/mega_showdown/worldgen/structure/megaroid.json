@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "biomes": "#minecraft:is_overworld",
   "step": "underground_decoration",
-  "terrain_adaptation": "beard_box",
+  "terrain_adaptation": "bury",
   "spawn_overrides": {},
   "start_pool": "mega_showdown:megaroid",
   "size": 1,

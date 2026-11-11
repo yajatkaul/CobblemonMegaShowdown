@@ -1,17 +1,6 @@
 {
   "pools": [
     {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "mega_showdown:zygarde_cell",
-          "weight": 1,
-          "functions": []
-        }
-      ]
-    },
-    {
       "rolls": 3,
       "entries": [
         {
@@ -28,6 +17,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:lightning_rod",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:blank_tm",
           "weight": 4
         },
         {
