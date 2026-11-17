@@ -1,19 +1,19 @@
 {
   "values": [
+    "mega_showdown:gladion_z_power_ring",
+    "mega_showdown:hapu_z_power_ring",
+    "mega_showdown:hapus_z_ring",
+    "mega_showdown:nanu_z_power_ring",
+    "mega_showdown:olivia_z_power_ring",
+    "mega_showdown:olivias_z_ring",
+    "mega_showdown:rocket_z_power_ring",
+    "mega_showdown:z_power_ring",
     "mega_showdown:z_ring",
     "mega_showdown:z_ring_black",
-    "mega_showdown:z_ring_yellow",
-    "mega_showdown:z_ring_green",
     "mega_showdown:z_ring_blue",
+    "mega_showdown:z_ring_green",
     "mega_showdown:z_ring_pink",
     "mega_showdown:z_ring_red",
-    "mega_showdown:olivias_z_ring",
-    "mega_showdown:hapus_z_ring",
-    "mega_showdown:z_power_ring",
-    "mega_showdown:olivia_z_power_ring",
-    "mega_showdown:hapu_z_power_ring",
-    "mega_showdown:rocket_z_power_ring",
-    "mega_showdown:gladion_z_power_ring",
-    "mega_showdown:nanu_z_power_ring"
+    "mega_showdown:z_ring_yellow"
   ]
 }
