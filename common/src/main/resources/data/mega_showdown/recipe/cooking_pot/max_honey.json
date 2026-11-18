@@ -1,0 +1,21 @@
+{
+  "type":"cobblemon:cooking_pot",
+  "category":"foods",
+  "key":{
+    "a":{
+      "item":"mega_showdown:max_mushroom"
+    },
+    "b":{
+      "item":"minecraft:honeycomb"
+    }
+  },
+  "pattern":[
+    "ab ",
+    "   "
+  ],
+  "result": {
+    "id":"mega_showdown:max_honey"
+  },
+  "seasoningTag":"cobblemon:empty",
+  "seasoningProcessors":[]
+}

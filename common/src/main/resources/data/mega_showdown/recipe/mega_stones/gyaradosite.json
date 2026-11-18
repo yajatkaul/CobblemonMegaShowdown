@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "cobblemon:deep_sea_scale"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "cobblemon:water_gem"
+    },
+    "h": {
+      "item": "cobblemon:dark_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:gyaradosite"
+  }
+}

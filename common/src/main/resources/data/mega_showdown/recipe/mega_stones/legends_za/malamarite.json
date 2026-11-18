@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:clock"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "cobblemon:dark_gem"
+    },
+    "h": {
+      "item": "cobblemon:psychic_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:malamarite"
+  }
+}

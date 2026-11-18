@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "cobblemon:wise_glasses"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "cobblemon:life_orb"
+    },
+    "g": {
+      "item": "cobblemon:psychic_gem"
+    },
+    "h": {
+      "item": "cobblemon:psychic_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:mewtwonite_y"
+  }
+}

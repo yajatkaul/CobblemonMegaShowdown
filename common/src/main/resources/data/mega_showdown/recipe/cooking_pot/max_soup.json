@@ -1,0 +1,21 @@
+{
+  "type":"cobblemon:cooking_pot",
+  "category":"foods",
+  "pattern":[
+    "aaa",
+    " b "
+  ],
+  "key":{
+    "a": {
+      "item":"mega_showdown:max_mushroom"
+    },
+    "b":{
+      "item":"minecraft:bowl"
+    }
+  },
+  "result": {
+    "id":"mega_showdown:max_soup"
+  },
+  "seasoningTag":"cobblemon:empty",
+  "seasoningProcessors":[]
+}

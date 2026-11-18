@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "mega_showdown:mewtwonite_x"
+      "id": "mega_showdown:lucarionite_z"
     },
     "title": {
       "translate": "advancement.mega_showdown.craft_mega_stones.title",
@@ -23,9 +23,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:mega_stone"
-            ]
+            "items": ["mega_showdown:mega_stone"]
           }
         ]
       }
@@ -35,9 +33,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:absolite"
-            ]
+            "items": ["mega_showdown:absolite"]
           }
         ]
       }
@@ -47,9 +43,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:aerodactylite"
-            ]
+            "items": ["mega_showdown:aerodactylite"]
           }
         ]
       }
@@ -59,9 +53,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:aggronite"
-            ]
+            "items": ["mega_showdown:aggronite"]
           }
         ]
       }
@@ -71,9 +63,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:alakazite"
-            ]
+            "items": ["mega_showdown:alakazite"]
           }
         ]
       }
@@ -83,9 +73,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:altarianite"
-            ]
+            "items": ["mega_showdown:altarianite"]
           }
         ]
       }
@@ -95,9 +83,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:ampharosite"
-            ]
+            "items": ["mega_showdown:ampharosite"]
           }
         ]
       }
@@ -107,9 +93,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:audinite"
-            ]
+            "items": ["mega_showdown:audinite"]
           }
         ]
       }
@@ -119,9 +103,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:banettite"
-            ]
+            "items": ["mega_showdown:banettite"]
           }
         ]
       }
@@ -131,9 +113,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:beedrillite"
-            ]
+            "items": ["mega_showdown:beedrillite"]
           }
         ]
       }
@@ -143,9 +123,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:blastoisinite"
-            ]
+            "items": ["mega_showdown:blastoisinite"]
           }
         ]
       }
@@ -155,9 +133,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:blazikenite"
-            ]
+            "items": ["mega_showdown:blazikenite"]
           }
         ]
       }
@@ -167,9 +143,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:cameruptite"
-            ]
+            "items": ["mega_showdown:cameruptite"]
           }
         ]
       }
@@ -179,9 +153,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:charizardite_y"
-            ]
+            "items": ["mega_showdown:charizardite_y"]
           }
         ]
       }
@@ -191,21 +163,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:charizardite_x"
-            ]
-          }
-        ]
-      }
-    },
-    "diancite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "mega_showdown:diancite"
-            ]
+            "items": ["mega_showdown:charizardite_x"]
           }
         ]
       }
@@ -215,9 +173,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:galladite"
-            ]
+            "items": ["mega_showdown:galladite"]
           }
         ]
       }
@@ -227,9 +183,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:garchompite"
-            ]
+            "items": ["mega_showdown:garchompite"]
           }
         ]
       }
@@ -239,9 +193,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:gardevoirite"
-            ]
+            "items": ["mega_showdown:gardevoirite"]
           }
         ]
       }
@@ -251,9 +203,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:gengarite"
-            ]
+            "items": ["mega_showdown:gengarite"]
           }
         ]
       }
@@ -263,9 +213,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:glalitite"
-            ]
+            "items": ["mega_showdown:glalitite"]
           }
         ]
       }
@@ -275,9 +223,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:gyaradosite"
-            ]
+            "items": ["mega_showdown:gyaradosite"]
           }
         ]
       }
@@ -287,9 +233,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:heracronite"
-            ]
+            "items": ["mega_showdown:heracronite"]
           }
         ]
       }
@@ -299,9 +243,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:houndoominite"
-            ]
+            "items": ["mega_showdown:houndoominite"]
           }
         ]
       }
@@ -311,9 +253,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:kangaskhanite"
-            ]
+            "items": ["mega_showdown:kangaskhanite"]
           }
         ]
       }
@@ -323,9 +263,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:latiasite"
-            ]
+            "items": ["mega_showdown:latiasite"]
           }
         ]
       }
@@ -335,9 +273,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:latiosite"
-            ]
+            "items": ["mega_showdown:latiosite"]
           }
         ]
       }
@@ -347,9 +283,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:lopunnite"
-            ]
+            "items": ["mega_showdown:lopunnite"]
           }
         ]
       }
@@ -359,9 +293,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:lucarionite"
-            ]
+            "items": ["mega_showdown:lucarionite"]
           }
         ]
       }
@@ -371,9 +303,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:manectite"
-            ]
+            "items": ["mega_showdown:manectite"]
           }
         ]
       }
@@ -383,9 +313,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:mawilite"
-            ]
+            "items": ["mega_showdown:mawilite"]
           }
         ]
       }
@@ -395,9 +323,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:medichamite"
-            ]
+            "items": ["mega_showdown:medichamite"]
           }
         ]
       }
@@ -407,33 +333,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:metagrossite"
-            ]
-          }
-        ]
-      }
-    },
-    "mewtwonite_y": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "mega_showdown:mewtwonite_y"
-            ]
-          }
-        ]
-      }
-    },
-    "mewtwonite_x": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "mega_showdown:mewtwonite_x"
-            ]
+            "items": ["mega_showdown:metagrossite"]
           }
         ]
       }
@@ -443,9 +343,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:pidgeotite"
-            ]
+            "items": ["mega_showdown:pidgeotite"]
           }
         ]
       }
@@ -455,9 +353,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:pinsirite"
-            ]
+            "items": ["mega_showdown:pinsirite"]
           }
         ]
       }
@@ -467,9 +363,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:sablenite"
-            ]
+            "items": ["mega_showdown:sablenite"]
           }
         ]
       }
@@ -479,9 +373,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:salamencite"
-            ]
+            "items": ["mega_showdown:salamencite"]
           }
         ]
       }
@@ -491,9 +383,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:scizorite"
-            ]
+            "items": ["mega_showdown:scizorite"]
           }
         ]
       }
@@ -503,9 +393,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:sceptilite"
-            ]
+            "items": ["mega_showdown:sceptilite"]
           }
         ]
       }
@@ -515,9 +403,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:sharpedonite"
-            ]
+            "items": ["mega_showdown:sharpedonite"]
           }
         ]
       }
@@ -527,9 +413,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:slowbronite"
-            ]
+            "items": ["mega_showdown:slowbronite"]
           }
         ]
       }
@@ -539,9 +423,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:steelixite"
-            ]
+            "items": ["mega_showdown:steelixite"]
           }
         ]
       }
@@ -551,9 +433,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:swampertite"
-            ]
+            "items": ["mega_showdown:swampertite"]
           }
         ]
       }
@@ -563,9 +443,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:tyranitarite"
-            ]
+            "items": ["mega_showdown:tyranitarite"]
           }
         ]
       }
@@ -575,156 +453,486 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mega_showdown:venusaurite"
-            ]
+            "items": ["mega_showdown:venusaurite"]
+          }
+        ]
+      }
+    },
+    "clefablite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:clefablite"]
+          }
+        ]
+      }
+    },
+    "crabominite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:crabominite"]
+          }
+        ]
+      }
+    },
+    "delphoxite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:delphoxite"]
+          }
+        ]
+      }
+    },
+    "dragoninite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:dragoninite"]
+          }
+        ]
+      }
+    },
+    "drampanite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:drampanite"]
+          }
+        ]
+      }
+    },
+    "emboarite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:emboarite"]
+          }
+        ]
+      }
+    },
+    "excadrite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:excadrite"]
+          }
+        ]
+      }
+    },
+    "feraligite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:feraligite"]
+          }
+        ]
+      }
+    },
+    "floettite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:floettite"]
+          }
+        ]
+      }
+    },
+    "froslassite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:froslassite"]
+          }
+        ]
+      }
+    },
+    "glimmoranite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:glimmoranite"]
+          }
+        ]
+      }
+    },
+    "golurkite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:golurkite"]
+          }
+        ]
+      }
+    },
+    "greninjite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:greninjite"]
+          }
+        ]
+      }
+    },
+    "hawluchanite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:hawluchanite"]
+          }
+        ]
+      }
+    },
+    "meganiumite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:meganiumite"]
+          }
+        ]
+      }
+    },
+    "meowsticite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:meowsticite"]
+          }
+        ]
+      }
+    },
+    "raichunite_x": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:raichunite_x"]
+          }
+        ]
+      }
+    },
+    "raichunite_y": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:raichunite_y"]
+          }
+        ]
+      }
+    },
+    "scovillainite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:scovillainite"]
+          }
+        ]
+      }
+    },
+    "skarmorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:skarmorite"]
+          }
+        ]
+      }
+    },
+    "starminite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:starminite"]
+          }
+        ]
+      }
+    },
+    "victreebelite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:victreebelite"]
+          }
+        ]
+      }
+    },
+    "staraptite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:staraptite"]
+          }
+        ]
+      }
+    },
+    "scolipite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:scolipite"]
+          }
+        ]
+      }
+    },
+    "scraftinite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:scraftinite"]
+          }
+        ]
+      }
+    },
+    "eelektrossite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:eelektrossite"]
+          }
+        ]
+      }
+    },
+    "pyroarite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:pyroarite"]
+          }
+        ]
+      }
+    },
+    "malamarite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:malamarite"]
+          }
+        ]
+      }
+    },
+    "barbaracite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:barbaracite"]
+          }
+        ]
+      }
+    },
+    "dragalgite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:dragalgite"]
+          }
+        ]
+      }
+    },
+    "falinksite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:falinksite"]
+          }
+        ]
+      }
+    },
+    "chesnaughtite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:chesnaughtite"]
+          }
+        ]
+      }
+    },
+    "chimechite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:chimechite"]
+          }
+        ]
+      }
+    },
+    "chandelurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:chandelurite"]
+          }
+        ]
+      }
+    },
+    "absolite_z": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:absolite_z"]
+          }
+        ]
+      }
+    },
+    "baxcalibrite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:baxcalibrite"]
+          }
+        ]
+      }
+    },
+    "garchompite_z": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:garchompite_z"]
+          }
+        ]
+      }
+    },
+    "golisopite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:golisopite"]
+          }
+        ]
+      }
+    },
+    "lucarionite_z": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["mega_showdown:lucarionite_z"]
           }
         ]
       }
     }
   },
   "requirements": [
-    [
-      "mega_stone"
-    ],
-    [
-      "absolite"
-    ],
-    [
-      "aerodactylite"
-    ],
-    [
-      "aggronite"
-    ],
-    [
-      "alakazite"
-    ],
-    [
-      "altarianite"
-    ],
-    [
-      "ampharosite"
-    ],
-    [
-      "audinite"
-    ],
-    [
-      "banettite"
-    ],
-    [
-      "beedrillite"
-    ],
-    [
-      "blastoisinite"
-    ],
-    [
-      "blazikenite"
-    ],
-    [
-      "cameruptite"
-    ],
-    [
-      "charizardite_y"
-    ],
-    [
-      "charizardite_x"
-    ],
-    [
-      "diancite"
-    ],
-    [
-      "galladite"
-    ],
-    [
-      "garchompite"
-    ],
-    [
-      "gardevoirite"
-    ],
-    [
-      "gengarite"
-    ],
-    [
-      "glalitite"
-    ],
-    [
-      "gyaradosite"
-    ],
-    [
-      "heracronite"
-    ],
-    [
-      "houndoominite"
-    ],
-    [
-      "kangaskhanite"
-    ],
-    [
-      "latiasite"
-    ],
-    [
-      "latiosite"
-    ],
-    [
-      "lopunnite"
-    ],
-    [
-      "lucarionite"
-    ],
-    [
-      "manectite"
-    ],
-    [
-      "mawilite"
-    ],
-    [
-      "medichamite"
-    ],
-    [
-      "metagrossite"
-    ],
-    [
-      "mewtwonite_y"
-    ],
-    [
-      "mewtwonite_x"
-    ],
-    [
-      "pidgeotite"
-    ],
-    [
-      "pinsirite"
-    ],
-    [
-      "sablenite"
-    ],
-    [
-      "salamencite"
-    ],
-    [
-      "scizorite"
-    ],
-    [
-      "sceptilite"
-    ],
-    [
-      "sharpedonite"
-    ],
-    [
-      "slowbronite"
-    ],
-    [
-      "steelixite"
-    ],
-    [
-      "swampertite"
-    ],
-    [
-      "tyranitarite"
-    ],
-    [
-      "venusaurite"
-    ]
+    ["mega_stone"],
+    ["absolite"],
+    ["aerodactylite"],
+    ["aggronite"],
+    ["alakazite"],
+    ["altarianite"],
+    ["ampharosite"],
+    ["audinite"],
+    ["banettite"],
+    ["beedrillite"],
+    ["blastoisinite"],
+    ["blazikenite"],
+    ["cameruptite"],
+    ["charizardite_y"],
+    ["charizardite_x"],
+    ["galladite"],
+    ["garchompite"],
+    ["gardevoirite"],
+    ["gengarite"],
+    ["glalitite"],
+    ["gyaradosite"],
+    ["heracronite"],
+    ["houndoominite"],
+    ["kangaskhanite"],
+    ["latiasite"],
+    ["latiosite"],
+    ["lopunnite"],
+    ["lucarionite"],
+    ["manectite"],
+    ["mawilite"],
+    ["medichamite"],
+    ["metagrossite"],
+    ["pidgeotite"],
+    ["pinsirite"],
+    ["sablenite"],
+    ["salamencite"],
+    ["scizorite"],
+    ["sceptilite"],
+    ["sharpedonite"],
+    ["slowbronite"],
+    ["steelixite"],
+    ["swampertite"],
+    ["tyranitarite"],
+    ["venusaurite"],
+    ["clefablite"],
+    ["crabominite"],
+    ["delphoxite"],
+    ["dragoninite"],
+    ["drampanite"],
+    ["emboarite"],
+    ["excadrite"],
+    ["feraligite"],
+    ["floettite"],
+    ["froslassite"],
+    ["glimmoranite"],
+    ["golurkite"],
+    ["greninjite"],
+    ["hawluchanite"],
+    ["meganiumite"],
+    ["meowsticite"],
+    ["raichunite_x"],
+    ["raichunite_y"],
+    ["scovillainite"],
+    ["skarmorite"],
+    ["starminite"],
+    ["victreebelite"],
+    ["staraptite"],
+    ["scolipite"],
+    ["scraftinite"],
+    ["eelektrossite"],
+    ["pyroarite"],
+    ["malamarite"],
+    ["barbaracite"],
+    ["dragalgite"],
+    ["falinksite"],
+    ["chesnaughtite"],
+    ["chimechite"],
+    ["chandelurite"],
+    ["absolite_z"],
+    ["baxcalibrite"],
+    ["garchompite_z"],
+    ["golisopite"],
+    ["lucarionite_z"]
   ],
   "sends_telemetry_event": false
 }

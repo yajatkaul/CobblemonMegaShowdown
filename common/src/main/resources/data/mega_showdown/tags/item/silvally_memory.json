@@ -1,0 +1,21 @@
+{
+  "values": [
+    "mega_showdown:bug_memory",
+    "mega_showdown:dark_memory",
+    "mega_showdown:dragon_memory",
+    "mega_showdown:electric_memory",
+    "mega_showdown:fairy_memory",
+    "mega_showdown:fighting_memory",
+    "mega_showdown:fire_memory",
+    "mega_showdown:flying_memory",
+    "mega_showdown:ghost_memory",
+    "mega_showdown:grass_memory",
+    "mega_showdown:ground_memory",
+    "mega_showdown:ice_memory",
+    "mega_showdown:poison_memory",
+    "mega_showdown:psychic_memory",
+    "mega_showdown:rock_memory",
+    "mega_showdown:steel_memory",
+    "mega_showdown:water_memory"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "cobblemon:damp_rock"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "cobblemon:water_gem"
+    },
+    "h": {
+      "item": "cobblemon:ground_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:swampertite"
+  }
+}

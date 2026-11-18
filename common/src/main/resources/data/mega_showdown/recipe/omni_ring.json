@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " W ",
+    "KNS",
+    " T "
+  ],
+  "key": {
+    "W": [
+      {
+        "item": "mega_showdown:wishing_star"
+      },
+      {
+        "item": "mega_showdown:dynamax_band"
+      }
+    ],
+    "K": [
+      {
+        "tag": "mega_showdown:mega_bracelet"
+      },
+      {
+        "item": "mega_showdown:keystone"
+      }
+    ],
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": [
+      {
+        "item": "mega_showdown:sparkling_stone_dark"
+      },
+      {
+        "item": "mega_showdown:sparkling_stone_light"
+      },
+      {
+        "tag": "mega_showdown:z_ring"
+      }
+    ],
+    "T": {
+      "item": "mega_showdown:tera_orb"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:omni_ring"
+  }
+}

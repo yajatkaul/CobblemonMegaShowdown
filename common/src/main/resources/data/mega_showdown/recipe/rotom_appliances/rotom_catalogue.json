@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "mega_showdown:rotom_fan"
+    },
+    {
+      "item": "mega_showdown:rotom_fridge"
+    },
+    {
+      "item": "mega_showdown:rotom_mow"
+    },
+    {
+      "item": "mega_showdown:rotom_oven"
+    },
+    {
+      "item": "mega_showdown:rotom_washing_machine"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:rotom_catalogue"
+  }
+}

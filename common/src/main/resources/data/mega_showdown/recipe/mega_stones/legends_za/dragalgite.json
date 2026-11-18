@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "cobblemon:black_sludge"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "cobblemon:poison_gem"
+    },
+    "h": {
+      "item": "cobblemon:dragon_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:dragalgite"
+  }
+}

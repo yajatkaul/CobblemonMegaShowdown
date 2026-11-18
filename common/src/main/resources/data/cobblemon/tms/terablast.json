@@ -1,0 +1,15 @@
+{
+  "moveName": "terablast",
+  "type": "normal",
+  "obtainMethods": [
+    {
+      "variant": "cobblemon:default"
+    }
+  ],
+  "recipe": [
+    { 
+      "count": 2, 
+      "item": "mega_showdown:stellar_tera_shard"
+    }
+  ]
+}
