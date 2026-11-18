@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "cobblemon:shiny_stone"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "cobblemon:fairy_gem"
+    },
+    "h": {
+      "item": "cobblemon:fairy_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:floettite"
+  }
+}

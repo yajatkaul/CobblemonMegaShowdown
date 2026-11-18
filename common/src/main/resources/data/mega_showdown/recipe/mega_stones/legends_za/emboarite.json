@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:fire_charge"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "cobblemon:fire_gem"
+    },
+    "h": {
+      "item": "cobblemon:fighting_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:emboarite"
+  }
+}

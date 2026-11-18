@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ccc",
-    "cac",
-    "bbc"
+    "dcd",
+    "bab",
+    "dbd"
   ],
   "key": {
     "a": {
       "item": "minecraft:nether_star"
     },
     "b": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:light_blue_dye"
     },
     "c": {
-      "item": "minecraft:diamond"
+      "item": "cobblemon:ability_capsule"
+    },
+    "d": {
+      "item": "minecraft:paper"
     }
   },
   "result": {

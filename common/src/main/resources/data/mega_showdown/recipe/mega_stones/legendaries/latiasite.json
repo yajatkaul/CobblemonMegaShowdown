@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "gmh",
+    " u "
+  ],
+  "key": {
+    "c": {
+      "item": "cobblemon:power_band"
+    },
+    "m": {
+      "item": "mega_showdown:mega_stone"
+    },
+    "u": {
+      "item": "mega_showdown:soul_dew"
+    },
+    "g": {
+      "item": "cobblemon:dragon_gem"
+    },
+    "h": {
+      "item": "cobblemon:psychic_gem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:latiasite"
+  }
+}

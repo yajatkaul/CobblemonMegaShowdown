@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BEB",
+    "BGB",
+    "BDB"
+  ],
+  "key": {
+    "B": {
+      "item": "mega_showdown:stellar_tera_shard"
+    },
+    "D": {
+      "item": "cobblemon:upgrade"
+    },
+    "E": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:calibrated_sculk_sensor"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:tera_orb"
+  }
+}
