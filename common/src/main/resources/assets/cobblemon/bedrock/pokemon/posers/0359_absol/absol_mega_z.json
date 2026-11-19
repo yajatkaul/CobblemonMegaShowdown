@@ -1,9 +1,12 @@
 {
-  "portraitScale": 1.91,
-  "portraitTranslation": [-0.91, 1.18, 0],
-  "profileScale": 0.59,
-  "profileTranslation": [0.02, 0.85, 0],
+  "portraitScale": 1.81,
+  "portraitTranslation": [-1.09, 1.6, 0],
+  "profileScale": 0.55,
+  "profileTranslation": [-0.02, 0.85, 0],
   "rootBone": "absol",
+  "firstPersonCameraOffset": {
+    "seat_1": [0.0, 0.1, -0.05]
+  },
   "animations": {
     "cry": "q.bedrock_stateful('absol_mega_z', 'cry')",
     "recoil": "q.bedrock_stateful('absol_mega_z', 'recoil')",

@@ -1,5 +1,21 @@
 {
   "target": "cobblemon:absol",
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "75-85",
+          "JUMP": "30-50",
+          "SKILL": "60-80",
+          "SPEED": "50-70",
+          "STAMINA": "35-55"
+        }
+      }
+    },
+    "seats": []
+  },
   "forms": [
     {
       "name": "Mega-Z",

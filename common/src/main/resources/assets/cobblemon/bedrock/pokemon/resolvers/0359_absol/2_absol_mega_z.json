@@ -11,16 +11,6 @@
     {
       "aspects": ["mega_z", "shiny"],
       "texture": "cobblemon:textures/pokemon/0359_absol/absol_mega_z_shiny.png"
-    },
-    {
-      "aspects": ["mega_z", "alpha_eyes"],
-      "layers": [
-        {
-          "name": "alpha_eyes",
-          "texture": "cobblemon:textures/pokemon/0359_absol/absol_mega_z_alpha.png",
-          "emissive": true
-        }
-      ]
     }
   ]
 }

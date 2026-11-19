@@ -3,18 +3,13 @@
   "order": 1,
   "variations": [
     {
-      "aspects": [
-        "mega"
-      ],
+      "aspects": ["mega"],
       "poser": "cobblemon:absol_mega",
       "model": "cobblemon:absol_mega.geo",
       "texture": "cobblemon:textures/pokemon/0359_absol/absol_mega.png"
     },
     {
-      "aspects": [
-        "mega",
-        "shiny"
-      ],
+      "aspects": ["mega", "shiny"],
       "texture": "cobblemon:textures/pokemon/0359_absol/absol_mega_shiny.png"
     }
   ]
