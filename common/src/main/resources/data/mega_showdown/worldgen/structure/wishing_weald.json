@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "biomes": "#cobblemon:is_spooky",
   "step": "strongholds",
-  "terrain_adaptation": "beard_thin",
+  "terrain_adaptation": "beard_box",
   "spawn_overrides": {},
   "start_pool": "mega_showdown:wishing_weald",
   "size": 1,

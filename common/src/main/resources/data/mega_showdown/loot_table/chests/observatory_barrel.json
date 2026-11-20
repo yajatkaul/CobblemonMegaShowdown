@@ -33,6 +33,11 @@
         },
         {
           "type": "minecraft:item",
+          "name": "cobblemon:blank_tm",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:golden_apple",
           "weight": 3
         },
