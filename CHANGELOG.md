@@ -1,4 +1,4 @@
-# 1.3.4+1.8.4+1.21.1-release
+# 1.4+1.8.4+1.21.1-release
 ### General updates:
 - Added many item new tags for addon creators (#mega_showdown:arceus_plate, fusion_device, genesect_drive, ogerpon_mask, oricorio_nectar, origin_form_items, primal_orb, silvally_memory, tera_pouch)
 - Updated all existing tags to include some missing entries (#mega_showdown:mega_stone, tera_shard, z_ring)
