@@ -1,12 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:blipbug",
+  "implemented": true,
+  "shoulderMountable": true,
   "baseScale": 0.5,
   "hitbox": {
     "width": 0.75,
     "height": 1,
     "fixed": false
-  },
-  "shoulderMountable": true
+  }
 }
 

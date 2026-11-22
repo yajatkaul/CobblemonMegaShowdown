@@ -1,6 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:darkrai",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.5,
+    "height": 1,
+    "fixed": false
+  },
   "behaviour": {
     "moving": {
       "walk": {
@@ -10,11 +16,5 @@
         "canFly": true
       }
     }
-  },
-  "baseScale": 1,
-  "hitbox": {
-    "width": 1.5,
-    "height": 1,
-    "fixed": false
   }
 }

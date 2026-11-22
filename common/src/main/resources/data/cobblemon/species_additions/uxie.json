@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:uxie",
+  "implemented": true,
   "behaviour": {
     "moving": {
       "walk": {

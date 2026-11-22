@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:azelf",
+  "implemented": true,
   "behaviour": {
     "moving": {
       "walk": {

@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:delphox",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,6 +7,8 @@
       "labels": ["gen6", "mega"],
       "aspects": ["mega"],
       "abilities": ["levitate", "h:levitate"],
+      "height": 15,
+      "weight": 390,
       "baseStats": {
         "hp": 75,
         "attack": 69,
@@ -83,9 +84,7 @@
         "width": 1.5,
         "height": 3.8,
         "fixed": false
-      },
-      "height": 15,
-      "weight": 390
+      }
     }
   ]
 }

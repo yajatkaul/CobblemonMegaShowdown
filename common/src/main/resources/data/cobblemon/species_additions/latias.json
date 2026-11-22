@@ -1,70 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:latias",
-  "riding": {
-  "behaviours": {
-    "AIR": {
-      "key": "cobblemon:air/jet",
-      "rideSounds": [
-        {
-          "muffleEnabled": true,
-          "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
-          "playForNonPassengers": true,
-          "soundLocation": "cobblemon:ride.loop.wind",
-          "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
-        },
-        {
-          "muffleEnabled": true,
-          "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
-          "playForNonPassengers": true,
-          "soundLocation": "cobblemon:ride.loop.leather",
-          "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
-        }
-      ],
-      "stats": {
-        "ACCELERATION": "70-90",
-        "JUMP": "41-60",
-        "SKILL": "100-130",
-        "SPEED": "75-85",
-        "STAMINA": "82-120"
-      }
-    },
-      "LAND": {
-        "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
-        "key": "cobblemon:land/horse",
-        "rideSounds": [],
-        "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
-        "jumpVector": [
-          0,
-          "0.3*q.jump_strength/50",
-          "-1 * 0.5*q.jump_strength/50"
-        ],
-        "stats": {
-          "ACCELERATION": "41-60",
-          "JUMP": "41-60",
-          "SKILL": "21-40",
-          "SPEED": "21-40",
-          "STAMINA": "61-80"
-        }
-      },
-      "LIQUID": {
-        "key": "cobblemon:liquid/dolphin",
-        "rideSounds": [],
-        "stats": {
-          "ACCELERATION": "0-20",
-          "JUMP": "41-60",
-          "SKILL": "60-80",
-          "SPEED": "41-60",
-          "STAMINA": "60-90"
-        }
-      }
-    },
-  "seats": [
-    {
-      "locator": "seat_1"
-    }
-  ]
-},
+  "implemented": true,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.5,
@@ -80,9 +16,73 @@
         "canFly": true,
         "flySpeedHorizontal": 0.7
       },
-	  "swim": {
+      "swim": {
         "canBreatheUnderwater": true
       }
     }
+  },
+  "riding": {
+    "behaviours": {
+      "AIR": {
+        "key": "cobblemon:air/jet",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.wind",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.leather",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "stats": {
+          "ACCELERATION": "70-90",
+          "JUMP": "41-60",
+          "SKILL": "100-130",
+          "SPEED": "75-85",
+          "STAMINA": "82-120"
+        }
+      },
+        "LAND": {
+          "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+          "key": "cobblemon:land/horse",
+          "rideSounds": [],
+          "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+          "jumpVector": [
+            0,
+            "0.3*q.jump_strength/50",
+            "-1 * 0.5*q.jump_strength/50"
+          ],
+          "stats": {
+            "ACCELERATION": "41-60",
+            "JUMP": "41-60",
+            "SKILL": "21-40",
+            "SPEED": "21-40",
+            "STAMINA": "61-80"
+          }
+        },
+        "LIQUID": {
+          "key": "cobblemon:liquid/dolphin",
+          "rideSounds": [],
+          "stats": {
+            "ACCELERATION": "0-20",
+            "JUMP": "41-60",
+            "SKILL": "60-80",
+            "SPEED": "41-60",
+            "STAMINA": "60-90"
+          }
+        }
+      },
+    "seats": [
+      {
+        "locator": "seat_1"
+      }
+    ]
   }
 }

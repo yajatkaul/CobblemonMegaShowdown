@@ -1,6 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:tapufini",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1,
+    "height": 2.3,
+    "fixed": false
+  },
   "behaviour": {
     "moving": {
       "walk": {
@@ -13,12 +19,6 @@
       "depth": "normal",
       "light": "0-4"
     }
-  },
-  "baseScale": 1,
-  "hitbox": {
-    "width": 1,
-    "height": 2.3,
-    "fixed": false
   }
 }
 

@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:emboar",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,8 +7,11 @@
       "abilities": ["moldbreaker", "h:moldbreaker"],
       "labels": ["gen5", "mega"],
       "aspects": ["mega"],
+      "height": 18,
+      "weight": 1803,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.15,
       "baseStats": {
         "hp": 110,
         "attack": 148,
@@ -17,10 +19,7 @@
         "special_attack": 110,
         "special_defence": 110,
         "speed": 75
-      },
-      "baseScale": 1.15,
-      "height": 18,
-      "weight": 1803
+      }
     }
   ]
 }

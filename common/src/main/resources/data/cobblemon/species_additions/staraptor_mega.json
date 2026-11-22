@@ -9,6 +9,8 @@
       "abilities": ["contrary", "h:contrary"],
       "labels": ["gen4", "mega"],
       "aspects": ["mega"],
+      "height": 19,
+      "weight": 500,
       "battleOnly": true,
       "dynamaxBlocked": true,
       "baseStats": {
@@ -18,9 +20,7 @@
         "special_attack": 60,
         "special_defence": 90,
         "speed": 110
-      },
-      "height": 19,
-      "weight": 500
+      }
     }
   ]
 }

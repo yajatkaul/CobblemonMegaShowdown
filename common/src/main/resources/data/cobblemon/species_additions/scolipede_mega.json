@@ -7,8 +7,11 @@
       "abilities": ["shellarmor", "shellarmor", "h:shellarmor"],
       "labels": ["gen5", "mega"],
       "aspects": ["mega"],
+      "height": 32,
+      "weight": 2305,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.05,
       "baseStats": {
         "hp": 60,
         "attack": 140,
@@ -16,10 +19,7 @@
         "special_attack": 75,
         "special_defence": 99,
         "speed": 62
-      },
-      "baseScale": 1.05,
-      "height": 32,
-      "weight": 2305
+      }
     }
   ]
 }

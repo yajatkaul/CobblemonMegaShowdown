@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:castform",
+  "implemented": true,
   "baseScale": 1,
   "hitbox": {
     "width": 1,

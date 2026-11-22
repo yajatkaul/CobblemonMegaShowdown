@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:dialga",
+  "implemented": true,
   "hitbox": {
     "width": 2.5,
     "height": 6.5,

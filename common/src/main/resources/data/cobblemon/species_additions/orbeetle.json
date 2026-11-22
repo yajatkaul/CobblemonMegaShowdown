@@ -1,31 +1,10 @@
 {
+  "target": "cobblemon:orbeetle",
  "implemented": true,
- "target": "cobblemon:orbeetle",
   "baseScale": 0.75,
   "hitbox": {
     "width": 1.4,
     "height": 1.6,
     "fixed": false
-  },
-  "behaviour": {
-        "moving": {
-            "fly": {
-                "canFly": true
-            },
-            "swim": {
-                "avoidsWater": true
-            },
-            "walk": {
-                "canWalk": false
-            }
-        },
-        "herd": {
-            "maxSize": "4"
-        },
-        "combat": {
-            "willDefendSelf": true,
-            "willDefendOwner": true,
-            "willFlee": false
-        }
-    }
+  }
 }

@@ -1,6 +1,26 @@
 {
-  "implemented": true,
   "target": "cobblemon:latios",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.5,
+    "height": 2.2,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.31
+      },
+      "fly": {
+        "canFly": true,
+        "flySpeedHorizontal": 0.7
+      },
+      "swim": {
+        "canBreatheUnderwater": true
+      }
+    }
+  },
   "riding": {
     "behaviours": {
 	  "AIR": {
@@ -64,25 +84,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "baseScale": 1,
-  "hitbox": {
-    "width": 1.5,
-    "height": 2.2,
-    "fixed": false
-  },
-  "behaviour": {
-    "moving": {
-      "walk": {
-        "walkSpeed": 0.31
-      },
-      "fly": {
-        "canFly": true,
-        "flySpeedHorizontal": 0.7
-      },
-	  "swim": {
-        "canBreatheUnderwater": true
-      }
-    }
   }
 }

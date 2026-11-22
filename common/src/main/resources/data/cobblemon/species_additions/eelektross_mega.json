@@ -7,8 +7,11 @@
       "abilities": ["eelevate", "h:eelevate"],
       "labels": ["gen5", "mega"],
       "aspects": ["mega"],
+      "height": 30,
+      "weight": 1800,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.15,
       "baseStats": {
         "hp": 85,
         "attack": 145,
@@ -16,10 +19,7 @@
         "special_attack": 135,
         "special_defence": 90,
         "speed": 80
-      },
-      "baseScale": 1.15,
-      "height": 30,
-      "weight": 1800
+      }
     }
   ]
 }

@@ -7,8 +7,11 @@
       "abilities": ["firemane", "firemane", "h:firemane"],
       "labels": ["gen6", "mega"],
       "aspects": ["mega"],
+      "height": 15,
+      "weight": 933,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.15,
       "baseStats": {
         "hp": 86,
         "attack": 88,
@@ -16,10 +19,7 @@
         "special_attack": 129,
         "special_defence": 86,
         "speed": 126
-      },
-      "baseScale": 1.15,
-      "height": 15,
-      "weight": 933
+      }
     }
   ]
 }

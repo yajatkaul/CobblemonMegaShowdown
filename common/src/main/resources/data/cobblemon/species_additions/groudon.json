@@ -1,6 +1,23 @@
 {
-  "implemented": true,
   "target": "cobblemon:groudon",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 5.5,
+    "height": 6,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "canLook": true,
+      "walk": {
+        "walkSpeed": 0.27
+      },
+      "swim": {
+        "canSwimInLava": true
+      }
+    }
+  },
   "riding": {
     "behaviours": {
       "LAND": {
@@ -20,22 +37,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "behaviour": {
-    "moving": {
-      "canLook": true,
-      "walk": {
-        "walkSpeed": 0.27
-      },
-      "swim": {
-        "canSwimInLava": true
-      }
-    }
-  },
-  "baseScale": 1,
-  "hitbox": {
-    "width": 5.5,
-    "height": 6,
-    "fixed": false
   }
 }

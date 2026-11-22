@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:cosmoem",
+  "implemented": true,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1.7,

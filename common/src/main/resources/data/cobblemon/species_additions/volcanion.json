@@ -1,5 +1,12 @@
 {
   "target": "cobblemon:volcanion",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 3,
+    "height": 4.5,
+    "fixed": false
+  },
   "riding": {
     "behaviours": {
       "LAND": {
@@ -19,12 +26,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "implemented": true,
-  "baseScale": 1,
-  "hitbox": {
-    "width": 3,
-    "height": 4.5,
-    "fixed": false
   }
 }

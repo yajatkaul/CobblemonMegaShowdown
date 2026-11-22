@@ -1,6 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:keldeo",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 2,
+    "height": 2.2,
+    "fixed": false
+  },
   "riding": {
     "behaviours": {
       "LAND": {
@@ -20,11 +26,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "baseScale": 1,
-  "hitbox": {
-    "width": 2,
-    "height": 2.2,
-    "fixed": false
   }
 }

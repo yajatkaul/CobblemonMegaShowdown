@@ -1,21 +1,11 @@
 {
-  "implemented": true,
   "target": "cobblemon:meltan",
+  "implemented": true,
   "baseScale": 0.3,
   "hitbox": {
     "width": 0.4,
     "height": 0.8,
     "fixed": false
-  },
-  "drops": {
-    "amount": "1",
-    "entries": [
-      {
-        "item": "minecraft:iron_ingot",
-        "quantityRange": "1-5",
-        "percentage": 50
-      }
-    ]
   },
   "behaviour": {
     "resting": {

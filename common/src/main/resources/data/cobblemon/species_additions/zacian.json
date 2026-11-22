@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:zacian",
+  "implemented": true,
   "baseScale": 1,
   "hitbox": {
     "width": 3,

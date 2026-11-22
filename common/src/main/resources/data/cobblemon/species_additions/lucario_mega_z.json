@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:lucario",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega-Z",
@@ -10,6 +9,10 @@
       "labels": ["gen4", "mega_z"],
       "aspects": ["mega_z"],
       "abilities": ["auraguard", "auraguard", "h:auraguard"],
+      "height": 13,
+      "weight": 494,
+      "battleOnly": true,
+      "dynamaxBlocked": true,
       "baseStats": {
         "hp": 70,
         "attack": 100,
@@ -30,11 +33,7 @@
             "canSwimInLava": false
           }
         }
-      },
-      "battleOnly": true,
-      "dynamaxBlocked": true,
-      "height": 13,
-      "weight": 494
+      }
     }
   ]
 }

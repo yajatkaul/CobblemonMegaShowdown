@@ -1,6 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:ogerpon",
+  "implemented": true,
+  "baseScale": 0.6,
+  "hitbox": {
+    "width": 1.1,
+    "height": 1.9,
+    "fixed": false
+  },
   "behaviour": {
     "resting": {
       "canSleep": true,
@@ -19,11 +25,5 @@
         "canBreatheUnderwater": false
       }
     }
-  },
-  "baseScale": 0.6,
-  "hitbox": {
-    "width": 1.1,
-    "height": 1.9,
-    "fixed": false
   }
 }

@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:golisopod",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -10,8 +9,16 @@
       "abilities": ["toughclaws", "h:toughclaws"],
       "labels": ["gen7", "mega"],
       "aspects": ["mega"],
+      "height": 23,
+      "weight": 1480,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1,
+      "hitbox": {
+        "width": 1.5,
+        "height": 4,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 75,
         "attack": 150,
@@ -19,15 +26,7 @@
         "special_attack": 70,
         "special_defence": 120,
         "speed": 40
-      },
-      "baseScale": 1,
-      "hitbox": {
-        "width": 1.5,
-        "height": 4,
-        "fixed": false
-      },
-      "height": 23,
-      "weight": 1480
+      }
     }
   ]
 }

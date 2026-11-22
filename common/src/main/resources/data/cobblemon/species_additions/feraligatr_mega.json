@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:feraligatr",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -10,8 +9,16 @@
       "abilities": ["dragonize", "h:dragonize"],
       "labels": ["gen2", "mega"],
       "aspects": ["mega"],
+      "height": 23,
+      "weight": 1080,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.25,
+      "hitbox": {
+        "width": 1.8,
+        "height": 4.5,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 85,
         "attack": 160,
@@ -19,15 +26,7 @@
         "special_attack": 89,
         "special_defence": 93,
         "speed": 78
-      },
-      "baseScale": 1.25,
-      "hitbox": {
-        "width": 1.8,
-        "height": 4.5,
-        "fixed": false
-      },
-      "height": 23,
-      "weight": 1080
+      }
     }
   ]
 }

@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:crabominable",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,8 +7,15 @@
       "abilities": ["ironfist", "ironfist", "h:ironfist"],
       "labels": ["gen7", "mega"],
       "aspects": ["mega"],
+      "height": 26,
+      "weight": 2528,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "hitbox": {
+        "width": 2.5,
+        "height": 4.5,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 97,
         "attack": 157,
@@ -17,14 +23,7 @@
         "special_attack": 62,
         "special_defence": 107,
         "speed": 33
-      },
-      "hitbox": {
-        "width": 2.5,
-        "height": 4.5,
-        "fixed": false
-      },
-      "height": 26,
-      "weight": 2528
+      }
     }
   ]
 }

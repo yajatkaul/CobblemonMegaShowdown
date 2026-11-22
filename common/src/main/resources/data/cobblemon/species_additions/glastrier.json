@@ -1,30 +1,30 @@
 {
-  "implemented": true,
   "target": "cobblemon:glastrier",
-  "riding": {
-  "behaviours": {
-    "LAND": {
-      "key": "cobblemon:land/horse",
-      "rideSounds": [],
-      "stats": {
-        "ACCELERATION": "30-60",
-        "JUMP": "30-65",
-        "SKILL": "20-50",
-        "SPEED": "20-40",
-        "STAMINA": "60-120"
-      }
-    }
-  },
-  "seats": [
-    {
-      "locator": "seat_1"
-    }
-  ]
-},
+  "implemented": true,
   "baseScale": 0.85,
   "hitbox": {
     "width": 2.2,
     "height": 3.3,
     "fixed": false
+  },
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "30-60",
+          "JUMP": "30-65",
+          "SKILL": "20-50",
+          "SPEED": "20-40",
+          "STAMINA": "60-120"
+        }
+      }
+    },
+    "seats": [
+      {
+        "locator": "seat_1"
+      }
+    ]
   }
 }

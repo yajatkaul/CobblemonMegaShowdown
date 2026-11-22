@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:skarmory",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,8 +7,16 @@
       "abilities": ["stalwart", "stalwart", "h:stalwart"],
       "labels": ["gen2", "mega"],
       "aspects": ["mega"],
+      "height": 17,
+      "weight": 404,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.35,
+      "hitbox": {
+        "width": 2,
+        "height": 2,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 65,
         "attack": 140,
@@ -17,15 +24,7 @@
         "special_attack": 40,
         "special_defence": 100,
         "speed": 110
-      },
-      "baseScale": 1.35,
-      "hitbox": {
-        "width": 2,
-        "height": 2,
-        "fixed": false
-      },
-      "height": 17,
-      "weight": 404
+      }
     }
   ]
 }

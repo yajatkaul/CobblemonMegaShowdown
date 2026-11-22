@@ -1,7 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:deoxys",
+  "implemented": true,
   "baseScale": 1,
+  "hitbox": {
+    "width": 1,
+    "height": 4,
+    "fixed": false
+  },
   "behaviour": {
     "moving": {
       "walk": {
@@ -11,10 +16,5 @@
         "canFly": true
       }
     }
-  },
-  "hitbox": {
-    "width": 1,
-    "height": 4,
-    "fixed": false
   }
 }

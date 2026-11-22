@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:chimecho",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -10,8 +9,16 @@
       "abilities": ["levitate", "h:levitate"],
       "labels": ["gen3", "mega"],
       "aspects": ["mega"],
+      "height": 12,
+      "weight": 80,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 0.7,
+      "hitbox": {
+        "width": 1.5,
+        "height": 2,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 75,
         "attack": 50,
@@ -19,15 +26,7 @@
         "special_attack": 135,
         "special_defence": 120,
         "speed": 65
-      },
-      "baseScale": 0.7,
-      "hitbox": {
-        "width": 1.5,
-        "height": 2,
-        "fixed": false
-      },
-      "height": 12,
-      "weight": 80
+      }
     }
   ]
 }

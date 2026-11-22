@@ -1,10 +1,38 @@
 {
-  "implemented": true,
   "target": "cobblemon:genesect",
+  "implemented": true,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 0.8,
+    "height": 2.0,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": false,
+      "depth": "normal",
+      "light": "4-15"
+    },
+    "moving": {
+      "canLook": false,
+      "walk": {
+        "canWalk": true,
+        "avoidsLand": false
+      },
+      "swim": {
+        "swimSpeed": 0.1,
+        "canSwimInWater": false,
+        "canBreatheUnderwater": false
+      },
+      "fly": {
+        "canFly": true
+      }
+    }
+  },
   "riding": {
     "behaviours": {
       "AIR": {
-        "key": "cobblemon:air/bird",
+        "key": "cobblemon:air/jet",
         "rideSounds": [],
         "stats": {
           "ACCELERATION": "41-60",
@@ -31,33 +59,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "behaviour": {
-    "resting": {
-      "canSleep": false,
-      "depth": "normal",
-      "light": "4-15"
-    },
-    "moving": {
-      "canLook": false,
-      "walk": {
-        "canWalk": true,
-        "avoidsLand": false
-      },
-      "swim": {
-        "swimSpeed": 0.1,
-        "canSwimInWater": false,
-        "canBreatheUnderwater": false
-      },
-      "fly": {
-        "canFly": true
-      }
-    }
-  },
-  "baseScale": 0.8,
-  "hitbox": {
-    "width": 0.8,
-    "height": 2.0,
-    "fixed": false
   }
 }

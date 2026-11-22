@@ -1,6 +1,7 @@
 {
-  "implemented": true,
   "target": "cobblemon:lunala",
+  "implemented": true,
+  "baseScale": 1.2,
   "hitbox": {
     "width": 2,
     "height": 5,
@@ -18,7 +19,6 @@
       }
     }
   },
-  "baseScale": 1.2,
   "riding": {
     "behaviours": {
       "AIR": {

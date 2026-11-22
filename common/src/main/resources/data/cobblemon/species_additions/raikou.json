@@ -1,6 +1,6 @@
 {
-  "target": "cobblemon:raikou",
   "implemented": true,
+  "target": "cobblemon:raikou",
   "baseScale": 1,
   "hitbox": {
     "width": 2,

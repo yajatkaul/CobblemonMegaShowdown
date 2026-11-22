@@ -1,6 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:spectrier",
+  "implemented": true,
+  "baseScale": 0.85,
+  "hitbox": {
+    "width": 2.2,
+    "height": 3.3,
+    "fixed": false
+  },
   "riding": {
     "behaviours": {
       "LAND": {
@@ -20,11 +26,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "baseScale": 0.85,
-  "hitbox": {
-    "width": 2.2,
-    "height": 3.3,
-    "fixed": false
   }
 }
