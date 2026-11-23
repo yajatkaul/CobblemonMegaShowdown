@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:scovillain",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,6 +7,8 @@
       "abilities": ["spicyspray", "spicyspray", "h:spicyspray"],
       "labels": ["gen9", "mega"],
       "aspects": ["mega"],
+      "height": 12,
+      "weight": 220,
       "battleOnly": true,
       "dynamaxBlocked": true,
       "baseStats": {
@@ -17,9 +18,7 @@
         "special_attack": 138,
         "special_defence": 85,
         "speed": 75
-      },
-      "height": 12,
-      "weight": 220
+      }
     }
   ]
 }

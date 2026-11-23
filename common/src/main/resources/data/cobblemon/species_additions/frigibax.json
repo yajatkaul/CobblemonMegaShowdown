@@ -1,17 +1,17 @@
 {
-  "implemented": true,
   "target": "cobblemon:frigibax",
+  "implemented": true,
+  "baseScale": 0.5,
   "hitbox": {
-   "width": 1.5,
-   "height": 1.5,
-   "fixed": false
- },
- "behaviour": {
-  "moving": {
-    "walk": {
-      "walkSpeed": 0.13
+    "width": 1.5,
+    "height": 1.5,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.13
+      }
     }
   }
-},
-"baseScale": 0.5
 }

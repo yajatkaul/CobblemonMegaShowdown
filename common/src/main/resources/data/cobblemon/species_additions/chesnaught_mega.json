@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:chesnaught",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,6 +7,10 @@
       "labels": ["gen6", "mega"],
       "aspects": ["mega"],
       "abilities": ["bulletproof", "h:bulletproof"],
+      "height": 16,
+      "weight": 900,
+      "battleOnly": true,
+      "dynamaxBlocked": true,
       "baseStats": {
         "hp": 88,
         "attack": 137,
@@ -15,11 +18,7 @@
         "special_attack": 74,
         "special_defence": 115,
         "speed": 44
-      },
-      "battleOnly": true,
-      "dynamaxBlocked": true,
-      "height": 16,
-      "weight": 900
+      }
     }
   ]
 }

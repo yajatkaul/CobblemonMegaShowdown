@@ -1,17 +1,17 @@
 {
-  "implemented": true,
   "target": "cobblemon:arctibax",
+  "implemented": true,
+  "baseScale": 0.67,
   "hitbox": {
-   "width": 1.5,
-   "height": 1.5,
-   "fixed": false
- },
- "behaviour": {
-  "moving": {
-    "walk": {
-      "walkSpeed": 0.26
+    "width": 1.5,
+    "height": 1.5,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.26
+      }
     }
   }
-},
-"baseScale": 0.67
 }

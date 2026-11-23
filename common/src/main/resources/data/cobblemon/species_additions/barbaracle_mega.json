@@ -9,17 +9,16 @@
       "abilities": ["toughclaws", "toughclaws", "h:toughclaws"],
       "labels": ["gen6", "mega"],
       "aspects": ["mega"],
+      "height": 22,
+      "weight": 1000,
       "battleOnly": true,
       "dynamaxBlocked": true,
-      "baseStats": {
-        "hp": 72,
-        "attack": 140,
-        "defence": 130,
-        "special_attack": 64,
-        "special_defence": 106,
-        "speed": 88
-      },
       "baseScale": 1.15,
+      "hitbox": {
+        "width": 1.5,
+        "height": 4,
+        "fixed": false
+      },
       "behaviour": {
         "moving": {
           "walk": {
@@ -33,13 +32,14 @@
           }
         }
       },
-      "hitbox": {
-        "width": 1.5,
-        "height": 4,
-        "fixed": false
-      },
-      "height": 22,
-      "weight": 1000
+      "baseStats": {
+        "hp": 72,
+        "attack": 140,
+        "defence": 130,
+        "special_attack": 64,
+        "special_defence": 106,
+        "speed": 88
+      }
     }
   ]
 }

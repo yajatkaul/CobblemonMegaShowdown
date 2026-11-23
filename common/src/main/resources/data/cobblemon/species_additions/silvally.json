@@ -1,27 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:silvally",
-  "riding": {
-  "behaviours": {
-    "LAND": {
-      "key": "cobblemon:land/horse",
-      "rideSounds": [],
-      "stats": {
-        "ACCELERATION": "30-60",
-        "JUMP": "30-65",
-        "SKILL": "20-50",
-        "SPEED": "20-40",
-        "STAMINA": "30-65"
-      }
-    }
-  },
-  "seats": [
-    {
-      "locator": "seat_1"
-    }
-  ]
-},
+  "implemented": true,
   "baseScale": 1,
+  "hitbox": {
+    "width": 2,
+    "height": 3,
+    "fixed": false
+  },
   "behaviour": {
     "moving": {
       "canLook": true,
@@ -40,9 +25,24 @@
       }
     }
   },
-  "hitbox": {
-    "width": 2,
-    "height": 3,
-    "fixed": false
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "30-60",
+          "JUMP": "30-65",
+          "SKILL": "20-50",
+          "SPEED": "20-40",
+          "STAMINA": "30-65"
+        }
+      }
+    },
+    "seats": [
+      {
+        "locator": "seat_1"
+      }
+    ]
   }
 }

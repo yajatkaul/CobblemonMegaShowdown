@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:meganium",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -10,8 +9,11 @@
       "abilities": ["megasol", "h:megasol"],
       "labels": ["gen2", "mega"],
       "aspects": ["mega"],
+      "height": 24,
+      "weight": 2010,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.0,
       "baseStats": {
         "hp": 80,
         "attack": 92,
@@ -19,10 +21,7 @@
         "special_attack": 143,
         "special_defence": 115,
         "speed": 80
-      },
-      "baseScale": 1.0,
-      "height": 24,
-      "weight": 2010
+      }
     }
   ]
 }

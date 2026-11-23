@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:dragonite",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,14 +7,8 @@
       "labels": ["gen1", "mega"],
       "aspects": ["mega"],
       "abilities": ["multiscale", "h:multiscale"],
-      "baseStats": {
-        "hp": 91,
-        "attack": 124,
-        "defence": 115,
-        "special_attack": 145,
-        "special_defence": 125,
-        "speed": 100
-      },
+      "height": 22,
+      "weight": 2900,
       "battleOnly": true,
       "dynamaxBlocked": true,
       "baseScale": 0.9,
@@ -24,8 +17,14 @@
         "height": 3.5,
         "fixed": false
       },
-      "height": 22,
-      "weight": 2900
+      "baseStats": {
+        "hp": 91,
+        "attack": 124,
+        "defence": 115,
+        "special_attack": 145,
+        "special_defence": 125,
+        "speed": 100
+      }
     }
   ]
 }

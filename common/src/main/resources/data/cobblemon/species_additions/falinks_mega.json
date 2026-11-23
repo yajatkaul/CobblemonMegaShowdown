@@ -7,8 +7,16 @@
       "abilities": ["defiant", "h:defiant"],
       "labels": ["gen8", "mega"],
       "aspects": ["mega"],
+      "height": 16,
+      "weight": 990,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.05,
+      "hitbox": {
+        "width": 1.2,
+        "height": 2.1,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 65,
         "attack": 135,
@@ -16,15 +24,7 @@
         "special_attack": 70,
         "special_defence": 65,
         "speed": 100
-      },
-      "baseScale": 1.05,
-      "hitbox": {
-        "width": 1.2,
-        "height": 2.1,
-        "fixed": false
-      },
-      "height": 16,
-      "weight": 990
+      }
     }
   ]
 }

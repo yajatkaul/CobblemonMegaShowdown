@@ -1,6 +1,13 @@
 {
-  "implemented": true,
   "target": "cobblemon:marshadow",
+  "implemented": true,
+  "shoulderMountable": true,
+  "baseScale": 0.6,
+  "hitbox": {
+    "width": 0.5,
+    "height": 0.8,
+    "fixed": false
+  },
   "behaviour": {
     "resting": {
       "canSleep": false,
@@ -18,17 +25,7 @@
         "swimSpeed": 0.1,
         "canSwimInWater": true,
         "canBreatheUnderwater": false
-      },
-      "fly": {
-        "canFly": false
       }
     }
-  },
-  "shoulderMountable": true,
-  "baseScale": 0.6,
-  "hitbox": {
-    "width": 0.5,
-    "height": 0.8,
-    "fixed": false
   }
 }

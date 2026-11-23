@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:meowstic",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "M-Mega",
@@ -9,8 +8,15 @@
       "abilities": ["trace", "trace", "h:trace"],
       "labels": ["mega", "gen6"],
       "aspects": ["male", "mega"],
+      "height": 0.8,
+      "weight": 101,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "hitbox": {
+        "width": 0.85,
+        "height": 2.5,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 74,
         "attack": 48,
@@ -159,14 +165,7 @@
         "legacy:snore",
         "legacy:swagger",
         "legacy:toxic"
-      ],
-      "hitbox": {
-        "width": 0.85,
-        "height": 2.5,
-        "fixed": false
-      },
-      "height": 0.8,
-      "weight": 101
+      ]
     },
     {
       "name": "F-Mega",
@@ -175,8 +174,23 @@
       "abilities": ["trace", "trace", "h:trace"],
       "labels": ["mega", "gen6"],
       "aspects": ["female", "mega"],
+      "height": 0.8,
+      "weight": 101,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "hitbox": {
+        "width": 0.85,
+        "height": 2.5,
+        "fixed": false
+      },
+      "baseStats": {
+        "hp": 74,
+        "attack": 48,
+        "defence": 76,
+        "special_attack": 143,
+        "special_defence": 101,
+        "speed": 124
+      },
       "moves": [
         "1:mefirst",
         "1:magicalleaf",
@@ -318,22 +332,7 @@
         "legacy:snore",
         "legacy:swagger",
         "legacy:toxic"
-      ],
-      "baseStats": {
-        "hp": 74,
-        "attack": 48,
-        "defence": 76,
-        "special_attack": 143,
-        "special_defence": 101,
-        "speed": 124
-      },
-      "hitbox": {
-        "width": 0.85,
-        "height": 2.5,
-        "fixed": false
-      },
-      "height": 0.8,
-      "weight": 101
+      ]
     }
   ]
 }

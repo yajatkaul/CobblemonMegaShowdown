@@ -65,30 +65,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "drops": {
-    "amount": 5,
-    "entries": [
-      {
-        "item": "cobblemon:rare_candy",
-        "quantityRange": "2-6"
-      },
-      {
-        "item": "cobblemon:fighting_gem",
-        "percentage": 50.0
-      },
-      {
-        "item": "minecraft:nether_star",
-        "percentage": 8.0
-      },
-      {
-        "item": "cobblemon:ability_capsule",
-        "percentage": 25.0
-      },
-      {
-        "item": "cobblemon:ability_patch",
-        "percentage": 10.0
-      }
-    ]
   }
 }

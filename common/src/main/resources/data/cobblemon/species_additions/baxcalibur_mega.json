@@ -1,19 +1,5 @@
 {
-  "implemented": true,
   "target": "cobblemon:baxcalibur",
-  "hitbox": {
-    "width": 3,
-    "height": 2.5,
-    "fixed": false
-  },
-  "behaviour": {
-    "moving": {
-      "walk": {
-        "walkSpeed": 0.2
-      }
-    }
-  },
-  "baseScale": 0.88,
   "forms": [
     {
       "name": "Mega",

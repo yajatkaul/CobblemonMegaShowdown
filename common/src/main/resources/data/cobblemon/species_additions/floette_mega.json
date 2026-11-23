@@ -7,8 +7,19 @@
       "abilities": ["fairyaura", "h:fairyaura"],
       "labels": ["flower-eternal", "mega", "gen6", "mythical"],
       "aspects": ["mega", "flower-eternal"],
+      "height": 2,
+      "weight": 1008,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 0.5,
+      "baseStats": {
+        "hp": 74,
+        "attack": 85,
+        "defence": 87,
+        "special_attack": 155,
+        "special_defence": 148,
+        "speed": 102
+      },
       "moves": [
         "1:tackle",
         "1:vinewhip",
@@ -112,18 +123,7 @@
         "legacy:snore",
         "legacy:swagger",
         "legacy:toxic"
-      ],
-      "baseStats": {
-        "hp": 74,
-        "attack": 85,
-        "defence": 87,
-        "special_attack": 155,
-        "special_defence": 148,
-        "speed": 102
-      },
-      "baseScale": 0.5,
-      "height": 2,
-      "weight": 1008
+      ]
     }
   ]
 }

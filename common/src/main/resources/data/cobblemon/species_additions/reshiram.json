@@ -1,6 +1,12 @@
 {
-  "implemented": true,
   "target": "cobblemon:reshiram",
+  "implemented": true,
+  "baseScale": 0.9,
+  "hitbox": {
+    "width": 4,
+    "height": 5,
+    "fixed": false
+  },
   "riding": {
     "behaviours": {
       "AIR": {
@@ -31,11 +37,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "baseScale": 0.9,
-  "hitbox": {
-    "width": 4,
-    "height": 5,
-    "fixed": false
   }
 }

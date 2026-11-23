@@ -1,6 +1,8 @@
 {
+  "features": ["mega_evolution"],
   "pokemon": [
     "barbaracle",
+    "baxcalibur",
     "chandelure",
     "chesnaught",
     "chimecho",
@@ -18,6 +20,8 @@
     "floette",
     "froslass",
     "glimmora",
+    "golisopod",
+    "golurk",
     "greninja",
     "hawlucha",
     "malamar",
@@ -31,10 +35,6 @@
     "skarmory",
     "starmie",
     "staraptor",
-    "victreebel",
-    "golurk",
-    "golisopod",
-    "baxcalibur"
-  ],
-  "features": ["mega_evolution"]
+    "victreebel"
+  ]
 }

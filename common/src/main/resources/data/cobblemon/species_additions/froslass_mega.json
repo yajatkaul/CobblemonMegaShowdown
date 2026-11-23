@@ -1,6 +1,5 @@
 {
   "target": "cobblemon:froslass",
-  "features": ["mega_evolution"],
   "forms": [
     {
       "name": "Mega",
@@ -8,8 +7,16 @@
       "abilities": ["snowwarning", "h:snowwarning"],
       "labels": ["gen4", "mega"],
       "aspects": ["mega"],
+      "height": 26,
+      "weight": 296,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 0.75,
+      "hitbox": {
+        "width": 1,
+        "height": 3.2,
+        "fixed": false
+      },
       "baseStats": {
         "hp": 70,
         "attack": 80,
@@ -17,15 +24,7 @@
         "special_attack": 140,
         "special_defence": 100,
         "speed": 120
-      },
-      "baseScale": 0.75,
-      "hitbox": {
-        "width": 1,
-        "height": 3.2,
-        "fixed": false
-      },
-      "height": 26,
-      "weight": 296
+      }
     }
   ]
 }

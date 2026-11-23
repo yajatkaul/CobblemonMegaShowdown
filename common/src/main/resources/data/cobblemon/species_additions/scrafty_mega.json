@@ -7,8 +7,11 @@
       "abilities": ["intimidate", "intimidate", "h:intimidate"],
       "labels": ["gen5", "mega"],
       "aspects": ["mega"],
+      "height": 11,
+      "weight": 310,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.05,
       "baseStats": {
         "hp": 65,
         "attack": 130,
@@ -16,10 +19,7 @@
         "special_attack": 55,
         "special_defence": 135,
         "speed": 68
-      },
-      "baseScale": 1.05,
-      "height": 11,
-      "weight": 310
+      }
     }
   ]
 }

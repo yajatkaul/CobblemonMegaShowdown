@@ -1,5 +1,12 @@
 {
   "target": "cobblemon:hooh",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 4,
+    "height": 5,
+    "fixed": false
+  },
   "riding": {
     "behaviours": {
       "AIR": {
@@ -37,12 +44,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "implemented": true,
-  "baseScale": 1,
-  "hitbox": {
-    "width": 4,
-    "height": 5,
-    "fixed": false
   }
 }

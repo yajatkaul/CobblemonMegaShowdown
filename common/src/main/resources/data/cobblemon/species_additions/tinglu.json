@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:tinglu",
+  "implemented": true,
   "baseScale": 1,
   "hitbox": {
     "width": 1.5,

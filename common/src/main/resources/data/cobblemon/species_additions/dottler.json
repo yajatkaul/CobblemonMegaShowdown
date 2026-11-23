@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:dottler",
+  "implemented": true,
   "baseScale": 0.5,
   "hitbox": {
     "width": 1,

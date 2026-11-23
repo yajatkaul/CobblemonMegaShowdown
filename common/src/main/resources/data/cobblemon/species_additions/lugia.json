@@ -1,6 +1,30 @@
 {
-  "implemented": true,
   "target": "cobblemon:lugia",
+  "implemented": true,
+  "baseScale": 1.1,
+  "hitbox": {
+    "width": 2,
+    "height": 7,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.28
+      },
+      "fly": {
+        "canFly": true,
+        "flySpeedHorizontal": 0.7
+      },
+      "swim": {
+        "swimSpeed": 0.7,
+        "canBreatheUnderwater": true,
+        "canWalkOnWater": false,
+        "canSwimInWater": true,
+        "canSwimInLava": false
+      }
+    }
+  },
   "riding": {
     "behaviours": {
       "AIR": {
@@ -49,29 +73,5 @@
         "locator": "seat_1"
       }
     ]
-  },
-  "hitbox": {
-    "width": 2,
-    "height": 7,
-    "fixed": false
-  },
-  "behaviour": {
-    "moving": {
-      "walk": {
-        "walkSpeed": 0.28
-      },
-      "fly": {
-        "canFly": true,
-        "flySpeedHorizontal": 0.7
-      },
-      "swim": {
-        "swimSpeed": 0.7,
-        "canBreatheUnderwater": true,
-        "canWalkOnWater": false,
-        "canSwimInWater": true,
-        "canSwimInLava": false
-      }
-    }
-  },
-  "baseScale": 1.1
+  }
 }

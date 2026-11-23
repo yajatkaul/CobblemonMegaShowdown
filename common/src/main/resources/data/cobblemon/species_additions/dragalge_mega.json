@@ -7,8 +7,11 @@
       "abilities": ["regenerator", "regenerator", "h:regenerator"],
       "labels": ["gen6", "mega"],
       "aspects": ["mega"],
+      "height": 21,
+      "weight": 1003,
       "battleOnly": true,
       "dynamaxBlocked": true,
+      "baseScale": 1.05,
       "baseStats": {
         "hp": 65,
         "attack": 85,
@@ -16,10 +19,7 @@
         "special_attack": 132,
         "special_defence": 163,
         "speed": 44
-      },
-      "baseScale": 1.05,
-      "height": 21,
-      "weight": 1003
+      }
     }
   ]
 }

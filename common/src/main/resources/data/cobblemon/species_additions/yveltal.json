@@ -1,6 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:yveltal",
+  "implemented": true,
   "hitbox": {
     "width": 4,
     "height": 3,

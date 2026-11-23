@@ -1,26 +1,6 @@
 {
-  "implemented": true,
   "target": "cobblemon:melmetal",
-  "riding": {
-    "behaviours": {
-      "LAND": {
-        "key": "cobblemon:land/horse",
-        "rideSounds": [],
-        "stats": {
-          "ACCELERATION": "30-60",
-          "JUMP": "30-65",
-          "SKILL": "20-50",
-          "SPEED": "20-40",
-          "STAMINA": "80-135"
-        }
-      }
-    },
-    "seats": [
-      {
-        "locator": "seat_1"
-      }
-    ]
-  },
+  "implemented": true,
   "baseScale": 1.2,
   "hitbox": {
     "width": 2.4,
@@ -46,5 +26,25 @@
         "canBreatheUnderwater": false
       }
     }
+  },
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "30-60",
+          "JUMP": "30-65",
+          "SKILL": "20-50",
+          "SPEED": "20-40",
+          "STAMINA": "80-135"
+        }
+      }
+    },
+    "seats": [
+      {
+        "locator": "seat_1"
+      }
+    ]
   }
 }

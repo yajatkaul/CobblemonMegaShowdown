@@ -8,6 +8,10 @@
       "labels": ["gen1", "mega_x"],
       "aspects": ["mega_x"],
       "abilities": ["electricsurge", "h:electricsurge"],
+      "height": 12,
+      "weight": 380,
+      "battleOnly": true,
+      "dynamaxBlocked": true,
       "baseStats": {
         "hp": 60,
         "attack": 135,
@@ -23,11 +27,7 @@
             "flySpeedHorizontal": 0.3
           }
         }
-      },
-      "battleOnly": true,
-      "dynamaxBlocked": true,
-      "height": 12,
-      "weight": 380
+      }
     },
     {
       "name": "Mega-Y",
@@ -35,6 +35,10 @@
       "labels": ["gen1", "mega_y"],
       "aspects": ["mega_y"],
       "abilities": ["noguard", "h:noguard"],
+      "height": 10,
+      "weight": 260,
+      "battleOnly": true,
+      "dynamaxBlocked": true,
       "baseStats": {
         "hp": 60,
         "attack": 100,
@@ -42,11 +46,7 @@
         "special_attack": 160,
         "special_defence": 80,
         "speed": 130
-      },
-      "battleOnly": true,
-      "dynamaxBlocked": true,
-      "height": 10,
-      "weight": 260
+      }
     }
   ]
 }
